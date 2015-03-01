@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 697e1f70dd97f2f4694cf35897d00ddc
+guid: 0a13c867ecb5a3f4ca375c4f1931ca5a
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -14,30 +14,30 @@ ModelImporter:
     100016: HairBack1
     100018: Head
     100020: Jaw
-    100022: jiggle_hair1
+    100022: jiggle_hair1_
     100024: jiggle_hair2
     100026: jiggle_hair2_end
-    100028: jiggle_hair3
-    100030: jiggle_hair3_end
-    100032: jiggle_hair4
-    100034: jiggle_hair4_end
-    100036: jiggle_hair5
-    100038: jiggle_hair5_end
-    100040: jiggle_hair6
-    100042: jiggle_hair6_end
-    100044: jiggle_tail1
-    100046: jiggle_tail2
-    100048: jiggle_tail2_end
-    100050: jiggle_tail3
-    100052: jiggle_tail3_end
-    100054: jiggle_tail4
-    100056: jiggle_tail4_end
-    100058: jiggle_tail5
-    100060: jiggle_tail5_end
-    100062: jiggle_tail6
-    100064: jiggle_tail6_end
-    100066: jiggle_tail7
-    100068: jiggle_tail7_end
+    100028: jiggle_hair3_
+    100030: jiggle_hair3__end
+    100032: jiggle_hair4_
+    100034: jiggle_hair4__end
+    100036: jiggle_hair5_
+    100038: jiggle_hair5__end
+    100040: jiggle_hair6_
+    100042: jiggle_hair6__end
+    100044: jiggle_tail1_
+    100046: jiggle_tail2_
+    100048: jiggle_tail2__end
+    100050: jiggle_tail3_
+    100052: jiggle_tail3__end
+    100054: jiggle_tail4_
+    100056: jiggle_tail4__end
+    100058: jiggle_tail5_
+    100060: jiggle_tail5__end
+    100062: jiggle_tail6_
+    100064: jiggle_tail6__end
+    100066: jiggle_tail7_
+    100068: jiggle_tail7__end
     100070: left_wing_normal_closed
     100072: left_wing_normal_spread
     100074: LeftBall
@@ -125,30 +125,30 @@ ModelImporter:
     400016: HairBack1
     400018: Head
     400020: Jaw
-    400022: jiggle_hair1
+    400022: jiggle_hair1_
     400024: jiggle_hair2
     400026: jiggle_hair2_end
-    400028: jiggle_hair3
-    400030: jiggle_hair3_end
-    400032: jiggle_hair4
-    400034: jiggle_hair4_end
-    400036: jiggle_hair5
-    400038: jiggle_hair5_end
-    400040: jiggle_hair6
-    400042: jiggle_hair6_end
-    400044: jiggle_tail1
-    400046: jiggle_tail2
-    400048: jiggle_tail2_end
-    400050: jiggle_tail3
-    400052: jiggle_tail3_end
-    400054: jiggle_tail4
-    400056: jiggle_tail4_end
-    400058: jiggle_tail5
-    400060: jiggle_tail5_end
-    400062: jiggle_tail6
-    400064: jiggle_tail6_end
-    400066: jiggle_tail7
-    400068: jiggle_tail7_end
+    400028: jiggle_hair3_
+    400030: jiggle_hair3__end
+    400032: jiggle_hair4_
+    400034: jiggle_hair4__end
+    400036: jiggle_hair5_
+    400038: jiggle_hair5__end
+    400040: jiggle_hair6_
+    400042: jiggle_hair6__end
+    400044: jiggle_tail1_
+    400046: jiggle_tail2_
+    400048: jiggle_tail2__end
+    400050: jiggle_tail3_
+    400052: jiggle_tail3__end
+    400054: jiggle_tail4_
+    400056: jiggle_tail4__end
+    400058: jiggle_tail5_
+    400060: jiggle_tail5__end
+    400062: jiggle_tail6_
+    400064: jiggle_tail6__end
+    400066: jiggle_tail7_
+    400068: jiggle_tail7__end
     400070: left_wing_normal_closed
     400072: left_wing_normal_spread
     400074: LeftBall
@@ -236,37 +236,11 @@ ModelImporter:
     4300016: right_wing_normal_closed
     4300018: right_wing_normal_spread
     4300020: reference_rd ref
-    7400000: female walk cycle 1.3
-    7400002: running_sprint
-    7400004: pony_shock.001
-    7400006: rainbowdash.qc_skeleton|female walk cycle 1.3
-    7400008: rainbowdash.qc_skeleton|pony_shock
-    7400010: rainbowdash.qc_skeleton|pony_shock.001
-    7400012: rainbowdash.qc_skeleton|ragdoll_female_normal
-    7400014: rainbowdash.qc_skeleton|rainbowdash.qc_skeletonAction
-    7400016: rainbowdash.qc_skeleton|running_sprint
-    7400018: phymodel_female_medium_tail|pony_shock
-    7400020: phymodel_female_medium_tail|rainbowdash.qc_skeletonAction
-    7400022: tail_RD|pony_shock
-    7400024: tail_RD|rainbowdash.qc_skeletonAction
-    7400026: mane_RD|pony_shock
-    7400028: mane_RD|rainbowdash.qc_skeletonAction
-    7400030: wb_badge|pony_shock
-    7400032: wb_badge|rainbowdash.qc_skeletonAction
-    7400034: goggles_neck|pony_shock
-    7400036: goggles_neck|rainbowdash.qc_skeletonAction
-    7400038: goggles_on_female|pony_shock
-    7400040: goggles_on_female|rainbowdash.qc_skeletonAction
-    7400042: left_wing_normal_closed|pony_shock
-    7400044: left_wing_normal_closed|rainbowdash.qc_skeletonAction
-    7400046: left_wing_normal_spread|pony_shock
-    7400048: left_wing_normal_spread|rainbowdash.qc_skeletonAction
-    7400050: right_wing_normal_closed|pony_shock
-    7400052: right_wing_normal_closed|rainbowdash.qc_skeletonAction
-    7400054: right_wing_normal_spread|pony_shock
-    7400056: right_wing_normal_spread|rainbowdash.qc_skeletonAction
-    7400058: reference_rd ref|pony_shock
-    7400060: reference_rd ref|rainbowdash.qc_skeletonAction
+    7400000: pony_shock.001
+    7400002: female walk cycle 1.3
+    7400004: running_sprint
+    7400006: argo_rainbow_salute_v1
+    7400008: pony_idle_stance
     9500000: //RootNode
     13700000: goggles_neck
     13700002: goggles_on_female
