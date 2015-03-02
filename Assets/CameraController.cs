@@ -20,7 +20,6 @@ public class CameraController : MonoBehaviour
     private float y = 0.0f;
     public bool isTalking = false;
 
-
     void Start ()
     {
         var angles = transform.eulerAngles;
@@ -28,14 +27,14 @@ public class CameraController : MonoBehaviour
         y = angles.x;
 
        // Make the rigid body not change rotation
-          if (rigidbody)
-          rigidbody.freezeRotation = true;
+        if (rigidbody)
+            rigidbody.freezeRotation = true;
     }
 
     void LateUpdate ()
     {
-       if(!target)
-          return;
+        if(!target)
+            return;
        
        // If either mouse buttons are down, let them govern camera position
        if (Input.GetMouseButton(1) || (Input.GetMouseButton(1)))
