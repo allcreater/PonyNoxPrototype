@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class FloatingObjectBehaviour : MonoBehaviour
+public abstract class FloatingObjectBehaviour : MonoBehaviour
 {
-    public virtual void Float(float liquidDensity) { }
+	public abstract void Float(float liquidDensity);// { }
 }
 
 public class Water : MonoBehaviour

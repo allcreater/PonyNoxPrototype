@@ -28,7 +28,7 @@ public class PlayerBehavior : MonoBehaviour
 
             if (Physics.Raycast(ray_new, out hit_new, Mathf.Infinity, 5))
             {
-                if (hit_new.collider != collider)
+                if (hit_new.collider != GetComponent<Collider>())
                 {
                     //var pos = new Vector3(hit_new.point.x, Terrain.activeTerrain.SampleHeight(hit_new.point) + 1, hit_new.point.z);
 
@@ -43,7 +43,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (grounded)
         {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            //moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+			moveDirection = new Vector3(0, 0, Input.GetButton("Fire2") ? 1.0f : 0.0f);
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
 

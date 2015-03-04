@@ -27,8 +27,8 @@ public class CameraController : MonoBehaviour
         y = angles.x;
 
        // Make the rigid body not change rotation
-        if (rigidbody)
-            rigidbody.freezeRotation = true;
+        if (GetComponent<Rigidbody>())
+            GetComponent<Rigidbody>().freezeRotation = true;
     }
 
     void LateUpdate ()
@@ -37,7 +37,7 @@ public class CameraController : MonoBehaviour
             return;
        
        // If either mouse buttons are down, let them govern camera position
-       if (Input.GetMouseButton(1) && Input.GetMouseButton(0))
+       if (Input.GetMouseButton(2))
        {
            x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
            y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
