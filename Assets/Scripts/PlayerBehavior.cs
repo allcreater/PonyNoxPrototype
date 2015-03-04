@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerBehavior : MonoBehaviour
 {
     public float speed = 6.0f;
@@ -40,7 +40,8 @@ public class PlayerBehavior : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
+	{
+		grounded = true;
         if (grounded)
         {
             //moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -53,15 +54,16 @@ public class PlayerBehavior : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
         }
-        moveDirection += (Physics.gravity * Time.deltaTime);
+        //moveDirection += (Physics.gravity * Time.deltaTime);
         
 
-        var characterController = GetComponent<CharacterController>();
-        CollisionFlags flags = characterController.Move(moveDirection * Time.deltaTime);
-        grounded = (flags & CollisionFlags.CollidedBelow) != 0;
+        var rigidBody = GetComponent<Rigidbody>();
+		rigidBody.AddForce(moveDirection * 10.0f);
+        //CollisionFlags flags = rigidBody.
+        //grounded = (flags & CollisionFlags.CollidedBelow) != 0;
 
         TestMousePointer();
 
-        animator.SetFloat("Speed", transform.InverseTransformDirection(characterController.velocity).z*0.3f);
+		animator.SetFloat("Speed", transform.InverseTransformDirection(rigidBody.velocity).z * 0.3f);
     }
 }

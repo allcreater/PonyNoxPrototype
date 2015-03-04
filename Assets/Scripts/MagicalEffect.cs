@@ -17,7 +17,8 @@ public abstract class MagicalEffect
 
 	public void UpdateEffect(LivingCreatureBehaviour target, float dt)
 	{
-		float currentTime = m_elapsedTime += dt;
+		float currentTime = m_elapsedTime;
+		m_elapsedTime += dt;
 
 		if (currentTime == 0.0f)
 		{
@@ -54,6 +55,8 @@ public class PoisonMagicalEffect : MagicalEffect
 	protected override void BeginEffectImpl(LivingCreatureBehaviour target)
 	{
 		Debug.Log("Poison!");
+
+		var go = GameObject.Instantiate((GameObject)Resources.LoadAssetAtPath("Assets/PoisonPlayerEffect.prefab", typeof(GameObject)), target.transform.position, target.transform.rotation);
 	}
 
 	protected override void FinalizeEffectImpl(LivingCreatureBehaviour target)
