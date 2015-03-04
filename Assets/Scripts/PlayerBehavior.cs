@@ -28,7 +28,7 @@ public class PlayerBehavior : MonoBehaviour
 
             if (Physics.Raycast(ray_new, out hit_new, Mathf.Infinity, 5))
             {
-                if (hit_new.collider != GetComponent<Collider>())
+                if (hit_new.collider != collider)
                 {
                     //var pos = new Vector3(hit_new.point.x, Terrain.activeTerrain.SampleHeight(hit_new.point) + 1, hit_new.point.z);
 
