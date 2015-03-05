@@ -1,14 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public abstract class FloatingObjectBehaviour : MonoBehaviour
-{
-	public abstract void Float(float liquidDensity);// { }
-}
-
 public class Water : MonoBehaviour
 {
-    private HashSet<FloatingObjectBehaviour> registeredObjects = new HashSet<FloatingObjectBehaviour>();
+	private HashSet<FloatingRigidBody> registeredObjects = new HashSet<FloatingRigidBody>();
 
 	// Use this for initialization
 	void Start ()
@@ -18,13 +13,13 @@ public class Water : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        foreach (FloatingObjectBehaviour obj in registeredObjects)
+		foreach (FloatingRigidBody obj in registeredObjects)
             obj.Float(1.0f);
 	}
 
     void OnTriggerEnter(Collider other)
     {
-        var hm = other.GetComponent<FloatingObjectBehaviour>();
+		var hm = other.GetComponent<FloatingRigidBody>();
         if (hm != null)
         {
             Debug.Log("Object enter water");
@@ -34,7 +29,7 @@ public class Water : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        var hm = other.GetComponent<FloatingObjectBehaviour>();
+		var hm = other.GetComponent<FloatingRigidBody>();
         if (hm != null)
         {
             Debug.Log("Object enter water");

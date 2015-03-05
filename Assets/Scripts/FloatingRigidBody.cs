@@ -2,12 +2,15 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
-public class FloatingRigidBody : FloatingObjectBehaviour
+public class FloatingRigidBody : MonoBehaviour
 {
+	public float m_density = 1.0f;
+
+	private Rigidbody m_rigidBody;
     // Use this for initialization
     void Start()
     {
-
+		m_rigidBody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -16,12 +19,12 @@ public class FloatingRigidBody : FloatingObjectBehaviour
 
     }
 
-    public override void Float(float liquidDensity)
+    public void Float(float liquidDensity)
     {
         if (!isActiveAndEnabled)
             return;
 
-        var rb = GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(0.0f, 5.0f * liquidDensity, 0.0f)); //TODO add density etc
+		float volume = m_rigidBody.mass / m_density;
+		m_rigidBody.AddForce(new Vector3(0.0f, volume * liquidDensity, 0.0f)); //TODO add density etc
     }
 }
