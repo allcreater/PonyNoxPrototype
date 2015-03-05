@@ -2,19 +2,27 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
+//[RequireComponent(typeof(Animator))]
 public class PlayerBehavior : MonoBehaviour
 {
-    public float speed = 6.0f;
-    public float jumpSpeed = 8.0f;
+    public float m_force = 7500.0f;
+    public float m_jumpImpulse = 1000.0f;
+	public float m_GroundCheckDistance = 0.1f;
 
-    public Animator animator;
-    public Camera playerCamera;
+    public Animator m_animator;
+    public Camera m_playerCamera;
 
-    private Vector3 moveDirection = Vector3.zero;
-    private bool grounded = false;
+    private Vector3 m_moveDirection = Vector3.zero;
+
+    private bool m_isGrounded = false;
+	private Vector3 m_groundNormal = Vector3.up;
+
+	private Rigidbody m_rigidBody;
+
 
 	void Start ()
     {
+		m_rigidBody = GetComponent<Rigidbody>();
 	}
 
     void TestMousePointer()
@@ -24,7 +32,7 @@ public class PlayerBehavior : MonoBehaviour
 
         //if (Input.GetMouseButton(0))//Input.GetButtonDown("Fire1"))
         {
-            ray_new = playerCamera.ScreenPointToRay(Input.mousePosition);
+            ray_new = m_playerCamera.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray_new, out hit_new, Mathf.Infinity, 5))
             {
@@ -41,29 +49,49 @@ public class PlayerBehavior : MonoBehaviour
 
     void FixedUpdate()
 	{
-		grounded = true;
-        if (grounded)
+        if (m_isGrounded)
         {
-            //moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-			moveDirection = new Vector3(0, 0, Input.GetButton("Fire2") ? 1.0f : 0.0f);
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
+			m_moveDirection = new Vector3(0, 0, Input.GetButton("Fire2") ? 1.0f : 0.0f);
+            m_moveDirection = transform.TransformDirection(m_moveDirection);
+
+			m_rigidBody.velocity = m_moveDirection * 6.0f;
 
             if (Input.GetButton("Jump"))
             {
-                moveDirection.y = jumpSpeed;
+				m_rigidBody.AddForce(m_groundNormal * m_jumpImpulse, ForceMode.Impulse);
             }
         }
-        //moveDirection += (Physics.gravity * Time.deltaTime);
-        
 
-        var rigidBody = GetComponent<Rigidbody>();
-		rigidBody.AddForce(moveDirection * 10.0f);
-        //CollisionFlags flags = rigidBody.
-        //grounded = (flags & CollisionFlags.CollidedBelow) != 0;
+		//m_rigidBody.AddForce(m_moveDirection * m_force);
+		
 
+
+		CheckGroundStatus();
         TestMousePointer();
 
-		animator.SetFloat("Speed", transform.InverseTransformDirection(rigidBody.velocity).z * 0.3f);
+		m_animator.SetFloat("Speed", transform.InverseTransformDirection(m_rigidBody.velocity).z * 0.3f);
     }
+
+	void CheckGroundStatus()
+	{
+		RaycastHit hitInfo;
+#if UNITY_EDITOR
+		// helper to visualise the ground check ray in the scene view
+		Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
+#endif
+		// 0.1f is a small offset to start the ray from inside the character
+		// it is also good to note that the transform position in the sample assets is at the base of the character
+		if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
+		{
+			m_isGrounded = true;
+			m_groundNormal = hitInfo.normal;
+			m_animator.applyRootMotion = true;
+		}
+		else
+		{
+			m_isGrounded = false;
+			m_groundNormal = Vector3.up;
+			m_animator.applyRootMotion = false;
+		}
+	}
 }

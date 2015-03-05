@@ -403,7 +403,7 @@ Rigidbody:
   m_GameObject: {fileID: 1297136855}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: .100000001
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86192c0fff491f248898efc72c9d5a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_density: .100000001
 --- !u!23 &1297136858
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -727,10 +728,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1577575773}
-  - 114: {fileID: 1577575775}
-  - 114: {fileID: 1577575771}
   - 136: {fileID: 1577575772}
   - 54: {fileID: 1577575770}
+  - 114: {fileID: 1577575771}
+  - 114: {fileID: 1577575775}
+  - 114: {fileID: 1577575774}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -745,8 +747,8 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577575769}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 100
+  m_Drag: .0500000007
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -773,11 +775,11 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577575769}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ca9c519a34ab1e445a8f2dbe1a03df9e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .5
-  m_Height: 1
+  m_Height: 0
   m_Direction: 1
   m_Center: {x: 0, y: .5, z: 0}
 --- !u!4 &1577575773
@@ -794,6 +796,18 @@ Transform:
   - {fileID: 12020163}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1577575774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577575769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86192c0fff491f248898efc72c9d5a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_density: .5
 --- !u!114 &1577575775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,10 +819,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9936695bde5ca4c8418b4d034fd976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpSpeed: 5
-  animator: {fileID: 160222768}
-  playerCamera: {fileID: 1544696319}
+  m_force: 3500
+  m_jumpImpulse: 500
+  m_GroundCheckDistance: .200000003
+  m_animator: {fileID: 160222768}
+  m_playerCamera: {fileID: 1544696319}
 --- !u!1001 &1982903208
 Prefab:
   m_ObjectHideFlags: 0
