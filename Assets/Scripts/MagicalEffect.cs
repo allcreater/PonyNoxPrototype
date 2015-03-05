@@ -25,7 +25,7 @@ public abstract class MagicalEffect
 			BeginEffectImpl(target);
 			return;
 		}
-		else if (currentTime > Duration)
+		else if (m_elapsedTime > Duration)
 		{
 			FinalizeEffectImpl(target);
 			return;
@@ -51,16 +51,21 @@ public class MagicalEffectFactory
 public class PoisonMagicalEffect : MagicalEffect
 {
 	public float PoisonForce = 1.0f;
+	private GameObject specialEffect = null;
+
 
 	protected override void BeginEffectImpl(LivingCreatureBehaviour target)
 	{
 		Debug.Log("Poison!");
 
-		var go = GameObject.Instantiate((GameObject)Resources.LoadAssetAtPath("Assets/PoisonPlayerEffect.prefab", typeof(GameObject)), target.transform.position, target.transform.rotation);
+		specialEffect = GameObject.Instantiate((GameObject)Resources.LoadAssetAtPath("Assets/PoisonPlayerEffect.prefab", typeof(GameObject)), target.transform.position, target.transform.rotation) as GameObject;
+		specialEffect.transform.parent = target.transform;
+		//specialEffect.GetComponent<ParticleSystem>().duration = Duration;
 	}
 
 	protected override void FinalizeEffectImpl(LivingCreatureBehaviour target)
 	{
+		GameObject.Destroy(specialEffect);
 		Debug.Log("~Poison");
 	}
 
