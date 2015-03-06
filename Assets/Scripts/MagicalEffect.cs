@@ -44,7 +44,7 @@ public class MagicalEffectFactory
 {
 	public static MagicalEffect CreateEffect()
 	{
-		return new PoisonMagicalEffect();
+		return new PoisonMagicalEffect() { Duration = 10.0f };
 	}
 }
 
@@ -56,22 +56,50 @@ public class PoisonMagicalEffect : MagicalEffect
 
 	protected override void BeginEffectImpl(LivingCreatureBehaviour target)
 	{
-		Debug.Log("Poison!");
-
 		specialEffect = GameObject.Instantiate((GameObject)Resources.LoadAssetAtPath("Assets/PoisonPlayerEffect.prefab", typeof(GameObject)), target.transform.position, target.transform.rotation) as GameObject;
 		specialEffect.transform.parent = target.transform;
-		//specialEffect.GetComponent<ParticleSystem>().duration = Duration;
+
+		//Debug.Log("Poison!");
 	}
 
 	protected override void FinalizeEffectImpl(LivingCreatureBehaviour target)
 	{
-		GameObject.Destroy(specialEffect);
-		Debug.Log("~Poison");
+		GameObject.Destroy(specialEffect, specialEffect.GetComponent<ParticleSystem>().startLifetime);
+		//Debug.Log("~Poison");
 	}
 
 	protected override void UpdateEffectImpl(LivingCreatureBehaviour target, float dt)
 	{
+		specialEffect.GetComponent<ParticleSystem>().Emit(10);
 		target.hitPoints.ChangeValue(-PoisonForce * dt);
-		Debug.Log("Poison updated: " + ElapsedTime);
+		//Debug.Log("Poison updated: " + ElapsedTime);
+	}
+}
+
+public class CureMagicalEffect : MagicalEffect
+{
+	public float PoisonForce = 1.0f;
+	private GameObject specialEffect = null;
+
+
+	protected override void BeginEffectImpl(LivingCreatureBehaviour target)
+	{
+		specialEffect = GameObject.Instantiate((GameObject)Resources.LoadAssetAtPath("Assets/PoisonPlayerEffect.prefab", typeof(GameObject)), target.transform.position, target.transform.rotation) as GameObject;
+		specialEffect.transform.parent = target.transform;
+
+		//Debug.Log("Poison!");
+	}
+
+	protected override void FinalizeEffectImpl(LivingCreatureBehaviour target)
+	{
+		GameObject.Destroy(specialEffect, specialEffect.GetComponent<ParticleSystem>().startLifetime);
+		//Debug.Log("~Poison");
+	}
+
+	protected override void UpdateEffectImpl(LivingCreatureBehaviour target, float dt)
+	{
+		specialEffect.GetComponent<ParticleSystem>().Emit(10);
+		target.hitPoints.ChangeValue(-PoisonForce * dt);
+		//Debug.Log("Poison updated: " + ElapsedTime);
 	}
 }
