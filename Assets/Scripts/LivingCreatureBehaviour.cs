@@ -20,6 +20,11 @@ public struct Segment
 		currentValue += value;
 		currentValue = Mathf.Clamp(currentValue, 0.0f, maximumValue);
 	}
+
+	public override string ToString()
+	{
+		return string.Format("{0:0.0}/{1:0.0}", currentValue, maximumValue);
+	}
 }
 
 public class LivingCreatureBehaviour : MonoBehaviour
