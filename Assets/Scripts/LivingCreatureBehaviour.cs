@@ -46,7 +46,7 @@ public class LivingCreatureBehaviour : MonoBehaviour
 
 	void Start ()
 	{
-		AddEffect(MagicalEffectFactory.CreateEffect());
+		//AddEffect(MagicalEffectFactory.CreateEffect());
 	}
 
 	void Update ()

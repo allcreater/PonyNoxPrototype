@@ -19,7 +19,7 @@ public class PlayerGUI : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		m_HpIndicator.text = string.Format("Health {0}", m_livingCreatureComponent.hitPoints);
+		m_HpIndicator.text = string.Format("{0}", m_livingCreatureComponent.hitPoints);
 
 	}
 }

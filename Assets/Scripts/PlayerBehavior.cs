@@ -2,7 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
-//[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(CasterBehaviour))]
 public class PlayerBehavior : MonoBehaviour
 {
     public float m_force = 7500.0f;
@@ -18,11 +18,12 @@ public class PlayerBehavior : MonoBehaviour
 	private Vector3 m_groundNormal = Vector3.up;
 
 	private Rigidbody m_rigidBody;
-
+	private CasterBehaviour m_caster;
 
 	void Start ()
     {
 		m_rigidBody = GetComponent<Rigidbody>();
+		m_caster = GetComponent<CasterBehaviour>();
 	}
 
     void TestMousePointer()
@@ -63,7 +64,11 @@ public class PlayerBehavior : MonoBehaviour
         }
 
 		//m_rigidBody.AddForce(m_moveDirection * m_force);
-		
+
+		if (Input.GetButton("Fire1"))
+		{
+			m_caster.Cast(0);
+		}
 
 
 		CheckGroundStatus();

@@ -78,15 +78,16 @@ public class PoisonMagicalEffect : MagicalEffect
 
 public class CureMagicalEffect : MagicalEffect
 {
-	public float PoisonForce = 1.0f;
+	public float CureForce = 5.0f;
 	private GameObject specialEffect = null;
 
 
 	protected override void BeginEffectImpl(LivingCreatureBehaviour target)
 	{
-		specialEffect = GameObject.Instantiate((GameObject)Resources.LoadAssetAtPath("Assets/PoisonPlayerEffect.prefab", typeof(GameObject)), target.transform.position, target.transform.rotation) as GameObject;
+		var original = (GameObject)Resources.LoadAssetAtPath("Assets/CurePlayerEffect.prefab", typeof(GameObject));
+		specialEffect = GameObject.Instantiate(original) as GameObject;//, target.transform.position, target.transform.rotation
 		specialEffect.transform.parent = target.transform;
-
+		specialEffect.transform.localPosition = original.transform.position;
 		//Debug.Log("Poison!");
 	}
 
@@ -98,8 +99,8 @@ public class CureMagicalEffect : MagicalEffect
 
 	protected override void UpdateEffectImpl(LivingCreatureBehaviour target, float dt)
 	{
-		specialEffect.GetComponent<ParticleSystem>().Emit(10);
-		target.hitPoints.ChangeValue(-PoisonForce * dt);
+		specialEffect.GetComponent<ParticleSystem>().Emit(3);
+		target.hitPoints.ChangeValue(CureForce * dt);
 		//Debug.Log("Poison updated: " + ElapsedTime);
 	}
 }

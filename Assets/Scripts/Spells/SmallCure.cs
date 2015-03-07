@@ -12,4 +12,10 @@ public class SmallCure : SpellBehaviour
 	{
 	
 	}
+
+	public override void BeginCastImpl()
+	{
+		var parent = gameObject.transform.parent.GetComponent<LivingCreatureBehaviour>();
+		parent.AddEffect(new CureMagicalEffect() { CureForce = 5.0f });
+	}
 }
