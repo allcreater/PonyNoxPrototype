@@ -75,6 +75,7 @@ public class PlayerBehavior : MonoBehaviour
         TestMousePointer();
 
 		m_animator.SetFloat("Speed", transform.InverseTransformDirection(m_rigidBody.velocity).z * 0.3f);
+        m_animator.SetBool("Jump", !m_isGrounded);
     }
 
 	void CheckGroundStatus()
