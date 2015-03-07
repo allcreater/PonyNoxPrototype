@@ -1522,7 +1522,7 @@ ModelImporter:
     - serializedVersion: 16
       name: pony_jump
       takeName: pony_jump
-      firstFrame: 1
+      firstFrame: 36
       lastFrame: 80
       wrapMode: 0
       orientationOffsetY: 0
