@@ -1,0 +1,1811 @@
+fileFormatVersion: 2
+guid: da8657c7f69b5364490116150d1e9c2b
+timeCreated: 1425682264
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Chest1
+    100002: Chest2
+    100004: cube
+    100006: cube_end
+    100008: goggles_neck
+    100010: goggles_on_female
+    100012: grid
+    100014: grid_end
+    100016: HairBack1
+    100018: Head
+    100020: Jaw
+    100022: jiggle_hair1_
+    100024: jiggle_hair2
+    100026: jiggle_hair2_end
+    100028: jiggle_hair3_
+    100030: jiggle_hair3__end
+    100032: jiggle_hair4_
+    100034: jiggle_hair4__end
+    100036: jiggle_hair5_
+    100038: jiggle_hair5__end
+    100040: jiggle_hair6_
+    100042: jiggle_hair6__end
+    100044: jiggle_tail1_
+    100046: jiggle_tail2_
+    100048: jiggle_tail2__end
+    100050: jiggle_tail3_
+    100052: jiggle_tail3__end
+    100054: jiggle_tail4_
+    100056: jiggle_tail4__end
+    100058: jiggle_tail5_
+    100060: jiggle_tail5__end
+    100062: jiggle_tail6_
+    100064: jiggle_tail6__end
+    100066: jiggle_tail7_
+    100068: jiggle_tail7__end
+    100070: left_wing_normal_closed
+    100072: left_wing_normal_spread
+    100074: LeftBall
+    100076: LeftBall_end
+    100078: LeftEar
+    100080: LeftEar_end
+    100082: LeftFoot
+    100084: LeftFoot_end
+    100086: LeftForearm
+    100088: LeftHand
+    100090: LeftLeg1
+    100092: LeftLeg2
+    100094: LeftShoulder
+    100096: LeftThigh
+    100098: LeftWingClosed
+    100100: LeftWingClosed1
+    100102: LeftWingClosed2
+    100104: LeftWingClosed2_end
+    100106: LeftWingOpen
+    100108: LeftWingOpen0
+    100110: LeftWingOpen01
+    100112: LeftWingOpen01_end
+    100114: LeftWingOpen02
+    100116: LeftWingOpen02_end
+    100118: LeftWingOpen03
+    100120: LeftWingOpen03_end
+    100122: LeftWingOpen04
+    100124: LeftWingOpen04_end
+    100126: LowerTeeth
+    100128: LowerTeeth_end
+    100130: mane_RD
+    100132: mesh
+    100134: mesh_end
+    100136: Neck
+    100138: Pelvis
+    100140: phymodel_female_medium_tail
+    100142: polymsh
+    100144: polymsh_end
+    100146: rainbowdash.qc_skeleton
+    100148: //RootNode
+    100150: reference_rd ref
+    100152: right_wing_normal_closed
+    100154: right_wing_normal_spread
+    100156: RightBall
+    100158: RightBall_end
+    100160: RightEar
+    100162: RightEar_end
+    100164: RightFoot
+    100166: RightFoot_end
+    100168: RightForearm
+    100170: RightHand
+    100172: RightLeg1
+    100174: RightLeg2
+    100176: RightShoulder
+    100178: RightThigh
+    100180: RightWingClosed
+    100182: RightWingClosed1
+    100184: RightWingClosed2
+    100186: RightWingClosed2_end
+    100188: RightWingOpen
+    100190: RightWingOpen0
+    100192: RightWingOpen01
+    100194: RightWingOpen01_end
+    100196: RightWingOpen02
+    100198: RightWingOpen02_end
+    100200: RightWingOpen03
+    100202: RightWingOpen03_end
+    100204: RightWingOpen04
+    100206: RightWingOpen04_end
+    100208: Tail1
+    100210: Tail2
+    100212: Tail3
+    100214: tail_RD
+    100216: UpperTeeth
+    100218: UpperTeeth_end
+    100220: wb_badge
+    400000: Chest1
+    400002: Chest2
+    400004: cube
+    400006: cube_end
+    400008: goggles_neck
+    400010: goggles_on_female
+    400012: grid
+    400014: grid_end
+    400016: HairBack1
+    400018: Head
+    400020: Jaw
+    400022: jiggle_hair1_
+    400024: jiggle_hair2
+    400026: jiggle_hair2_end
+    400028: jiggle_hair3_
+    400030: jiggle_hair3__end
+    400032: jiggle_hair4_
+    400034: jiggle_hair4__end
+    400036: jiggle_hair5_
+    400038: jiggle_hair5__end
+    400040: jiggle_hair6_
+    400042: jiggle_hair6__end
+    400044: jiggle_tail1_
+    400046: jiggle_tail2_
+    400048: jiggle_tail2__end
+    400050: jiggle_tail3_
+    400052: jiggle_tail3__end
+    400054: jiggle_tail4_
+    400056: jiggle_tail4__end
+    400058: jiggle_tail5_
+    400060: jiggle_tail5__end
+    400062: jiggle_tail6_
+    400064: jiggle_tail6__end
+    400066: jiggle_tail7_
+    400068: jiggle_tail7__end
+    400070: left_wing_normal_closed
+    400072: left_wing_normal_spread
+    400074: LeftBall
+    400076: LeftBall_end
+    400078: LeftEar
+    400080: LeftEar_end
+    400082: LeftFoot
+    400084: LeftFoot_end
+    400086: LeftForearm
+    400088: LeftHand
+    400090: LeftLeg1
+    400092: LeftLeg2
+    400094: LeftShoulder
+    400096: LeftThigh
+    400098: LeftWingClosed
+    400100: LeftWingClosed1
+    400102: LeftWingClosed2
+    400104: LeftWingClosed2_end
+    400106: LeftWingOpen
+    400108: LeftWingOpen0
+    400110: LeftWingOpen01
+    400112: LeftWingOpen01_end
+    400114: LeftWingOpen02
+    400116: LeftWingOpen02_end
+    400118: LeftWingOpen03
+    400120: LeftWingOpen03_end
+    400122: LeftWingOpen04
+    400124: LeftWingOpen04_end
+    400126: LowerTeeth
+    400128: LowerTeeth_end
+    400130: mane_RD
+    400132: mesh
+    400134: mesh_end
+    400136: Neck
+    400138: Pelvis
+    400140: phymodel_female_medium_tail
+    400142: polymsh
+    400144: polymsh_end
+    400146: rainbowdash.qc_skeleton
+    400148: //RootNode
+    400150: reference_rd ref
+    400152: right_wing_normal_closed
+    400154: right_wing_normal_spread
+    400156: RightBall
+    400158: RightBall_end
+    400160: RightEar
+    400162: RightEar_end
+    400164: RightFoot
+    400166: RightFoot_end
+    400168: RightForearm
+    400170: RightHand
+    400172: RightLeg1
+    400174: RightLeg2
+    400176: RightShoulder
+    400178: RightThigh
+    400180: RightWingClosed
+    400182: RightWingClosed1
+    400184: RightWingClosed2
+    400186: RightWingClosed2_end
+    400188: RightWingOpen
+    400190: RightWingOpen0
+    400192: RightWingOpen01
+    400194: RightWingOpen01_end
+    400196: RightWingOpen02
+    400198: RightWingOpen02_end
+    400200: RightWingOpen03
+    400202: RightWingOpen03_end
+    400204: RightWingOpen04
+    400206: RightWingOpen04_end
+    400208: Tail1
+    400210: Tail2
+    400212: Tail3
+    400214: tail_RD
+    400216: UpperTeeth
+    400218: UpperTeeth_end
+    400220: wb_badge
+    4300000: phymodel_female_medium_tail
+    4300002: tail_RD
+    4300004: mane_RD
+    4300006: wb_badge
+    4300008: goggles_neck
+    4300010: goggles_on_female
+    4300012: left_wing_normal_closed
+    4300014: left_wing_normal_spread
+    4300016: right_wing_normal_closed
+    4300018: right_wing_normal_spread
+    4300020: reference_rd ref
+    7400000: rainbowdash.qc_skeletonAction.001
+    7400002: running_sprint
+    7400004: rainbowdash.qc_skeletonAction.002
+    7400006: female walk cycle 1.3
+    7400008: rainbowdash.qc_skeletonAction.003
+    7400010: pony_shock.001
+    7400012: rainbowdash.qc_skeletonAction.004
+    7400014: pony_idle_stance
+    7400016: rainbowdash.qc_skeletonAction.005
+    7400018: argo_rainbow_salute_v1
+    7400020: rainbowdash.qc_skeletonAction.006
+    7400022: pony_jump
+    7400024: rainbowdash.qc_skeletonAction.007
+    9500000: //RootNode
+    13700000: goggles_neck
+    13700002: goggles_on_female
+    13700004: left_wing_normal_closed
+    13700006: left_wing_normal_spread
+    13700008: mane_RD
+    13700010: phymodel_female_medium_tail
+    13700012: reference_rd ref
+    13700014: right_wing_normal_closed
+    13700016: right_wing_normal_spread
+    13700018: tail_RD
+    13700020: wb_badge
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: running_sprint
+      takeName: running_sprint
+      firstFrame: 1
+      lastFrame: 289
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: goggles_neck
+        weight: 1
+      - path: goggles_on_female
+        weight: 1
+      - path: left_wing_normal_closed
+        weight: 1
+      - path: left_wing_normal_spread
+        weight: 1
+      - path: mane_RD
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: rainbowdash.qc_skeleton
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube/cube_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid/grid_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_/jiggle_hair4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_/jiggle_hair5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_/jiggle_hair6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_/jiggle_hair3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2/LeftWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01/LeftWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02/LeftWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03/LeftWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04/LeftWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2/RightWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01/RightWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02/RightWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03/RightWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04/RightWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_/jiggle_tail3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_/jiggle_tail7__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_/jiggle_tail2__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_/jiggle_tail4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_/jiggle_tail5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_/jiggle_tail6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      - path: reference_rd ref
+        weight: 1
+      - path: right_wing_normal_closed
+        weight: 1
+      - path: right_wing_normal_spread
+        weight: 1
+      - path: tail_RD
+        weight: 1
+      - path: wb_badge
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: female walk cycle 1.3
+      takeName: female walk cycle 1.3
+      firstFrame: 1
+      lastFrame: 301
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: goggles_neck
+        weight: 1
+      - path: goggles_on_female
+        weight: 1
+      - path: left_wing_normal_closed
+        weight: 1
+      - path: left_wing_normal_spread
+        weight: 1
+      - path: mane_RD
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: rainbowdash.qc_skeleton
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube/cube_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid/grid_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_/jiggle_hair4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_/jiggle_hair5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_/jiggle_hair6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_/jiggle_hair3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2/LeftWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01/LeftWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02/LeftWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03/LeftWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04/LeftWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2/RightWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01/RightWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02/RightWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03/RightWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04/RightWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_/jiggle_tail3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_/jiggle_tail7__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_/jiggle_tail2__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_/jiggle_tail4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_/jiggle_tail5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_/jiggle_tail6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      - path: reference_rd ref
+        weight: 1
+      - path: right_wing_normal_closed
+        weight: 1
+      - path: right_wing_normal_spread
+        weight: 1
+      - path: tail_RD
+        weight: 1
+      - path: wb_badge
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pony_shock.001
+      takeName: pony_shock.001
+      firstFrame: 0
+      lastFrame: 61
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: goggles_neck
+        weight: 1
+      - path: goggles_on_female
+        weight: 1
+      - path: left_wing_normal_closed
+        weight: 1
+      - path: left_wing_normal_spread
+        weight: 1
+      - path: mane_RD
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: rainbowdash.qc_skeleton
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube/cube_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid/grid_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_/jiggle_hair4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_/jiggle_hair5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_/jiggle_hair6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_/jiggle_hair3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2/LeftWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01/LeftWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02/LeftWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03/LeftWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04/LeftWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2/RightWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01/RightWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02/RightWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03/RightWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04/RightWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_/jiggle_tail3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_/jiggle_tail7__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_/jiggle_tail2__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_/jiggle_tail4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_/jiggle_tail5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_/jiggle_tail6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      - path: reference_rd ref
+        weight: 1
+      - path: right_wing_normal_closed
+        weight: 1
+      - path: right_wing_normal_spread
+        weight: 1
+      - path: tail_RD
+        weight: 1
+      - path: wb_badge
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pony_idle_stance
+      takeName: pony_idle_stance
+      firstFrame: 0
+      lastFrame: 907
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: goggles_neck
+        weight: 1
+      - path: goggles_on_female
+        weight: 1
+      - path: left_wing_normal_closed
+        weight: 1
+      - path: left_wing_normal_spread
+        weight: 1
+      - path: mane_RD
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: rainbowdash.qc_skeleton
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube/cube_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid/grid_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_/jiggle_hair4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_/jiggle_hair5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_/jiggle_hair6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_/jiggle_hair3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2/LeftWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01/LeftWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02/LeftWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03/LeftWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04/LeftWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2/RightWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01/RightWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02/RightWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03/RightWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04/RightWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_/jiggle_tail3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_/jiggle_tail7__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_/jiggle_tail2__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_/jiggle_tail4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_/jiggle_tail5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_/jiggle_tail6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      - path: reference_rd ref
+        weight: 1
+      - path: right_wing_normal_closed
+        weight: 1
+      - path: right_wing_normal_spread
+        weight: 1
+      - path: tail_RD
+        weight: 1
+      - path: wb_badge
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: argo_rainbow_salute_v1
+      takeName: argo_rainbow_salute_v1
+      firstFrame: 1
+      lastFrame: 557
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: goggles_neck
+        weight: 1
+      - path: goggles_on_female
+        weight: 1
+      - path: left_wing_normal_closed
+        weight: 1
+      - path: left_wing_normal_spread
+        weight: 1
+      - path: mane_RD
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: rainbowdash.qc_skeleton
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube/cube_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid/grid_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_/jiggle_hair4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_/jiggle_hair5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_/jiggle_hair6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_/jiggle_hair3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2/LeftWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01/LeftWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02/LeftWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03/LeftWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04/LeftWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2/RightWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01/RightWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02/RightWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03/RightWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04/RightWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_/jiggle_tail3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_/jiggle_tail7__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_/jiggle_tail2__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_/jiggle_tail4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_/jiggle_tail5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_/jiggle_tail6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      - path: reference_rd ref
+        weight: 1
+      - path: right_wing_normal_closed
+        weight: 1
+      - path: right_wing_normal_spread
+        weight: 1
+      - path: tail_RD
+        weight: 1
+      - path: wb_badge
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pony_jump
+      takeName: pony_jump
+      firstFrame: 1
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: goggles_neck
+        weight: 1
+      - path: goggles_on_female
+        weight: 1
+      - path: left_wing_normal_closed
+        weight: 1
+      - path: left_wing_normal_spread
+        weight: 1
+      - path: mane_RD
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: rainbowdash.qc_skeleton
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube
+        weight: 1
+      - path: rainbowdash.qc_skeleton/cube/cube_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid
+        weight: 1
+      - path: rainbowdash.qc_skeleton/grid/grid_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair4_/jiggle_hair4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair5_/jiggle_hair5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1_/jiggle_hair6_/jiggle_hair6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair3_/jiggle_hair3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed1/LeftWingClosed2/LeftWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen01/LeftWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen02/LeftWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen03/LeftWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen0/LeftWingOpen04/LeftWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed1/RightWingClosed2/RightWingClosed2_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen01/RightWingOpen01_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen02/RightWingOpen02_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen03/RightWingOpen03_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen0/RightWingOpen04/RightWingOpen04_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail3_/jiggle_tail3__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/jiggle_tail7_/jiggle_tail7__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail2_/jiggle_tail2__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail4_/jiggle_tail4__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail5_/jiggle_tail5__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_
+        weight: 1
+      - path: rainbowdash.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1_/jiggle_tail6_/jiggle_tail6__end
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh
+        weight: 1
+      - path: rainbowdash.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      - path: reference_rd ref
+        weight: 1
+      - path: right_wing_normal_closed
+        weight: 1
+      - path: right_wing_normal_spread
+        weight: 1
+      - path: tail_RD
+        weight: 1
+      - path: wb_badge
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
