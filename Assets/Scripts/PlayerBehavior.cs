@@ -17,6 +17,8 @@ public class PlayerBehavior : MonoBehaviour
     private bool m_isGrounded = false;
 	private Vector3 m_groundNormal = Vector3.up;
 
+    private Vector3 m_targetPosition = Vector3.zero;
+
 	private Rigidbody m_rigidBody;
 	private CasterBehaviour m_caster;
     private Collider m_collider;
@@ -44,6 +46,8 @@ public class PlayerBehavior : MonoBehaviour
 
                     var dir = hit_new.point - transform.position;
                     transform.eulerAngles = new Vector3(0, Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg, 0);
+
+                    m_targetPosition = hit_new.point;
                 }
             }
         }
@@ -64,13 +68,21 @@ public class PlayerBehavior : MonoBehaviour
             }
         }
 
-		//m_rigidBody.AddForce(m_moveDirection * m_force);
-
-		if (Input.GetButton("Fire1"))
-		{
-			m_caster.Cast(0);
-		}
-
+        //TODO: Ахтунг! Говнокод!
+		if (Input.GetKey(KeyCode.Alpha1))
+            m_caster.Cast(0, m_targetPosition);
+        if (Input.GetKey(KeyCode.Alpha2))
+            m_caster.Cast(1, m_targetPosition);
+        if (Input.GetKey(KeyCode.Alpha3))
+            m_caster.Cast(2, m_targetPosition);
+        if (Input.GetKey(KeyCode.Alpha4))
+            m_caster.Cast(3, m_targetPosition);
+        if (Input.GetKey(KeyCode.Alpha5))
+            m_caster.Cast(4, m_targetPosition);
+        if (Input.GetKey(KeyCode.Alpha6))
+            m_caster.Cast(5, m_targetPosition);
+        if (Input.GetKey(KeyCode.Alpha7))
+            m_caster.Cast(6, m_targetPosition);
 
 		CheckGroundStatus();
         TestMousePointer();

@@ -7,6 +7,10 @@ public abstract class SpellBehaviour : MonoBehaviour
 	public float m_CooldownTime = 1.0f;
     public float m_ManaCost = 0.0f;
 
+    public string m_SpellName = "";
+
+    public CasterBehaviour m_Caster;
+
 	public bool IsAvailable
 	{
 		get { return Time.timeSinceLevelLoad > (m_lastCastTime + m_CooldownTime); }
@@ -14,15 +18,17 @@ public abstract class SpellBehaviour : MonoBehaviour
 
 	private float m_lastCastTime = 0.0f;
 
-	public void BeginCast()
+	public void BeginCast(Vector3 target)
 	{
-		Debug.Log("Fire!");
+		Debug.Log(m_SpellName + " fired!");
+
 		m_lastCastTime = Time.timeSinceLevelLoad;
-		BeginCastImpl();
+
+		BeginCastImpl(target);
 	}
 
 
-	public abstract void BeginCastImpl();
+    public abstract void BeginCastImpl(Vector3 target);
 }
 
 
@@ -32,14 +38,14 @@ public class CasterBehaviour : MonoBehaviour
 
     public Segment m_ManaPoints;
 
-	protected SpellBehaviour[] m_AvailableSpells;
+	public SpellBehaviour[] m_AvailableSpells;
 
 	protected void UpdateSpellsList()
 	{
 		m_AvailableSpells = m_spellContainer.GetComponents<SpellBehaviour>();
 	}
 
-	public void Cast(uint activeSpell)
+	public void Cast(uint activeSpell, Vector3 target)
 	{
 		if (m_AvailableSpells == null || activeSpell >= m_AvailableSpells.Length)
 			return;
@@ -48,7 +54,8 @@ public class CasterBehaviour : MonoBehaviour
         if (spell.IsAvailable && m_ManaPoints.currentValue >= spell.m_ManaCost)
         {
             m_ManaPoints.ChangeValue(-spell.m_ManaCost);
-            spell.BeginCast();
+            spell.m_Caster = this;
+            spell.BeginCast(target);
         }
 	}
 
