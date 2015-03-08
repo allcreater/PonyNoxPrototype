@@ -19,11 +19,12 @@ public class PlayerBehavior : MonoBehaviour
 
 	private Rigidbody m_rigidBody;
 	private CasterBehaviour m_caster;
-
+    private Collider m_collider;
 	void Start ()
     {
 		m_rigidBody = GetComponent<Rigidbody>();
 		m_caster = GetComponent<CasterBehaviour>();
+        m_collider = GetComponent<Collider>();
 	}
 
     void TestMousePointer()
@@ -35,14 +36,14 @@ public class PlayerBehavior : MonoBehaviour
         {
             ray_new = m_playerCamera.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray_new, out hit_new, Mathf.Infinity, 5))
+            if (Physics.Raycast(ray_new, out hit_new, Mathf.Infinity, 1))
             {
-                if (hit_new.collider != GetComponent<Collider>())
+                if (hit_new.collider != m_collider)
                 {
                     //var pos = new Vector3(hit_new.point.x, Terrain.activeTerrain.SampleHeight(hit_new.point) + 1, hit_new.point.z);
 
                     var dir = hit_new.point - transform.position;
-                    transform.eulerAngles = new Vector3(0, Mathf.Atan2(dir.x, dir.z)*57.3f, 0);
+                    transform.eulerAngles = new Vector3(0, Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg, 0);
                 }
             }
         }

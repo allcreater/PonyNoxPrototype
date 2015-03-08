@@ -5,6 +5,7 @@ public abstract class SpellBehaviour : MonoBehaviour
 {
 	[Range(0.0f, 100.0f)]
 	public float m_CooldownTime = 1.0f;
+    public float m_ManaCost = 0.0f;
 
 	public bool IsAvailable
 	{
@@ -29,6 +30,8 @@ public class CasterBehaviour : MonoBehaviour
 {
 	public GameObject m_spellContainer;
 
+    public Segment m_ManaPoints;
+
 	protected SpellBehaviour[] m_AvailableSpells;
 
 	protected void UpdateSpellsList()
@@ -42,8 +45,11 @@ public class CasterBehaviour : MonoBehaviour
 			return;
 		
 		var spell = m_AvailableSpells[activeSpell];
-		if (spell.IsAvailable)
-			spell.BeginCast();
+        if (spell.IsAvailable && m_ManaPoints.currentValue >= spell.m_ManaCost)
+        {
+            m_ManaPoints.ChangeValue(-spell.m_ManaCost);
+            spell.BeginCast();
+        }
 	}
 
 	void Start ()

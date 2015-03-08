@@ -1,17 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SmallCure : SpellBehaviour
+public class SmallCureSpell : SpellBehaviour
 {
-	void Start ()
-	{
-	
-	}
-	
-	void Update ()
-	{
-	
-	}
+    void Start()
+    {
+        m_ManaCost = 3.0f;
+    }
 
 	public override void BeginCastImpl()
 	{

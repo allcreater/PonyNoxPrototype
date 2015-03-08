@@ -29,7 +29,7 @@ public struct Segment
 
 public class LivingCreatureBehaviour : MonoBehaviour
 {
-	public Segment hitPoints;
+	public Segment m_HitPoints;
 
 	private List<MagicalEffect> effectsList = new List<MagicalEffect>();
 
