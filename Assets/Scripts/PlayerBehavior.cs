@@ -64,6 +64,15 @@ public class PlayerBehavior : MonoBehaviour
 
     void FixedUpdate()
 	{
+        var lc = GetComponent<LivingCreatureBehaviour>();
+        if (lc.IsAlive)
+            m_rigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        else
+        {
+            m_rigidBody.constraints = RigidbodyConstraints.None;
+            return;
+        }
+
         if (m_groundDetector.IsGrounded)
         {
 			m_moveDirection = new Vector3(0, 0.1f, Input.GetButton("Fire2") ? 1.0f : 0.0f);
