@@ -33,14 +33,16 @@ public class FireballLogic : MonoBehaviour
                 if (collider.isTrigger)
                     continue; //триггеры нематериальны, нас они не пока интересуют
 
-                var direction = transform.position - collider.transform.position;
+                var direction = collider.transform.position - transform.position;
+                if (direction.magnitude == 0.0f) Debug.LogError("WTF?!");
+                
                 float influence = Mathf.Clamp(1.0f - direction.magnitude/m_ExplosionRadius, 0, 1);
 
                 var rb = collider.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
                     float impulse = m_ShockwaveBaseImpulse * influence;
-                    rb.AddForce(direction.normalized * impulse, ForceMode.Impulse);
+                    rb.AddExplosionForce(impulse, transform.position, m_ExplosionRadius);
                 }
 
                 var lc = collider.GetComponent<LivingCreatureBehaviour>();
@@ -50,12 +52,13 @@ public class FireballLogic : MonoBehaviour
                 }
             }
 
-            GameObject.DestroyObject(gameObject);
+            GameObject.DestroyObject(gameObject, 2.0f);
+            enabled = false;
 
             if (m_explosionEffect != null)
             {
                 var obj = GameObject.Instantiate(m_explosionEffect, transform.position, transform.rotation);
-                GameObject.Destroy(obj, 10.0f);
+                GameObject.Destroy(obj, 5.0f);
             }
         }
 	}

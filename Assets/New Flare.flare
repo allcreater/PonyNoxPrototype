@@ -18,7 +18,7 @@ Flare:
     m_Zoom: 1
     m_Fade: 1
   - m_ImageIndex: 0
-    m_Position: 1.33000004
+    m_Position: 1
     m_Size: 1.63
     m_Color: {r: .761460364, g: .647058845, b: 1, a: 0}
     m_UseLightColor: 1
@@ -26,7 +26,7 @@ Flare:
     m_Zoom: 1
     m_Fade: 1
   - m_ImageIndex: 0
-    m_Position: 4.40999985
+    m_Position: 2
     m_Size: 42.6300011
     m_Color: {r: .360784322, g: .41568628, b: .360784322, a: 0}
     m_UseLightColor: 1

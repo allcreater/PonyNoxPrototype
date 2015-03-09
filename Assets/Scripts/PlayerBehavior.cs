@@ -3,6 +3,7 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CasterBehaviour))]
+[RequireComponent(typeof(GroundDetector))]
 public class PlayerBehavior : MonoBehaviour
 {
     public float m_force = 7500.0f;
@@ -13,20 +14,21 @@ public class PlayerBehavior : MonoBehaviour
     public Camera m_playerCamera;
 
     private Vector3 m_moveDirection = Vector3.zero;
-
-    private bool m_isGrounded = false;
-	private Vector3 m_groundNormal = Vector3.up;
-
     private Vector3 m_targetPosition = Vector3.zero;
 
+    private GroundDetector m_groundDetector;
 	private Rigidbody m_rigidBody;
 	private CasterBehaviour m_caster;
     private Collider m_collider;
+
+
+    public Transform m_sceletonTransform; //TODO
 	void Start ()
     {
 		m_rigidBody = GetComponent<Rigidbody>();
 		m_caster = GetComponent<CasterBehaviour>();
         m_collider = GetComponent<Collider>();
+        m_groundDetector = GetComponent<GroundDetector>();
 	}
 
     void TestMousePointer()
@@ -44,8 +46,15 @@ public class PlayerBehavior : MonoBehaviour
                 {
                     //var pos = new Vector3(hit_new.point.x, Terrain.activeTerrain.SampleHeight(hit_new.point) + 1, hit_new.point.z);
 
+                    var normalVS = transform.InverseTransformDirection(m_groundDetector.GroundNormal);
+                    //m_animator.SetFloat("x", normalVS.x); m_animator.SetFloat("y", normalVS.y); m_animator.SetFloat("z", normalVS.z);
+                    float pitch = Mathf.Asin(normalVS.z) * Mathf.Rad2Deg;
+                    m_animator.SetFloat("x", pitch);
+
                     var dir = hit_new.point - transform.position;
                     transform.eulerAngles = new Vector3(0, Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg, 0);
+
+                    m_sceletonTransform.localEulerAngles = new Vector3(pitch, 180, 0);
 
                     m_targetPosition = hit_new.point;
                 }
@@ -55,7 +64,7 @@ public class PlayerBehavior : MonoBehaviour
 
     void FixedUpdate()
 	{
-        if (m_isGrounded)
+        if (m_groundDetector.IsGrounded)
         {
 			m_moveDirection = new Vector3(0, 0, Input.GetButton("Fire2") ? 1.0f : 0.0f);
             m_moveDirection = transform.TransformDirection(m_moveDirection);
@@ -64,7 +73,7 @@ public class PlayerBehavior : MonoBehaviour
 
             if (Input.GetButton("Jump"))
             {
-				m_rigidBody.AddForce(m_groundNormal * m_jumpImpulse, ForceMode.Impulse);
+                m_rigidBody.AddForce(m_groundDetector.GroundNormal * m_jumpImpulse, ForceMode.Impulse);
             }
         }
 
@@ -84,33 +93,9 @@ public class PlayerBehavior : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha7))
             m_caster.Cast(6, m_targetPosition);
 
-		CheckGroundStatus();
         TestMousePointer();
 
 		m_animator.SetFloat("Speed", transform.InverseTransformDirection(m_rigidBody.velocity).z * 0.3f);
-        m_animator.SetBool("Jump", !m_isGrounded);
+        m_animator.SetBool("Jump", !m_groundDetector.IsGrounded);
     }
-
-	void CheckGroundStatus()
-	{
-		RaycastHit hitInfo;
-#if UNITY_EDITOR
-		// helper to visualise the ground check ray in the scene view
-		Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
-#endif
-		// 0.1f is a small offset to start the ray from inside the character
-		// it is also good to note that the transform position in the sample assets is at the base of the character
-		if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
-		{
-			m_isGrounded = true;
-			m_groundNormal = hitInfo.normal;
-			m_animator.applyRootMotion = true;
-		}
-		else
-		{
-			m_isGrounded = false;
-			m_groundNormal = Vector3.up;
-			m_animator.applyRootMotion = false;
-		}
-	}
 }
