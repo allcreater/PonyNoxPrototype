@@ -49,7 +49,7 @@ public class PlayerBehavior : MonoBehaviour
                     var normalVS = transform.InverseTransformDirection(m_groundDetector.GroundNormal);
                     //m_animator.SetFloat("x", normalVS.x); m_animator.SetFloat("y", normalVS.y); m_animator.SetFloat("z", normalVS.z);
                     float pitch = Mathf.Asin(normalVS.z) * Mathf.Rad2Deg;
-                    m_animator.SetFloat("x", pitch);
+                    //m_animator.SetFloat("x", pitch);
 
                     var dir = hit_new.point - transform.position;
                     transform.eulerAngles = new Vector3(0, Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg, 0);

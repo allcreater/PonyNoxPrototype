@@ -1474,7 +1474,7 @@ MonoBehaviour:
   m_HitPoints:
     currentValue: 5
     maximumValue: 10
-  m_Animator: {fileID: 0}
+  m_Animator: {fileID: 25222029}
 --- !u!136 &1577575772
 CapsuleCollider:
   m_ObjectHideFlags: 0
