@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: da8657c7f69b5364490116150d1e9c2b
-timeCreated: 1425682264
+timeCreated: 1425690026
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -1522,7 +1522,7 @@ ModelImporter:
     - serializedVersion: 16
       name: pony_jump
       takeName: pony_jump
-      firstFrame: 36
+      firstFrame: 31
       lastFrame: 80
       wrapMode: 0
       orientationOffsetY: 0
