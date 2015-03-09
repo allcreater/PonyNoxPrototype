@@ -71,7 +71,7 @@ public class PoisonMagicalEffect : MagicalEffect
 	protected override void UpdateEffectImpl(LivingCreatureBehaviour target, float dt)
 	{
 		specialEffect.GetComponent<ParticleSystem>().Emit(10);
-		target.hitPoints.ChangeValue(-PoisonForce * dt);
+		target.m_HitPoints.ChangeValue(-PoisonForce * dt);
 		//Debug.Log("Poison updated: " + ElapsedTime);
 	}
 }
@@ -100,7 +100,7 @@ public class CureMagicalEffect : MagicalEffect
 	protected override void UpdateEffectImpl(LivingCreatureBehaviour target, float dt)
 	{
 		specialEffect.GetComponent<ParticleSystem>().Emit(3);
-		target.hitPoints.ChangeValue(CureForce * dt);
+		target.m_HitPoints.ChangeValue(CureForce * dt);
 		//Debug.Log("Poison updated: " + ElapsedTime);
 	}
 }

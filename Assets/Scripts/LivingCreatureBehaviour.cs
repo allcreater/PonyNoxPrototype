@@ -29,7 +29,14 @@ public struct Segment
 
 public class LivingCreatureBehaviour : MonoBehaviour
 {
-	public Segment hitPoints;
+	public Segment m_HitPoints;
+
+    public bool IsAlive
+    {
+        get { return m_HitPoints.currentValue > 0.0f; }
+    }
+
+    public Animator m_Animator;
 
 	private List<MagicalEffect> effectsList = new List<MagicalEffect>();
 
@@ -52,5 +59,10 @@ public class LivingCreatureBehaviour : MonoBehaviour
 	void Update ()
 	{
 		UpdateEffects(Time.deltaTime);
+
+        if (m_Animator != null)
+        {
+            m_Animator.SetBool("IsDead", !IsAlive);
+        }
 	}
 }

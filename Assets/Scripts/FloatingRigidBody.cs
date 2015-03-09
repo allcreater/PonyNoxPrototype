@@ -25,6 +25,7 @@ public class FloatingRigidBody : MonoBehaviour
             return;
 
 		float volume = m_rigidBody.mass / m_density;
+        m_rigidBody.velocity = m_rigidBody.velocity * 0.99f; //dampening
 		m_rigidBody.AddForce(new Vector3(0.0f, volume * liquidDensity, 0.0f)); //TODO add density etc
     }
 }

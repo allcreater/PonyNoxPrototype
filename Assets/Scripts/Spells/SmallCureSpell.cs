@@ -1,19 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SmallCure : SpellBehaviour
+public class SmallCureSpell : SpellBehaviour
 {
-	void Start ()
-	{
-	
-	}
-	
-	void Update ()
-	{
-	
-	}
-
-	public override void BeginCastImpl()
+    public override void BeginCastImpl(Vector3 target)
 	{
 		var parent = gameObject.transform.parent.GetComponent<LivingCreatureBehaviour>();
 		parent.AddEffect(new CureMagicalEffect() { CureForce = 5.0f });

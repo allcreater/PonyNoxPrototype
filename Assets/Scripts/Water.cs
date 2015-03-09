@@ -22,7 +22,7 @@ public class Water : MonoBehaviour
 		var hm = other.GetComponent<FloatingRigidBody>();
         if (hm != null)
         {
-            Debug.Log("Object enter water");
+            //Debug.Log("Object enter water");
             registeredObjects.Add(hm); 
         }
     }
@@ -32,7 +32,7 @@ public class Water : MonoBehaviour
 		var hm = other.GetComponent<FloatingRigidBody>();
         if (hm != null)
         {
-            Debug.Log("Object enter water");
+            //Debug.Log("Object enter water");
             registeredObjects.Remove(hm);
         }
     }
