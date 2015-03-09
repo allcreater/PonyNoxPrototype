@@ -30,9 +30,10 @@ public class FireballLogic : MonoBehaviour
             var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
             foreach (var collider in objects)
             {
+                /*
                 if (collider.isTrigger)
                     continue; //триггеры нематериальны, нас они не пока интересуют
-
+                */
                 var direction = collider.transform.position - transform.position;
                 if (direction.magnitude == 0.0f) Debug.LogError("WTF?!");
                 

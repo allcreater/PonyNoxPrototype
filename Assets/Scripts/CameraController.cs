@@ -67,7 +67,7 @@ public class CameraController : MonoBehaviour
        RaycastHit hit;
        Vector3 trueTargetPosition = target.transform.position - new Vector3(0, -targetHeight, 0);
        // Cast the line to check:
-       if (Physics.Linecast (trueTargetPosition, transform.position, out hit))
+       if (Physics.Linecast (trueTargetPosition, transform.position, out hit, 1))
        {
           // If so, shorten distance so camera is in front of object:
           var tempDistance = Vector3.Distance (trueTargetPosition, hit.point) - 0.28f;
