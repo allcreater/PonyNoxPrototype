@@ -165,7 +165,7 @@ MonoBehaviour:
   m_ColliderRadius: .100000001
   m_ExplosionRadius: 5
   m_ExplosionBaseDamage: 10
-  m_ShockwaveBaseImpulse: 1000
+  m_ShockwaveBaseImpulse: 100000
   m_explosionEffect: {fileID: 105576, guid: ff1e6fb40ea0a4a48abce1745eadc611, type: 2}
 --- !u!198 &19832400
 ParticleSystem:

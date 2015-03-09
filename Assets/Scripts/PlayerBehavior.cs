@@ -66,16 +66,22 @@ public class PlayerBehavior : MonoBehaviour
 	{
         if (m_groundDetector.IsGrounded)
         {
-			m_moveDirection = new Vector3(0, 0, Input.GetButton("Fire2") ? 1.0f : 0.0f);
+			m_moveDirection = new Vector3(0, 0.1f, Input.GetButton("Fire2") ? 1.0f : 0.0f);
             m_moveDirection = transform.TransformDirection(m_moveDirection);
 
-			m_rigidBody.velocity = m_moveDirection * 6.0f;
+			//m_rigidBody.velocity = m_moveDirection * 6.0f;
+            m_rigidBody.AddForce(m_moveDirection * 60.0f, ForceMode.Impulse);
+            m_rigidBody.sleepThreshold = 0.0f;
 
             if (Input.GetButton("Jump"))
             {
+                if (m_rigidBody.IsSleeping())
+                    Debug.Log("Achtung");
                 m_rigidBody.AddForce(m_groundDetector.GroundNormal * m_jumpImpulse, ForceMode.Impulse);
             }
         }
+        m_rigidBody.velocity = m_rigidBody.velocity * 0.98f;
+
 
         //TODO: Ахтунг! Говнокод!
 		if (Input.GetKey(KeyCode.Alpha1))

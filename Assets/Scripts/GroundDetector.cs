@@ -25,7 +25,7 @@ public class GroundDetector : MonoBehaviour
         {
             RaycastHit hitInfo;
 
-            var ray = new Ray(raycastTransform.position, Vector3.down);
+            var ray = new Ray(raycastTransform.position + Vector3.up*0.1f, Vector3.down);
 #if UNITY_EDITOR
             Debug.DrawLine(ray.origin, ray.origin + (ray.direction * m_maxDistance));
 #endif
