@@ -1315,10 +1315,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 456392, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
   m_PrefabInternal: {fileID: 106616253}
---- !u!4 &1228881626
-Transform:
-  m_PrefabParentObject: {fileID: 400146, guid: da8657c7f69b5364490116150d1e9c2b, type: 3}
-  m_PrefabInternal: {fileID: 1642489848}
 --- !u!1001 &1242661490
 Prefab:
   m_ObjectHideFlags: 0
@@ -1800,6 +1796,7 @@ GameObject:
   - 114: {fileID: 1577575776}
   - 114: {fileID: 1577575777}
   - 114: {fileID: 1577575778}
+  - 114: {fileID: 1577575779}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -1887,12 +1884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9936695bde5ca4c8418b4d034fd976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_force: 3500
-  m_jumpImpulse: 500
-  m_GroundCheckDistance: .200000003
-  m_animator: {fileID: 25222029}
   m_playerCamera: {fileID: 1544696319}
-  m_sceletonTransform: {fileID: 1228881626}
 --- !u!114 &1577575776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,6 +1933,20 @@ MonoBehaviour:
   - {fileID: 1966028865}
   - {fileID: 92905306}
   m_maxDistance: .300000012
+--- !u!114 &1577575779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577575769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab4a073cc5724f42bf7c4d344a221a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MovementImpulse: 60
+  m_JumpImpulse: 500
+  m_Animator: {fileID: 25222029}
 --- !u!1001 &1595596037
 Prefab:
   m_ObjectHideFlags: 0
@@ -2028,7 +2034,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: da8657c7f69b5364490116150d1e9c2b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: da8657c7f69b5364490116150d1e9c2b, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2036,7 +2042,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: da8657c7f69b5364490116150d1e9c2b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -1.62920685e-07
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400148, guid: da8657c7f69b5364490116150d1e9c2b, type: 3}
       propertyPath: m_RootOrder
