@@ -5,6 +5,8 @@ public class MovementMotor : MonoBehaviour
 {
     public float m_MovementImpulse = 10.0f;
 
+    //public Quaternion PreferableOrientation;
+
     public Vector3 MovementImpulse
     {
         get { return m_movementDirection * m_MovementImpulse; }
@@ -39,14 +41,30 @@ public abstract class LivingCreatureMotor : MovementMotor
     }
     private LivingCreatureBehaviour m_livingCreature;
 
+    private bool m_stillAlive = true;
+
     void FixedUpdate()
     {
         if (LivingCreature == null)
             FixedUpdateImpl();
         else
             if (LivingCreature.IsAlive)
+            {
                 FixedUpdateImpl();
+                if (m_stillAlive == false)
+                    OnRevive();
+
+                m_stillAlive = true;
+            }
+            else if (m_stillAlive == true)
+            {
+                OnDeath();
+                m_stillAlive = false;
+            }
+            
     }
 
     protected abstract void FixedUpdateImpl();
+    protected virtual void OnDeath() { }
+    protected virtual void OnRevive() { }
 }
