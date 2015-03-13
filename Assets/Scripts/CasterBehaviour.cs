@@ -11,6 +11,8 @@ public abstract class SpellBehaviour : MonoBehaviour
 
     public CasterBehaviour m_Caster;
 
+    public Sprite m_Icon;
+
 	public bool IsAvailable
 	{
 		get { return Time.timeSinceLevelLoad > (m_lastCastTime + m_CooldownTime); }

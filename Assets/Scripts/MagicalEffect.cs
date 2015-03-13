@@ -56,7 +56,8 @@ public class PoisonMagicalEffect : MagicalEffect
 
 	protected override void BeginEffectImpl(LivingCreatureBehaviour target)
 	{
-		specialEffect = GameObject.Instantiate((GameObject)Resources.LoadAssetAtPath("Assets/PoisonPlayerEffect.prefab", typeof(GameObject)), target.transform.position, target.transform.rotation) as GameObject;
+        var template = TemplateCollection.Instance.FindTemplate("PoisonPlayerEffect");
+        specialEffect = GameObject.Instantiate(template, target.transform.position, target.transform.rotation) as GameObject;
 		specialEffect.transform.parent = target.transform;
 
 		//Debug.Log("Poison!");
@@ -84,10 +85,10 @@ public class CureMagicalEffect : MagicalEffect
 
 	protected override void BeginEffectImpl(LivingCreatureBehaviour target)
 	{
-		var original = (GameObject)Resources.LoadAssetAtPath("Assets/CurePlayerEffect.prefab", typeof(GameObject));
-		specialEffect = GameObject.Instantiate(original) as GameObject;//, target.transform.position, target.transform.rotation
+        var template = TemplateCollection.Instance.FindTemplate("CurePlayerEffect");
+        specialEffect = GameObject.Instantiate(template) as GameObject;//, target.transform.position, target.transform.rotation
 		specialEffect.transform.parent = target.transform;
-		specialEffect.transform.localPosition = original.transform.position;
+        specialEffect.transform.localPosition = template.transform.position;
 		//Debug.Log("Poison!");
 	}
 

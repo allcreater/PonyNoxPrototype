@@ -6,6 +6,7 @@ using System.Collections;
 public class PlayerBehavior : MonoBehaviour
 {
     public Camera m_playerCamera;
+    public InventoryBehaviour m_InventoryBehaviour;
 
 	private CasterBehaviour m_caster;
     private Collider m_collider;
@@ -52,7 +53,7 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void Update()
 	{
         var lc = GetComponent<LivingCreatureBehaviour>();
         if (!lc.IsAlive)
@@ -78,5 +79,15 @@ public class PlayerBehavior : MonoBehaviour
             m_caster.Cast(6, m_targetPosition);
 
         TestMousePointer();
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        var item = other.GetComponent<PickableItem>();
+        if (item != null)
+        {
+            if (Input.GetButton("TakeItem"))
+                m_InventoryBehaviour.PickUpItem(item);
+        }
     }
 }
