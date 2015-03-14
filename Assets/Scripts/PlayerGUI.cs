@@ -53,6 +53,26 @@ public class PlayerGUI : MonoBehaviour
     private List<GameObject> m_iconsPool = new List<GameObject>();
     private PickableItem m_activeItem;
 
+    public void OnEquipButton()
+    {
+        if (m_activeItem != null)
+        {
+            m_Inventory.ArmWeapon(m_activeItem);
+        }
+    }
+    public void OnUseButton()
+    {
+
+    }
+    public void OnDropButton()
+    {
+        if (m_activeItem != null)
+        {
+            m_Inventory.ReleaseItem(m_activeItem);
+            m_activeItem = null;
+        }
+    }
+
     private void PreparePool(int count)
     {
         for (int i = 0; i < m_iconsPool.Count; ++i)

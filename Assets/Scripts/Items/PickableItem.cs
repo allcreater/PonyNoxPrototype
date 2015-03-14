@@ -66,6 +66,9 @@ public class PickableItem : MonoBehaviour
     private void SwitchToIdleState()
     {
         gameObject.SetActive(true);
+
+        var rigidBody = GetComponent<Rigidbody>();
+        rigidBody.isKinematic = false;
     }
     private void SwitchToInventoryState()
     {
@@ -74,5 +77,8 @@ public class PickableItem : MonoBehaviour
     private void SwitchToEquippedState()
     {
         gameObject.SetActive(true);
+
+        var rigidBody = GetComponent<Rigidbody>();
+        rigidBody.isKinematic = true;
     }
 }
