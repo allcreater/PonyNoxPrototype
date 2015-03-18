@@ -80,5 +80,9 @@ public class PickableItem : MonoBehaviour
 
         var rigidBody = GetComponent<Rigidbody>();
         rigidBody.isKinematic = true;
+
+        var colliderList = GetComponentsInChildren<Collider>();
+        foreach (var collider in colliderList)
+            collider.enabled = false;
     }
 }

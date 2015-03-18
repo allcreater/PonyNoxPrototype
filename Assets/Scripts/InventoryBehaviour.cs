@@ -14,10 +14,10 @@ public class InventoryBehaviour : MonoBehaviour
         get { return m_items; }
     }
 
+    public WeaponBehaviour ArmedWeapon { get; private set; }
+
     private bool m_inventoryDirtyFlag = true;
     private List<PickableItem> m_items = new List<PickableItem>();
-
-    private PickableItem m_armedWeapon;
 
     public void RequestUpdate()
     {
@@ -54,34 +54,40 @@ public class InventoryBehaviour : MonoBehaviour
 
     public void ArmWeapon(PickableItem item)
     {
+        var weapon = item.GetComponent<WeaponBehaviour>();
+        if (weapon == null)
+            return;
+
         if (m_WeaponSlot == null)
             Debug.LogWarning("weapon slot is null");
 
         if (m_items.IndexOf(item) < 0)
             throw new System.InvalidOperationException("предмет не в инвентаре");
 
-        if (m_armedWeapon == item)
+        if (ArmedWeapon == weapon)
             return;
 
-        if (m_armedWeapon != null)
+        if (ArmedWeapon != null)
             DisarmWeapon();
 
         item.ItemState = PickableItemState.Equipped;
         item.transform.SetParent(m_WeaponSlot);
-        item.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
-        m_armedWeapon = item;
+        item.transform.localPosition = new Vector3();
+        item.transform.localRotation = new Quaternion();
+
+        ArmedWeapon = weapon;
 
 		RequestUpdate();
     }
 
     public void DisarmWeapon()
     {
-        if (m_armedWeapon != null)
+        if (ArmedWeapon != null)
 		{
-			PickUpItem (m_armedWeapon);
+            PickUpItem(ArmedWeapon.Item);
 			RequestUpdate();
 		}
-        m_armedWeapon = null;
+        ArmedWeapon = null;
     }
 
 	void Start ()
