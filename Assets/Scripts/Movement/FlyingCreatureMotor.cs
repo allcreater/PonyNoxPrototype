@@ -14,6 +14,12 @@ public class FlyingCreatureMotor : LivingCreatureMotor
         m_rigidBody.useGravity = false; 
 	}
     
+    void Update()
+    {
+        m_Animator.SetBool("IsDead", !LivingCreature.IsAlive);
+        m_Animator.SetBool("IsFlying", m_rigidBody.velocity.magnitude > 0.5f);
+    }
+
     //Will work only for alive creature
     protected override void FixedUpdateImpl()
     {

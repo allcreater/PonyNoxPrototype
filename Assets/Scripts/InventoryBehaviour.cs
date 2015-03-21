@@ -16,12 +16,22 @@ public class InventoryBehaviour : MonoBehaviour
 
     public WeaponBehaviour ArmedWeapon { get; private set; }
 
+    public GameObject m_Owner;
+
     private bool m_inventoryDirtyFlag = true;
     private List<PickableItem> m_items = new List<PickableItem>();
 
     public void RequestUpdate()
     {
         m_inventoryDirtyFlag = true;
+    }
+
+    public void UseItem(PickableItem item)
+    {
+        if (m_items.IndexOf(item) < 0)
+            throw new System.InvalidOperationException("предмет не в инвентаре");
+
+        item.UseItem(m_Owner);
     }
 
     public bool PickUpItem(PickableItem item)
@@ -96,6 +106,7 @@ public class InventoryBehaviour : MonoBehaviour
 	
 	void Update ()
 	{
+        m_inventoryDirtyFlag = true; //костыль!
         if (m_inventoryDirtyFlag)
         {
             UpdateInventoryState();

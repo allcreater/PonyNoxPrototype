@@ -10,6 +10,18 @@ public enum PickableItemState
     Equipped
 }
 
+public class ItemUsedEventArgs
+{
+    public PickableItem Item;
+    public GameObject Owner;
+
+    public ItemUsedEventArgs(PickableItem item, GameObject owner)
+    {
+        Item = item;
+        Owner = owner;
+    }
+}
+
 [DisallowMultipleComponent]
 public class PickableItem : MonoBehaviour
 {
@@ -50,6 +62,23 @@ public class PickableItem : MonoBehaviour
         }
     }
     private PickableItemState m_itemState = PickableItemState.Idle;
+
+    public void UseItem(GameObject owner)
+    {
+        var args = new ItemUsedEventArgs(this, owner);
+
+        //BroadcastMessage("OnItemUsed", new ItemUsedEventArgs(this, owner));
+        var itemLogics = GetComponents<IUsableItem>();
+        foreach (var il in itemLogics)
+            il.OnItemUsed(args);
+    }
+
+    //одноразовый предмет использован и всё такое
+    public void Dispose()
+    {
+        //TODO: если предметов много, уменьшать счётчик, и удалять только при нулевом
+        GameObject.Destroy(this.gameObject);
+    }
 
 	// Use this for initialization
 	void Start ()
