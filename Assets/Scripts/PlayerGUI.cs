@@ -62,7 +62,10 @@ public class PlayerGUI : MonoBehaviour
     }
     public void OnUseButton()
     {
-
+        if (m_activeItem != null)
+        {
+            m_Inventory.UseItem(m_activeItem);
+        }
     }
     public void OnDropButton()
     {
