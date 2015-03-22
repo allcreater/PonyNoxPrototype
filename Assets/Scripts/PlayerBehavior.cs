@@ -80,7 +80,7 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && m_InventoryBehaviour.ArmedWeapon != null)
         {
-            m_InventoryBehaviour.ArmedWeapon.Fire(gameObject);
+            m_InventoryBehaviour.ArmedWeapon.Fire(gameObject, m_targetPosition);
         }
 
         TestMousePointer();

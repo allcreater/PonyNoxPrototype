@@ -21,10 +21,13 @@ public class FireballLogic : MonoBehaviour
 	
 	void FixedUpdate ()
 	{
+        var ray = new Ray(transform.position, m_Velocity.normalized);
+        float scalarVelocity = m_Velocity.magnitude * Time.fixedDeltaTime;
+
         transform.position = transform.position + m_Velocity * Time.fixedDeltaTime;
 
         //файрболл задел кого-то
-        if (Physics.CheckSphere(transform.position, m_ColliderRadius, 1))
+        if (Physics.SphereCast(ray, m_ColliderRadius, scalarVelocity, 1))
         {
             //взрываемся
             var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
@@ -58,7 +61,13 @@ public class FireballLogic : MonoBehaviour
 
             if (m_explosionEffect != null)
             {
-                var obj = GameObject.Instantiate(m_explosionEffect, transform.position, transform.rotation);
+                Vector3 effectLocation = transform.position;
+
+                RaycastHit hitInfo;
+                if (Physics.Raycast(ray, out hitInfo, scalarVelocity * 2.0f))
+                    effectLocation += (hitInfo.normal * 0.5f);
+
+                var obj = GameObject.Instantiate(m_explosionEffect, effectLocation, transform.rotation);
                 GameObject.Destroy(obj, 5.0f);
             }
         }
