@@ -20,6 +20,8 @@ public abstract class SpellBehaviour : MonoBehaviour
 
 	private float m_lastCastTime = 0.0f;
 
+    public abstract bool IsInProgress { get; }
+
 	public void BeginCast(Vector3 target)
 	{
 		Debug.Log(m_SpellName + " fired!");

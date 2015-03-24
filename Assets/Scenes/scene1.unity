@@ -234,9 +234,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 81902402}
-  - 33: {fileID: 81902405}
-  - 65: {fileID: 81902404}
-  - 23: {fileID: 81902403}
   m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
@@ -257,49 +254,6 @@ Transform:
   - {fileID: 350355127}
   m_Father: {fileID: 304191317}
   m_RootOrder: 1
---- !u!23 &81902403
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 81902401}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &81902404
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 81902401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &81902405
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 81902401}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &92905306
 Transform:
   m_PrefabParentObject: {fileID: 400158, guid: da8657c7f69b5364490116150d1e9c2b, type: 3}
@@ -2231,6 +2185,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0837000012, y: .270660013, z: .975801289}
   m_Center: {x: -.00460845232, y: -.0224439632, z: .460000008}
+--- !u!114 &459382656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459382649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d435750319b43843a60f26c6c0013e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CooldownTime: 1
+  m_ManaCost: 0
+  m_SpellName: sword attack
+  m_Caster: {fileID: 0}
+  m_Icon: {fileID: 0}
+  m_Damage: 10
+  m_MaxDuracity: .600000024
 --- !u!114 &459382657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2540,7 +2512,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3391878308d3c1429d6ae3984229b06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.05700004
+      value: 1.199
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3391878308d3c1429d6ae3984229b06, type: 3}
       propertyPath: m_LocalPosition.z

@@ -6,6 +6,14 @@ public class FireballSpell : SpellBehaviour
     public float m_FlySpeed = 20.0f;
     public GameObject m_prefab;
 
+    public override bool IsInProgress
+    {
+        get
+        {
+            return false;
+        }
+    }
+
     public override void BeginCastImpl(Vector3 target)
     {
         if (m_prefab.GetComponent<FireballLogic>() == null)
