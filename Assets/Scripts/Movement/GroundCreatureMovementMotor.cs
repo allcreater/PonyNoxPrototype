@@ -15,6 +15,8 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
 	{
         m_rigidBody = GetComponent<Rigidbody>();
         m_groundDetector = GetComponent<GroundDetector>();
+
+		OnRevive ();
 	}
 
     public void Jump()
@@ -47,11 +49,32 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
     protected override void OnDeath()
     {
         m_rigidBody.constraints = RigidbodyConstraints.None;
+		m_Animator.enabled = false;
+
+        foreach (var rb in GetComponentsInChildren<Rigidbody>())
+        {
+            if (rb == m_rigidBody)
+                continue;
+
+            rb.isKinematic = false;
+            rb.detectCollisions = true;
+            rb.transform.SetParent(null);
+        }
     }
 
 
     protected override void OnRevive()
     {
         m_rigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+		m_Animator.enabled = true;
+
+        foreach (var rb in GetComponentsInChildren<Rigidbody>())
+        {
+            if (rb == m_rigidBody)
+                continue;
+
+            rb.isKinematic = true;
+            rb.detectCollisions = false;
+        }
     }
 }
