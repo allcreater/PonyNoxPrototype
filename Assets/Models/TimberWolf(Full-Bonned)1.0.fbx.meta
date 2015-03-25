@@ -390,7 +390,189 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Pelvis
+        weight: 1
+      - path: Armature/Pelvis/B_R_Leg_1
+        weight: 1
+      - path: Armature/Pelvis/B_R_Leg_1/B_R_Leg_2
+        weight: 1
+      - path: Armature/Pelvis/B_R_Leg_1/B_R_Leg_2/B_R_leg_3
+        weight: 1
+      - path: Armature/Pelvis/B_R_Leg_1/B_R_Leg_2/B_R_leg_3/B_R_Foot
+        weight: 1
+      - path: Armature/Pelvis/B_R_Leg_1/B_R_Leg_2/B_R_leg_3/B_R_Foot/B_R_Foot_end
+        weight: 1
+      - path: Armature/Pelvis/R_L_Leg_1
+        weight: 1
+      - path: Armature/Pelvis/R_L_Leg_1/R_L_Leg_2
+        weight: 1
+      - path: Armature/Pelvis/R_L_Leg_1/R_L_Leg_2/R_L_Leg_3
+        weight: 1
+      - path: Armature/Pelvis/R_L_Leg_1/R_L_Leg_2/R_L_Leg_3/R_L_Foot
+        weight: 1
+      - path: Armature/Pelvis/R_L_Leg_1/R_L_Leg_2/R_L_Leg_3/R_L_Foot/R_L_Foot_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_1
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Branch.01 1
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Branch.01 1/Branch.01_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Branch.02
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Branch.02/Branch.02_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_L_Leg_1
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_L_Leg_1/F_L_Leg_2
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_L_Leg_1/F_L_Leg_2/F_L_Leg_3
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_L_Leg_1/F_L_Leg_2/F_L_Leg_3/F_L_Foot
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_L_Leg_1/F_L_Leg_2/F_L_Leg_3/F_L_Foot/F_L_Foot_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_R_Leg_1
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_R_Leg_1/F_R_Leg_2
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_R_Leg_1/F_R_Leg_2/F_R_Leg_3
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_R_Leg_1/F_R_Leg_2/F_R_Leg_3/F_R_Foot
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/F_R_Leg_1/F_R_Leg_2/F_R_Leg_3/F_R_Foot/F_R_Foot_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1/Neck_2
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1/Neck_2/Head
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1/Neck_2/Head/Ear
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1/Neck_2/Head/Ear/Ear_L
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1/Neck_2/Head/Ear/Ear_L/Ear_L_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1/Neck_2/Head/Ear/Ear_R
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1/Neck_2/Head/Ear/Ear_R/Ear_R_end
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1/Neck_2/Head/jaw
+        weight: 1
+      - path: Armature/Pelvis/Spine_1/Spine_2/Neck_1/Neck_2/Head/jaw/jaw_end
+        weight: 1
+      - path: Armature/Pelvis/Tail.02
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.004
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.004/Tail.008
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.004/Tail.008/Tail.008_end
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.004/Tail.009
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.004/Tail.009/Tail.009_end
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.04
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.04/Tail.006
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.04/Tail.006/Tail.006_end
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.04/Tail.007
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.04/Tail.007/Tail.007_end
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.005
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.005/Tail.011
+        weight: 1
+      - path: Armature/Pelvis/Tail.02/Tail.03/Tail.005/Tail.011/Tail.011_end
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Branch.000
+        weight: 1
+      - path: Branch.001
+        weight: 1
+      - path: Branch.01
+        weight: 1
+      - path: Branch.002
+        weight: 1
+      - path: Branch.004
+        weight: 1
+      - path: Branch.005
+        weight: 1
+      - path: Branch.007
+        weight: 1
+      - path: Branch.008
+        weight: 1
+      - path: Branch.009
+        weight: 1
+      - path: Branch.011
+        weight: 1
+      - path: Branch.013
+        weight: 1
+      - path: Branch.014
+        weight: 1
+      - path: Branch.015
+        weight: 1
+      - path: Branch.016
+        weight: 1
+      - path: Branch.017
+        weight: 1
+      - path: Branch.019
+        weight: 1
+      - path: Branch.020
+        weight: 1
+      - path: Branch.021
+        weight: 1
+      - path: Branch.022
+        weight: 1
+      - path: Branch.023
+        weight: 1
+      - path: TimberHead.01
+        weight: 1
+      - path: TimberHead.02
+        weight: 1
+      - path: z
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
