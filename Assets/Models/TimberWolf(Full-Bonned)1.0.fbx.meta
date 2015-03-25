@@ -142,6 +142,29 @@ ModelImporter:
     100268: R_L_Leg_3
     100270: Spine_1
     100272: Spine_2
+    100274: Branch.000 1
+    100276: Branch.000_end
+    100278: Branch.002_end
+    100280: Branch.003
+    100282: Branch.003_end
+    100284: Branch.004_end
+    100286: Branch.005_end
+    100288: Branch.007_end
+    100290: Branch.008_end
+    100292: Branch.009_end
+    100294: Branch.011_end
+    100296: Branch.013_end
+    100298: Branch.014_end
+    100300: Branch.015_end
+    100302: Branch.016_end
+    100304: Branch.017_end
+    100306: Branch.019_end
+    100308: Branch.020_end
+    100310: Branch.021_end
+    100312: Branch.022_end
+    100314: Branch.023_end
+    100316: Neck_1.002
+    100318: Neck_1.002_end
     400000: Armature
     400002: B_L_Leg_01
     400004: B_L_Leg_02
@@ -279,6 +302,29 @@ ModelImporter:
     400268: R_L_Leg_3
     400270: Spine_1
     400272: Spine_2
+    400274: Branch.000 1
+    400276: Branch.000_end
+    400278: Branch.002_end
+    400280: Branch.003
+    400282: Branch.003_end
+    400284: Branch.004_end
+    400286: Branch.005_end
+    400288: Branch.007_end
+    400290: Branch.008_end
+    400292: Branch.009_end
+    400294: Branch.011_end
+    400296: Branch.013_end
+    400298: Branch.014_end
+    400300: Branch.015_end
+    400302: Branch.016_end
+    400304: Branch.017_end
+    400306: Branch.019_end
+    400308: Branch.020_end
+    400310: Branch.021_end
+    400312: Branch.022_end
+    400314: Branch.023_end
+    400316: Neck_1.002
+    400318: Neck_1.002_end
     4300000: B_L_Paw
     4300002: B_L_Leg_02
     4300004: Branch_L_Leg_2
