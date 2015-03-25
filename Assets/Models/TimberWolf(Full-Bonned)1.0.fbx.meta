@@ -441,7 +441,7 @@ ModelImporter:
     - serializedVersion: 16
       name: TW_idly_stance
       takeName: TW_idly_stance
-      firstFrame: 0
+      firstFrame: 2
       lastFrame: 240
       wrapMode: 0
       orientationOffsetY: 0
@@ -623,7 +623,7 @@ ModelImporter:
     - serializedVersion: 16
       name: TW_sneaking
       takeName: TW_sneaking
-      firstFrame: 0
+      firstFrame: 2
       lastFrame: 100
       wrapMode: 0
       orientationOffsetY: 0
