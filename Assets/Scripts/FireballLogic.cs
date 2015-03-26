@@ -16,7 +16,6 @@ public class FireballLogic : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	
 	}
 	
 	void FixedUpdate ()
