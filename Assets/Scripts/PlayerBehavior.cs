@@ -38,7 +38,6 @@ public class PlayerBehavior : MonoBehaviour
                     //float pitch = Mathf.Asin(normalVS.z) * Mathf.Rad2Deg;
 
                     var dir = hit_new.point - transform.position;
-                    transform.eulerAngles = new Vector3(0, Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg, 0);
 
                     //m_sceletonTransform.localEulerAngles = new Vector3(pitch, 180, 0);
 
@@ -47,7 +46,7 @@ public class PlayerBehavior : MonoBehaviour
                     if (Input.GetButton("Fire2"))
                         m_motor.MovementDirection = dir;
                     else
-                        m_motor.MovementDirection = Vector3.zero;
+                        m_motor.MovementDirection = dir.normalized * 0.01f;//Vector3.zero;
                 }
             }
         }

@@ -35,6 +35,8 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
         float pitch = Mathf.Asin(normalVS.z) * Mathf.Rad2Deg;
         */
 
+        transform.eulerAngles = new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0);
+
         if (m_groundDetector.IsGrounded)
         {
             Vector3 groundedDirection = new Vector3(MovementImpulse.x, 0.0f, MovementImpulse.z);
