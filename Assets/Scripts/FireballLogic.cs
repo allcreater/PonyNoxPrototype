@@ -26,7 +26,7 @@ public class FireballLogic : MonoBehaviour
         transform.position = transform.position + m_Velocity * Time.fixedDeltaTime;
 
         //файрболл задел кого-то
-        if (Physics.SphereCast(ray, m_ColliderRadius, scalarVelocity, 1))
+        if (Physics.SphereCast(ray, m_ColliderRadius, scalarVelocity, 1 << 0 | 1 << 8))
         {
             //взрываемся
             var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);

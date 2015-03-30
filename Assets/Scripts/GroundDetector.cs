@@ -5,6 +5,7 @@ public class GroundDetector : MonoBehaviour
 {
     public Transform[] m_raycastPoints;
     public float m_maxDistance;
+    public float m_verticalShift = 0.0f;
 
     public bool IsGrounded { get; private set; }
     public Vector3 GroundNormal { get; private set; }
@@ -25,7 +26,7 @@ public class GroundDetector : MonoBehaviour
         {
             RaycastHit hitInfo;
 
-            var ray = new Ray(raycastTransform.position + Vector3.up*0.1f, Vector3.down);
+            var ray = new Ray(raycastTransform.position + Vector3.up * m_verticalShift, Vector3.down);
 #if UNITY_EDITOR
             Debug.DrawLine(ray.origin, ray.origin + (ray.direction * m_maxDistance));
 #endif

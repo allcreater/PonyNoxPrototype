@@ -42,7 +42,9 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
             Vector3 groundedDirection = new Vector3(MovementImpulse.x, 0.0f, MovementImpulse.z);
             m_rigidBody.AddForce(groundedDirection, ForceMode.Impulse);
         }
-        m_rigidBody.velocity = m_rigidBody.velocity * 0.98f;
+
+        float dampeningK = 1.0f - m_rigidBody.velocity.sqrMagnitude * 0.001f;
+        m_rigidBody.velocity = m_rigidBody.velocity * dampeningK;
 
         m_Animator.SetFloat("SpeedAhead", transform.InverseTransformDirection(m_rigidBody.velocity).z * 0.3f);
         m_Animator.SetBool("IsJumping", !m_groundDetector.IsGrounded);

@@ -20,7 +20,7 @@ public class TimberwolfAI : MonoBehaviour
 	{
         m_Motor = GetComponent<GroundCreatureMovementMotor>();
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -34,15 +34,13 @@ public class TimberwolfAI : MonoBehaviour
         {
             NavMeshHit hit;
             NavMesh.SamplePosition(m_Target.position, out hit, 1.0f, NavMesh.AllAreas);
-            hit.
+            
         }
         */
 
-
-
         if (dir.sqrMagnitude < m_TargetDetectDistance * m_TargetDetectDistance)
         {
-            m_Motor.MovementDirection = dir;
+            m_Motor.MovementDirection = dir * 0.05f;
             Debug.DrawRay(targetDirection.origin, targetDirection.direction * m_TargetDetectDistance, Color.green);
         }
         else
