@@ -15,18 +15,18 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
     void FixedUpdate()
     {
         var dir = m_Target.position - transform.position;
-        float acceleration = m_Speed * Time.fixedDeltaTime;
+        float acceleration = m_Speed * 4.0f;
 
-        m_Velocity += (dir.normalized * acceleration);
-        var vel = m_Velocity.magnitude;
-        if (vel > m_Speed)
-            m_Velocity *= (m_Speed / vel);
+        m_Velocity += (dir.normalized * acceleration * Time.fixedDeltaTime);
+        m_Velocity = Vector3.ClampMagnitude(m_Velocity, m_Speed);
 
         transform.position = transform.position + m_Velocity * Time.fixedDeltaTime;
 
+        float dSpeed = m_Velocity.magnitude * Time.fixedDeltaTime;
+
         //файрболл задел кого-то
         var ray = new Ray(transform.position, m_Velocity.normalized);
-        if (Physics.SphereCast(ray, m_ColliderRadius, acceleration, m_LayerMask))
+        if (Physics.SphereCast(ray, m_ColliderRadius, dSpeed, m_LayerMask))
         {
             //взрываемся
             var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
@@ -63,7 +63,7 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
                 Vector3 effectLocation = transform.position;
 
                 RaycastHit hitInfo;
-                if (Physics.Raycast(ray, out hitInfo, acceleration * 2.0f))
+                if (Physics.Raycast(ray, out hitInfo, dSpeed * 2.0f))
                     effectLocation += (hitInfo.normal * 0.5f);
 
                 var obj = GameObject.Instantiate(m_explosionEffect, effectLocation, transform.rotation);

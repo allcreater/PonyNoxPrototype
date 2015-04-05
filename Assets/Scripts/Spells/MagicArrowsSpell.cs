@@ -36,7 +36,7 @@ public class MagicArrowsSpell : SpellBehaviour
 
         for (int i = 0; i < m_NumberOfArrows; ++i)
         {
-            var velocity = RndOnHemisphere() * m_ArrowSpeed;//(target - origin).normalized * m_ArrowSpeed;
+            var velocity = RndOnHemisphere() * m_ArrowSpeed * 0.3f;//(target - origin).normalized * m_ArrowSpeed;
             var origin = m_Caster.transform.position + velocity * 0.05f;
             Debug.DrawLine(origin, origin + velocity, Color.red, 10.0f);
 

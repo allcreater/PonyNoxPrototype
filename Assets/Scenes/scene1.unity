@@ -7804,8 +7804,8 @@ MonoBehaviour:
   m_SpellName: Magic arrows
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300000, guid: f44e619c129bfea4e9b65dbf410f7329, type: 3}
-  m_NumberOfArrows: 3
-  m_ArrowSpeed: 30
+  m_NumberOfArrows: 4
+  m_ArrowSpeed: 90
   m_prefab: {fileID: 113712, guid: d67b28db07af9c3449f3b1660cc706b0, type: 2}
 --- !u!1 &1426360703
 GameObject:
