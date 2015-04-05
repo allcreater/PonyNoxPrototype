@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class FireballLogic : MonoBehaviour
+public class ThrowableSpellBehaviour : MonoBehaviour
 {
+    public int m_LayerMask = 1 << 0 | 1 << 8;
     public CasterBehaviour m_Caster;
 
-    public Vector3 m_Velocity;
+    public Vector3 Velocity
+    {
+        get { return m_Velocity; }
+        set { m_Velocity = value; }
+    }
 
     public float m_ColliderRadius = 0.1f;
     public float m_ExplosionRadius = 5.0f;
@@ -13,11 +18,13 @@ public class FireballLogic : MonoBehaviour
     public float m_ShockwaveBaseImpulse = 100.0f;
 
     public GameObject m_explosionEffect;
-	// Use this for initialization
-	void Start ()
-	{
-	}
-	
+
+    protected Vector3 m_Velocity;
+}
+
+
+public class FireballBehaviour : ThrowableSpellBehaviour
+{
 	void FixedUpdate ()
 	{
         var ray = new Ray(transform.position, m_Velocity.normalized);
@@ -26,7 +33,8 @@ public class FireballLogic : MonoBehaviour
         transform.position = transform.position + m_Velocity * Time.fixedDeltaTime;
 
         //файрболл задел кого-то
-        if (Physics.SphereCast(ray, m_ColliderRadius, scalarVelocity, 1 << 0 | 1 << 8))
+        if ((scalarVelocity > 0 && Physics.SphereCast(ray, m_ColliderRadius, scalarVelocity, m_LayerMask)) ||
+            (scalarVelocity == 0.0f && Physics.CheckSphere(ray.origin, m_ColliderRadius, m_LayerMask)))
         {
             //взрываемся
             var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);

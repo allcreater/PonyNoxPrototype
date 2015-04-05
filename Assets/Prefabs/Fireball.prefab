@@ -227,11 +227,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 117930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8423d7f3ce93e094883163783e4d0cc7, type: 3}
+  m_Script: {fileID: 11500000, guid: ae8bf9d576d5ecc48a4fe53c492a1ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_LayerMask: 257
   m_Caster: {fileID: 0}
-  m_Velocity: {x: 0, y: 0, z: 0}
   m_ColliderRadius: .100000001
   m_ExplosionRadius: 5
   m_ExplosionBaseDamage: 10
@@ -2353,7 +2353,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 21568939518156d4e8c3cec8a78a5e67, type: 2}
+  - {fileID: 2100000, guid: e2c8d6845c95d445685323e25880e162, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2389,7 +2389,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 21568939518156d4e8c3cec8a78a5e67, type: 2}
+  - {fileID: 2100000, guid: b1ca011c5f92d4fd4b5aeac44fd607c6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

@@ -16,7 +16,7 @@ public class FireballSpell : SpellBehaviour
 
     public override void BeginCastImpl(Vector3 target)
     {
-        if (m_prefab.GetComponent<FireballLogic>() == null)
+        if (m_prefab.GetComponent<ThrowableSpellBehaviour>() == null)
             return;
 
         var origin = m_Caster.transform.position + m_Caster.transform.TransformDirection(new Vector3(0.0f, 1.0f, 1.0f));
@@ -24,9 +24,9 @@ public class FireballSpell : SpellBehaviour
         Debug.DrawLine(origin, target, Color.red, 10.0f);
 
         var fireballObject = GameObject.Instantiate(m_prefab, origin, m_Caster.transform.rotation) as GameObject;
-        var fireball = fireballObject.GetComponent<FireballLogic>();
+        var fireball = fireballObject.GetComponent<ThrowableSpellBehaviour>();
 
-        fireball.m_Velocity = (target - origin).normalized * m_FlySpeed;
+        fireball.Velocity = (target - origin).normalized * m_FlySpeed;
         fireball.m_Caster = m_Caster;
     }
 }

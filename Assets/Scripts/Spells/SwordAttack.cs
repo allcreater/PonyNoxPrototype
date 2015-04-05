@@ -26,7 +26,8 @@ public class SwordAttack : SpellBehaviour
 
     private IEnumerator CastProcess()
     {
-        for (float maxTime = Time.time + m_MaxDuracity; Time.time < maxTime; )
+        yield return new WaitForSeconds(m_MaxDuracity / 2);
+        for (float maxTime = Time.time + m_MaxDuracity/2; Time.time < maxTime; )
         {
             if (TestHit())
                 break;
@@ -41,11 +42,11 @@ public class SwordAttack : SpellBehaviour
         var ray = new Ray(m_Caster.transform.position + Vector3.up*0.6f, m_Caster.transform.TransformVector(Vector3.forward));
         Debug.DrawRay(ray.origin, ray.direction, Color.red);
 
-        var hitsArray = Physics.SphereCastAll(ray, 1.0f, 1.0f, 1);
+        var hitsArray = Physics.SphereCastAll(ray, 1.0f, 1.0f, 1 | 1 << 8 );
         foreach (var hit in hitsArray)
         {
             var lcb = hit.collider.GetComponent<LivingCreatureBehaviour>();
-            if (lcb != null && hit.collider.gameObject != m_Caster)
+            if (lcb != null && hit.collider.gameObject != m_Caster.gameObject)
             {
                 lcb.m_HitPoints.ChangeValue(-m_Damage);
 
