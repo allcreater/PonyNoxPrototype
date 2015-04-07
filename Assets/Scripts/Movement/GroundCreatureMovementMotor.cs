@@ -54,7 +54,7 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
     {
         m_rigidBody.constraints = RigidbodyConstraints.None;
 		m_Animator.enabled = false;
-
+        /*
         foreach (var rb in GetComponentsInChildren<Rigidbody>())
         {
             if (rb == m_rigidBody)
@@ -64,6 +64,14 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
             rb.detectCollisions = true;
             rb.transform.SetParent(null);
         }
+        */
+        foreach (var component in GetComponentsInChildren<PhysicsOnOff>())
+            component.IsPhysicsActive = true;
+
+        foreach (var rb in GetComponentsInChildren<Rigidbody>())
+            rb.transform.SetParent(null);
+
+        transform.DetachChildren();
     }
 
 
@@ -72,6 +80,7 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
         m_rigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 		m_Animator.enabled = true;
 
+        /*
         foreach (var rb in GetComponentsInChildren<Rigidbody>())
         {
             if (rb == m_rigidBody)
@@ -80,5 +89,8 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
             rb.isKinematic = true;
             rb.detectCollisions = false;
         }
+        */
+        foreach (var component in GetComponentsInChildren<PhysicsOnOff>())
+            component.IsPhysicsActive = false;
     }
 }
