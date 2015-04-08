@@ -21,8 +21,8 @@ public class MagicArrowsSpell : SpellBehaviour
     private static Vector3 RndOnHemisphere()
     {
         var vec = Random.insideUnitSphere;
-        if (vec.z < 0.0f)
-            vec.z *= -1;
+        if (vec.y < 0.0f)
+            vec.y *= -1;
 
         return vec;
     }
@@ -38,7 +38,7 @@ public class MagicArrowsSpell : SpellBehaviour
         {
             var velocity = RndOnHemisphere() * m_ArrowSpeed * 0.3f;//(target - origin).normalized * m_ArrowSpeed;
             var origin = m_Caster.transform.position + velocity * 0.05f;
-            Debug.DrawLine(origin, origin + velocity, Color.red, 10.0f);
+            Debug.DrawLine(origin, origin + velocity, Color.red, 0.5f);
 
 
             var missileObject = GameObject.Instantiate(m_prefab, origin , m_Caster.transform.rotation) as GameObject;

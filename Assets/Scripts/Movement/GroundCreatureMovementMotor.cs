@@ -68,10 +68,14 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
         foreach (var component in GetComponentsInChildren<PhysicsOnOff>())
             component.IsPhysicsActive = true;
 
+        foreach (var component in GetComponentsInChildren<PhysicsOnOff>())
+            if (component.m_DetachObjectOnEnablePhysics) component.transform.SetParent(null);
+        /*
         foreach (var rb in GetComponentsInChildren<Rigidbody>())
-            rb.transform.SetParent(null);
+            if (rb != m_rigidBody) rb.transform.SetParent(null);
 
         transform.DetachChildren();
+         */
     }
 
 

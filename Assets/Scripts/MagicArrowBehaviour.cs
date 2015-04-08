@@ -6,6 +6,9 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
     public Transform m_Target;
 
     public float m_Speed;
+    public float m_Lifetime = 3.0f;
+
+    public int m_BounceLayerMask = 1 << 0;
 
     // Use this for initialization
     void Start()
@@ -14,7 +17,7 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
 
     void FixedUpdate()
     {
-        var dir = m_Target.position - transform.position;
+        var dir = (m_Target != null)? m_Target.position - transform.position : m_Velocity;
         float acceleration = m_Speed * 4.0f;
 
         m_Velocity += (dir.normalized * acceleration * Time.fixedDeltaTime);
@@ -26,6 +29,14 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
 
         //файрболл задел кого-то
         var ray = new Ray(transform.position, m_Velocity.normalized);
+        RaycastHit hit;
+        if (Physics.SphereCast(ray, m_ColliderRadius * 2.0f, out hit, dSpeed, m_BounceLayerMask))
+        {
+            m_Velocity = Vector3.Reflect(m_Velocity, hit.normal);
+            return;
+        }
+
+
         if (Physics.SphereCast(ray, m_ColliderRadius, dSpeed, m_LayerMask))
         {
             //взрываемся
@@ -55,20 +66,30 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
                 }
             }
 
-            GameObject.DestroyObject(gameObject, 2.0f);
-            enabled = false;
+            SelfDestruct(ray, dSpeed);
+        }
 
-            if (m_explosionEffect != null)
-            {
-                Vector3 effectLocation = transform.position;
+        m_Lifetime -= Time.fixedDeltaTime;
+        if (m_Lifetime <= 0.0f)
+            SelfDestruct(ray, dSpeed);
 
-                RaycastHit hitInfo;
-                if (Physics.Raycast(ray, out hitInfo, dSpeed * 2.0f))
-                    effectLocation += (hitInfo.normal * 0.5f);
+    }
 
-                var obj = GameObject.Instantiate(m_explosionEffect, effectLocation, transform.rotation);
-                GameObject.Destroy(obj, 5.0f);
-            }
+    private void SelfDestruct(Ray direction, float dSpeed)
+    {
+        GameObject.DestroyObject(gameObject, 2.0f);
+        enabled = false;
+
+        if (m_explosionEffect != null)
+        {
+            Vector3 effectLocation = transform.position;
+
+            RaycastHit hitInfo;
+            if (Physics.Raycast(direction, out hitInfo, dSpeed * 2.0f))
+                effectLocation += (hitInfo.normal * 0.5f);
+
+            var obj = GameObject.Instantiate(m_explosionEffect, effectLocation, transform.rotation);
+            GameObject.Destroy(obj, 5.0f);
         }
     }
 }

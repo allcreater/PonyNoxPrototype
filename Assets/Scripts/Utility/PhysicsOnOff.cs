@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 public class PhysicsOnOff : MonoBehaviour
 {
+    public bool m_DetachObjectOnEnablePhysics = true;
+
     public bool IsPhysicsActive
     {
         get
@@ -71,12 +73,6 @@ public class PhysicsOnOff : MonoBehaviour
 
     private void RemovePhysics()
     {
-        //BinaryFormatter bf = new BinaryFormatter();
-        //bf.
-
-
-
-
         var joint = GetComponent<Joint>();
         if (joint != null)
         {
