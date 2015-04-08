@@ -116,6 +116,28 @@ ModelImporter:
     100216: UpperTeeth
     100218: UpperTeeth_end
     100220: wb_badge
+    100222: jiggle_hair1
+    100224: jiggle_hair3
+    100226: jiggle_hair3_end
+    100228: jiggle_hair4
+    100230: jiggle_hair4_end
+    100232: jiggle_hair5
+    100234: jiggle_hair5_end
+    100236: jiggle_hair6
+    100238: jiggle_hair6_end
+    100240: jiggle_tail1
+    100242: jiggle_tail2
+    100244: jiggle_tail2_end
+    100246: jiggle_tail3
+    100248: jiggle_tail3_end
+    100250: jiggle_tail4
+    100252: jiggle_tail4_end
+    100254: jiggle_tail5
+    100256: jiggle_tail5_end
+    100258: jiggle_tail6
+    100260: jiggle_tail6_end
+    100262: jiggle_tail7
+    100264: jiggle_tail7_end
     400000: Chest1
     400002: Chest2
     400004: cube
@@ -227,6 +249,28 @@ ModelImporter:
     400216: UpperTeeth
     400218: UpperTeeth_end
     400220: wb_badge
+    400222: jiggle_hair1
+    400224: jiggle_hair3
+    400226: jiggle_hair3_end
+    400228: jiggle_hair4
+    400230: jiggle_hair4_end
+    400232: jiggle_hair5
+    400234: jiggle_hair5_end
+    400236: jiggle_hair6
+    400238: jiggle_hair6_end
+    400240: jiggle_tail1
+    400242: jiggle_tail2
+    400244: jiggle_tail2_end
+    400246: jiggle_tail3
+    400248: jiggle_tail3_end
+    400250: jiggle_tail4
+    400252: jiggle_tail4_end
+    400254: jiggle_tail5
+    400256: jiggle_tail5_end
+    400258: jiggle_tail6
+    400260: jiggle_tail6_end
+    400262: jiggle_tail7
+    400264: jiggle_tail7_end
     4300000: phymodel_female_medium_tail
     4300002: tail_RD
     4300004: mane_RD
