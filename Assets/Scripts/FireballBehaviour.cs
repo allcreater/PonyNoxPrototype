@@ -20,6 +20,46 @@ public class ThrowableSpellBehaviour : MonoBehaviour
     public GameObject m_explosionEffect;
 
     protected Vector3 m_Velocity;
+
+    protected void Explode (Vector3 position)
+    {
+        //взрываемся
+        var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
+        foreach (var collider in objects)
+        {
+            /*
+            if (collider.isTrigger)
+                continue; //триггеры нематериальны, нас они не пока интересуют
+            */
+            var direction = collider.transform.position - transform.position;
+            if (direction.magnitude == 0.0f) Debug.LogError("WTF?!");
+
+            float influence = Mathf.Clamp(1.0f - direction.magnitude / m_ExplosionRadius, 0, 1);
+
+            var rb = collider.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                float impulse = m_ShockwaveBaseImpulse * influence;
+                rb.AddExplosionForce(impulse, transform.position, m_ExplosionRadius);
+            }
+
+            var lc = collider.GetComponent<LivingCreatureBehaviour>();
+            if (lc != null)
+            {
+                lc.m_HitPoints.ChangeValue(-m_ExplosionBaseDamage * influence);
+            }
+        }
+
+        //самоуничтожаемся
+        GameObject.DestroyObject(gameObject, 2.0f);
+        enabled = false;
+
+        if (m_explosionEffect != null)
+        {
+            var obj = GameObject.Instantiate(m_explosionEffect, position, transform.rotation);
+            GameObject.Destroy(obj, 5.0f);
+        }
+    }
 }
 
 
@@ -36,47 +76,11 @@ public class FireballBehaviour : ThrowableSpellBehaviour
         if ((scalarVelocity > 0 && Physics.SphereCast(ray, m_ColliderRadius, scalarVelocity, m_LayerMask)) ||
             (scalarVelocity == 0.0f && Physics.CheckSphere(ray.origin, m_ColliderRadius, m_LayerMask)))
         {
-            //взрываемся
-            var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
-            foreach (var collider in objects)
-            {
-                /*
-                if (collider.isTrigger)
-                    continue; //триггеры нематериальны, нас они не пока интересуют
-                */
-                var direction = collider.transform.position - transform.position;
-                if (direction.magnitude == 0.0f) Debug.LogError("WTF?!");
-                
-                float influence = Mathf.Clamp(1.0f - direction.magnitude/m_ExplosionRadius, 0, 1);
-
-                var rb = collider.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    float impulse = m_ShockwaveBaseImpulse * influence;
-                    rb.AddExplosionForce(impulse, transform.position, m_ExplosionRadius);
-                }
-
-                var lc = collider.GetComponent<LivingCreatureBehaviour>();
-                if (lc != null)
-                {
-                    lc.m_HitPoints.ChangeValue(-m_ExplosionBaseDamage * influence);
-                }
-            }
-
-            GameObject.DestroyObject(gameObject, 2.0f);
-            enabled = false;
-
-            if (m_explosionEffect != null)
-            {
-                Vector3 effectLocation = transform.position;
-
-                RaycastHit hitInfo;
-                if (Physics.Raycast(ray, out hitInfo, scalarVelocity * 2.0f))
-                    effectLocation += (hitInfo.normal * 0.5f);
-
-                var obj = GameObject.Instantiate(m_explosionEffect, effectLocation, transform.rotation);
-                GameObject.Destroy(obj, 5.0f);
-            }
+            Vector3 effectLocation = transform.position;
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo, scalarVelocity * 2.0f))
+                effectLocation += (hitInfo.normal * 0.5f);
+            Explode(effectLocation);
         }
 	}
 }

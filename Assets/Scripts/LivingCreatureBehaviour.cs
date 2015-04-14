@@ -38,19 +38,6 @@ public class LivingCreatureBehaviour : MonoBehaviour
 
     public Animator m_Animator;
 
-	private List<MagicalEffect> effectsList = new List<MagicalEffect>();
-
-	public void AddEffect(MagicalEffect effect)
-	{
-		effectsList.Add(effect);
-	}
-	public void UpdateEffects(float dt)
-	{
-		foreach (var effect in effectsList)
-			effect.UpdateEffect(this, dt);
-		effectsList.RemoveAll((a) => !a.IsActive);
-	}
-
 	void Start ()
 	{
 		//AddEffect(MagicalEffectFactory.CreateEffect());
@@ -58,8 +45,6 @@ public class LivingCreatureBehaviour : MonoBehaviour
 
 	void Update ()
 	{
-		UpdateEffects(Time.deltaTime);
-
         if (m_Animator != null)
         {
             m_Animator.SetBool("IsDead", !IsAlive);

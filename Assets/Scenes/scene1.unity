@@ -7888,7 +7888,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1420970278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b05b32dd8c5eb034bb33378af39327ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 001c32c1638e220498e9a513b60fd6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_CooldownTime: 1
@@ -7896,6 +7896,8 @@ MonoBehaviour:
   m_SpellName: Small cure
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300000, guid: 1c6b7aa8c1879844ba990bc16decce3a, type: 3}
+  m_Effect: {fileID: 146492, guid: ba966160e243b9f46817d47944168437, type: 2}
+  m_IsAsynchronious: 0
 --- !u!114 &1420970281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7950,6 +7952,7 @@ MonoBehaviour:
   m_SpellName: Blink
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300000, guid: 23df957f6136df642be2096116fb2fc6, type: 3}
+  m_VisualEffectOrigin: {fileID: 0}
   m_CastDelay: .300000012
 --- !u!1 &1426360703
 GameObject:
@@ -8724,7 +8727,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577575769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.44199991, y: .467999995, z: -38.3590012}
+  m_LocalPosition: {x: 1.13999999, y: .469999999, z: -25.3700008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 687972682}

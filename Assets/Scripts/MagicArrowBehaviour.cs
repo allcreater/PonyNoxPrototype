@@ -34,8 +34,10 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
 
         float dSpeed = m_Velocity.magnitude * Time.fixedDeltaTime;
 
-        //файрболл задел кого-то
+        
         var ray = new Ray(transform.position, m_Velocity.normalized);
+
+        //отскакиваем от стен
         RaycastHit hit;
         if (Physics.SphereCast(ray, m_ColliderRadius * 2.0f, out hit, dSpeed, m_BounceLayerMask))
         {
@@ -43,59 +45,19 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
             return;
         }
 
-
+        //файрболл задел кого-то
         if (Physics.SphereCast(ray, m_ColliderRadius, dSpeed, m_LayerMask))
         {
-            //взрываемся
-            var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
-            foreach (var collider in objects)
-            {
-                /*
-                if (collider.isTrigger)
-                    continue; //триггеры нематериальны, нас они не пока интересуют
-                */
-                var direction = collider.transform.position - transform.position;
-                if (direction.magnitude == 0.0f) Debug.LogError("WTF?!");
-
-                float influence = Mathf.Clamp(1.0f - direction.magnitude / m_ExplosionRadius, 0, 1);
-
-                var rb = collider.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    float impulse = m_ShockwaveBaseImpulse * influence;
-                    rb.AddExplosionForce(impulse, transform.position, m_ExplosionRadius);
-                }
-
-                var lc = collider.GetComponent<LivingCreatureBehaviour>();
-                if (lc != null)
-                {
-                    lc.m_HitPoints.ChangeValue(-m_ExplosionBaseDamage * influence);
-                }
-            }
-
-            SelfDestruct(ray, dSpeed);
+            Vector3 effectLocation = transform.position;
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo, dSpeed * 2.0f))
+                effectLocation += (hitInfo.normal * 0.5f);
+            Explode(effectLocation);
         }
 
         if (Time.time >= m_startTime + m_Lifetime)
-            SelfDestruct(ray, dSpeed);
+            Explode(transform.position);
 
     }
 
-    private void SelfDestruct(Ray direction, float dSpeed)
-    {
-        GameObject.DestroyObject(gameObject, 2.0f);
-        enabled = false;
-
-        if (m_explosionEffect != null)
-        {
-            Vector3 effectLocation = transform.position;
-
-            RaycastHit hitInfo;
-            if (Physics.Raycast(direction, out hitInfo, dSpeed * 2.0f))
-                effectLocation += (hitInfo.normal * 0.5f);
-
-            var obj = GameObject.Instantiate(m_explosionEffect, effectLocation, transform.rotation);
-            GameObject.Destroy(obj, 5.0f);
-        }
-    }
 }
