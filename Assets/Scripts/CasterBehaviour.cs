@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public abstract class SpellBehaviour : MonoBehaviour
@@ -9,6 +10,7 @@ public abstract class SpellBehaviour : MonoBehaviour
 
     public string m_SpellName = "";
 
+    [HideInInspector]
     public CasterBehaviour m_Caster;
 
     public Sprite m_Icon;
@@ -44,15 +46,30 @@ public class CasterBehaviour : MonoBehaviour
 
 	public SpellBehaviour[] m_AvailableSpells;
 
+    public bool IsBusy { get; protected set; }
+
 	protected void UpdateSpellsList()
 	{
 		m_AvailableSpells = m_spellContainer.GetComponents<SpellBehaviour>();
 	}
 
-	public void Cast(uint activeSpell, Vector3 target)
+    private IEnumerator SpellWaitingProcess(SpellBehaviour activeSpell)
+    {
+        IsBusy = true;
+
+        while (activeSpell.IsInProgress)
+            yield return new WaitForEndOfFrame();
+
+        IsBusy = false;
+    }
+
+	public bool Cast(uint activeSpell, Vector3 target)
 	{
+        if (IsBusy)
+            return false;
+
 		if (m_AvailableSpells == null || activeSpell >= m_AvailableSpells.Length)
-			return;
+			return false;
 		
 		var spell = m_AvailableSpells[activeSpell];
         if (spell.IsAvailable && m_ManaPoints.currentValue >= spell.m_ManaCost)
@@ -61,10 +78,15 @@ public class CasterBehaviour : MonoBehaviour
             spell.m_Caster = this;
             spell.BeginCast(target);
         }
+
+        StartCoroutine(SpellWaitingProcess(spell));
+
+        return true;
 	}
 
 	void Start ()
 	{
+        IsBusy = false;
 		UpdateSpellsList();
 	}
 	

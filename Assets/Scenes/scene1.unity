@@ -850,66 +850,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 144340, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 152738, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 183808, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 156702, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 184162, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 113982, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 106128, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 154848, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 103830, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 133486, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 139784, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 147544, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 163378, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 154170, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360152, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
-      propertyPath: m_ReflectionProbeUsage
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f89177b3b0b9f046bcf0ab4e2a6e8d0, type: 2}
   m_IsPrefabParent: 0
@@ -2681,7 +2621,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.57952195e-06, y: 6.48189449, z: 2.88337401e-06}
+  m_ConnectedAnchor: {x: -1.41560929e-06, y: 6.48189211, z: 8.88854083e-06}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -6662,7 +6602,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 4.47034978e-08, y: 6.46247339, z: 1.10268491e-06}
+  m_ConnectedAnchor: {x: -1.78814003e-06, y: 6.46246004, z: -1.2516964e-06}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -7920,6 +7860,7 @@ GameObject:
   - 114: {fileID: 1420970280}
   - 114: {fileID: 1420970281}
   - 114: {fileID: 1420970282}
+  - 114: {fileID: 1420970283}
   m_Layer: 8
   m_Name: SpellBook
   m_TagString: Untagged
@@ -7985,13 +7926,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CooldownTime: 1
-  m_ManaCost: 0
+  m_ManaCost: 5
   m_SpellName: Magic arrows
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300000, guid: f44e619c129bfea4e9b65dbf410f7329, type: 3}
   m_NumberOfArrows: 4
-  m_ArrowSpeed: 90
+  m_ArrowSpeed: 20
+  m_ArrowAcceleration: 300
   m_prefab: {fileID: 113712, guid: d67b28db07af9c3449f3b1660cc706b0, type: 2}
+--- !u!114 &1420970283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1420970278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26fb4938debeb14982ce248f59e8947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CooldownTime: 2
+  m_ManaCost: 10
+  m_SpellName: Blink
+  m_Caster: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 23df957f6136df642be2096116fb2fc6, type: 3}
+  m_CastDelay: .300000012
 --- !u!1 &1426360703
 GameObject:
   m_ObjectHideFlags: 0
@@ -8014,7 +7973,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1426360703}
   m_LocalRotation: {x: -.0695856884, y: -.000263718102, z: .00378061854, w: -.997568786}
-  m_LocalPosition: {x: -.0399999991, y: 1.52400005, z: -.280000001}
+  m_LocalPosition: {x: -.0379999988, y: .296000004, z: -.588}
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000009}
   m_Children:
   - {fileID: 24693506}
@@ -8757,7 +8716,7 @@ CapsuleCollider:
   m_Radius: .600000024
   m_Height: .5
   m_Direction: 2
-  m_Center: {x: 0, y: .449999988, z: .0299999993}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1577575773
 Transform:
   m_ObjectHideFlags: 0
@@ -8765,7 +8724,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577575769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.44199991, y: -.061999999, z: -38.3590012}
+  m_LocalPosition: {x: 2.44199991, y: .467999995, z: -38.3590012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 687972682}
@@ -8909,7 +8868,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -.229795724, y: 8.51573563, z: -.776031733}
+  m_ConnectedAnchor: {x: -.229792535, y: 8.51573086, z: -.77603519}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -9303,7 +9262,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: .0110214651, y: 7.52674913, z: -1.71733451}
+  m_ConnectedAnchor: {x: .0110198557, y: 7.52674294, z: -1.71733701}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -9390,6 +9349,7 @@ MonoBehaviour:
   m_Templates:
   - {fileID: 146492, guid: ba966160e243b9f46817d47944168437, type: 2}
   - {fileID: 136186, guid: 3c5d86394c0a7fe4db14c33823d47d33, type: 2}
+  - {fileID: 100000, guid: e41a1ff11fe7f43e3bb0a215c7cd3d54, type: 2}
 --- !u!4 &1733880030
 Transform:
   m_ObjectHideFlags: 0
@@ -9767,11 +9727,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400130, guid: 96dc6b4afef3e7642a22d5a13034b498, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -.476999998
       objectReference: {fileID: 0}
     - target: {fileID: 400130, guid: 96dc6b4afef3e7642a22d5a13034b498, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: .023
       objectReference: {fileID: 0}
     - target: {fileID: 400130, guid: 96dc6b4afef3e7642a22d5a13034b498, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10860,7 +10820,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.20000005
-  m_Center: {x: 0, y: 1, z: .300000012}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1920308880
 MonoBehaviour:
   m_ObjectHideFlags: 0

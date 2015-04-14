@@ -6,15 +6,16 @@ public class MagicArrowsSpell : SpellBehaviour
 {
     public int m_NumberOfArrows = 1;
     public float m_ArrowSpeed = 20.0f;
+    public float m_ArrowAcceleration = 100.0f;
     public GameObject m_prefab;
 
-    private List<GameObject> m_arrowsList;
+    private List<MagicArrowBehaviour> m_arrowsList;
 
     public override bool IsInProgress
     {
         get
         {
-            return false;
+            return (m_arrowsList != null) && m_arrowsList.Any(x => x);
         }
     }
 
@@ -32,12 +33,12 @@ public class MagicArrowsSpell : SpellBehaviour
         if (m_prefab.GetComponent<MagicArrowBehaviour>() == null)
             return;
 
-        m_arrowsList = new List<GameObject>(m_NumberOfArrows);
+        m_arrowsList = new List<MagicArrowBehaviour>(m_NumberOfArrows);
 
         for (int i = 0; i < m_NumberOfArrows; ++i)
         {
-            var velocity = RndOnHemisphere() * m_ArrowSpeed * 0.3f;//(target - origin).normalized * m_ArrowSpeed;
-            var origin = m_Caster.transform.position + velocity * 0.05f;
+            var velocity = RndOnHemisphere() * m_ArrowSpeed * 0.1f;//(target - origin).normalized * m_ArrowSpeed;
+            var origin = m_Caster.transform.position + velocity * 0.2f;
             Debug.DrawLine(origin, origin + velocity, Color.red, 0.5f);
 
 
@@ -48,6 +49,9 @@ public class MagicArrowsSpell : SpellBehaviour
             missile.Velocity = velocity;
             missile.m_Caster = m_Caster;
             missile.m_Target = FindTarget();
+            missile.m_Acceleration = m_ArrowAcceleration;
+
+            m_arrowsList.Add(missile);
         }
     }
 
@@ -60,7 +64,7 @@ public class MagicArrowsSpell : SpellBehaviour
     private Transform FindTarget()
     {
         var aliveObjects = GameObject.FindGameObjectsWithTag("Enemy").Where(IsObjectAlive);
-
+        
         var target = aliveObjects.FirstOrDefault();
         if (target != null)
             return target.transform;

@@ -6,21 +6,28 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
     public Transform m_Target;
 
     public float m_Speed;
+    public float m_Acceleration;
+
+    public float m_HomingDelay = 0.25f;
     public float m_Lifetime = 3.0f;
 
     public int m_BounceLayerMask = 1 << 0;
 
+    private float m_startTime;
+
     // Use this for initialization
     void Start()
     {
+        m_startTime = Time.time;
     }
 
     void FixedUpdate()
     {
         var dir = (m_Target != null)? m_Target.position - transform.position : m_Velocity;
-        float acceleration = m_Speed * 4.0f;
+        if (Time.time <= m_startTime + m_HomingDelay)
+            dir = m_Velocity;
 
-        m_Velocity += (dir.normalized * acceleration * Time.fixedDeltaTime);
+        m_Velocity += (dir.normalized * m_Acceleration * Time.fixedDeltaTime);
         m_Velocity = Vector3.ClampMagnitude(m_Velocity, m_Speed);
 
         transform.position = transform.position + m_Velocity * Time.fixedDeltaTime;
@@ -69,8 +76,7 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
             SelfDestruct(ray, dSpeed);
         }
 
-        m_Lifetime -= Time.fixedDeltaTime;
-        if (m_Lifetime <= 0.0f)
+        if (Time.time >= m_startTime + m_Lifetime)
             SelfDestruct(ray, dSpeed);
 
     }
