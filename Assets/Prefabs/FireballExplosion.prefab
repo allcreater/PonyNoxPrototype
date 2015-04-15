@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 484392}
   - 82: {fileID: 8294782}
+  - 114: {fileID: 11495184}
   m_Layer: 0
   m_Name: FireballExplosion
   m_TagString: Untagged
@@ -261,6 +262,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RemoveDelay: .400000006
+--- !u!114 &11495184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8814f5cc1032941960d3c51cc4bc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExplosionRadius: 5
+  m_ExplosionBaseDamage: 10
+  m_ShockwaveBaseImpulse: 100
 --- !u!198 &19822250
 ParticleSystem:
   m_ObjectHideFlags: 1
