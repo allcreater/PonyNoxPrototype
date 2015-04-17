@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class GroundCreatureMovementMotor : LivingCreatureMotor
 {
     public float m_JumpImpulse = 1000.0f;
-
+    public Vector3 m_CenterOfMass;
     public Animator m_Animator;
 
     private Rigidbody m_rigidBody;
@@ -16,6 +16,8 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
         m_rigidBody = GetComponent<Rigidbody>();
         m_groundDetector = GetComponent<GroundDetector>();
 
+        m_rigidBody.centerOfMass = m_CenterOfMass;
+
 		OnRevive ();
 	}
 
@@ -24,35 +26,48 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
         if (m_groundDetector.IsGrounded)
             m_rigidBody.AddForce(m_groundDetector.GroundNormal * m_JumpImpulse, ForceMode.Impulse);
     }
+    private Vector3 GetAngleVelocitiesToRotate(Vector3 sourceAngles, Vector3 desiredAngles)
+    {
+        var source = Quaternion.Euler(sourceAngles);
+        var target = Quaternion.Euler(desiredAngles);
+
+        var deltaAngles = (source * Quaternion.Inverse(target)).eulerAngles;
+
+        return new Vector3(
+            Mathf.DeltaAngle(deltaAngles.x, 0),
+            Mathf.DeltaAngle(deltaAngles.y, 0),
+            Mathf.DeltaAngle(deltaAngles.z, 0)
+            ) / Mathf.PI;
+    }
 
     //Will work only for alive creature
     protected override void FixedUpdateImpl()
     {
-        //achtung! говноподход!
-        //transform.eulerAngles = new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0);
         /*
+        //achtung! говноподход!
         var normalVS = transform.InverseTransformDirection(m_groundDetector.GroundNormal);
         float pitch = Mathf.Asin(normalVS.z) * Mathf.Rad2Deg;
+        transform.eulerAngles = new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0);
         */
 
-        transform.eulerAngles = new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0);
-
+        m_rigidBody.angularVelocity = GetAngleVelocitiesToRotate(transform.eulerAngles, new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0)) * 0.5f;
+        
         if (m_groundDetector.IsGrounded)
         {
-            Vector3 groundedDirection = new Vector3(MovementImpulse.x, 0.0f, MovementImpulse.z);
+            float speedAttenuation = Mathf.Exp(-m_rigidBody.velocity.magnitude * 0.1f);
+            Vector3 groundedDirection = new Vector3(MovementImpulse.x, 0.0f, MovementImpulse.z) * speedAttenuation;
             m_rigidBody.AddForce(groundedDirection, ForceMode.Impulse);
         }
 
         float dampeningK = 1.0f - m_rigidBody.velocity.sqrMagnitude * 0.001f;
-        m_rigidBody.velocity = m_rigidBody.velocity * dampeningK;
+        //m_rigidBody.velocity = m_rigidBody.velocity * dampeningK;
 
-        m_Animator.SetFloat("SpeedAhead", transform.InverseTransformDirection(m_rigidBody.velocity).z * 0.3f);
+        m_Animator.SetFloat("SpeedAhead", transform.InverseTransformDirection(m_rigidBody.velocity).z);
         m_Animator.SetBool("IsJumping", !m_groundDetector.IsGrounded);
     }
 
     protected override void OnDeath()
     {
-        m_rigidBody.constraints = RigidbodyConstraints.None;
 		m_Animator.enabled = false;
         /*
         foreach (var rb in GetComponentsInChildren<Rigidbody>())
@@ -81,7 +96,8 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
 
     protected override void OnRevive()
     {
-        m_rigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        transform.eulerAngles = new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0);
+
 		m_Animator.enabled = true;
 
         /*

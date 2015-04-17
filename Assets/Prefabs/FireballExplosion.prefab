@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ExplosionRadius: 5
   m_ExplosionBaseDamage: 10
-  m_ShockwaveBaseImpulse: 100
+  m_ShockwaveBaseImpulse: 10000
 --- !u!198 &19822250
 ParticleSystem:
   m_ObjectHideFlags: 1

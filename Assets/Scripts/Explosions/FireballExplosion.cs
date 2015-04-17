@@ -8,7 +8,7 @@ public class FireballExplosion : MonoBehaviour
     public float m_ExplosionBaseDamage = 10.0f;
     public float m_ShockwaveBaseImpulse = 100.0f;
 
-    void Explode(Vector3 location)
+    IEnumerator Explode(Vector3 location)
     {
         //взрываемся
         var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
@@ -23,17 +23,34 @@ public class FireballExplosion : MonoBehaviour
 
             float influence = Mathf.Clamp(1.0f - direction.magnitude / m_ExplosionRadius, 0, 1);
 
+            /*
             var rb = collider.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 float impulse = m_ShockwaveBaseImpulse * influence;
                 rb.AddExplosionForce(impulse, transform.position, m_ExplosionRadius);
             }
+            */
 
             var lc = collider.GetComponent<LivingCreatureBehaviour>();
             if (lc != null)
             {
                 lc.m_HitPoints.ChangeValue(-m_ExplosionBaseDamage * influence);
+            }
+        }
+
+        yield return new WaitForSeconds(0.1f);
+
+        objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
+        foreach (var collider in objects)
+        {
+            var direction = collider.transform.position - transform.position;
+            float influence = Mathf.Clamp(1.0f - direction.magnitude / m_ExplosionRadius, 0, 1);
+            var rb = collider.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                float impulse = m_ShockwaveBaseImpulse * influence;
+                rb.AddExplosionForce(impulse, transform.position, m_ExplosionRadius);
             }
         }
     }

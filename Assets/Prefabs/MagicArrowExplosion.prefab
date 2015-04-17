@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 423480}
   - 198: {fileID: 19837526}
   - 199: {fileID: 19978812}
+  - 114: {fileID: 11408224}
   m_Layer: 8
   m_Name: MagicArrowExplosion
   m_TagString: Untagged
@@ -29,6 +30,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11408224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce4edf5579d2564cabd3854d497a3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExplosionRadius: .200000003
+  m_Damage: 4
 --- !u!198 &19837526
 ParticleSystem:
   m_ObjectHideFlags: 1
