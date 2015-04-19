@@ -8,17 +8,15 @@ public class TimberwolfAI : MonoBehaviour
     public float m_TargetDetectDistance;
 
 
-    private GroundCreatureMovementMotor m_Motor;
-    private void RetracePath()
-    {
-
-    }
+    private GroundCreatureMovementMotor m_motor;
+    private NavMeshNavigator m_navigator;
 
 
 	// Use this for initialization
 	void Start ()
 	{
-        m_Motor = GetComponent<GroundCreatureMovementMotor>();
+        m_motor = GetComponent<GroundCreatureMovementMotor>();
+        m_navigator = GetComponent<NavMeshNavigator>();
 	}
 
 	// Update is called once per frame
@@ -26,7 +24,7 @@ public class TimberwolfAI : MonoBehaviour
 	{
         if (m_Target == null)
             return;
-
+        
         var dir = m_Target.position - transform.position;
         var targetDirection = new Ray(transform.position, dir.normalized);
         /*
@@ -38,10 +36,12 @@ public class TimberwolfAI : MonoBehaviour
         }
         */
 
-        if (dir.sqrMagnitude < m_TargetDetectDistance * m_TargetDetectDistance)
+        if (dir.magnitude < m_TargetDetectDistance)
         {
-            m_Motor.MovementDirection = dir * 0.05f;
-            Debug.DrawRay(targetDirection.origin, targetDirection.direction * m_TargetDetectDistance, Color.green);
+            m_navigator.Target = m_Target.position;
+
+            m_motor.MovementDirection = m_navigator.DesiredDirection;
+            //Debug.DrawRay(targetDirection.origin, targetDirection.direction * m_TargetDetectDistance, Color.green);
         }
         else
         {

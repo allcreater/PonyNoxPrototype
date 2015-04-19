@@ -39,6 +39,17 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
             Mathf.DeltaAngle(deltaAngles.z, 0)
             ) / Mathf.PI;
     }
+    private Vector3 GetAngleVelocitiesToRotate(Quaternion source, Quaternion target)
+    {
+        var deltaAngles = (source * Quaternion.Inverse(target)).eulerAngles;
+
+        return new Vector3(
+            Mathf.DeltaAngle(deltaAngles.x, 0),
+            Mathf.DeltaAngle(deltaAngles.y, 0),
+            Mathf.DeltaAngle(deltaAngles.z, 0)
+            ) / Mathf.PI;
+    }
+
 
     //Will work only for alive creature
     protected override void FixedUpdateImpl()
@@ -50,7 +61,7 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
         transform.eulerAngles = new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0);
         */
 
-        m_rigidBody.angularVelocity = GetAngleVelocitiesToRotate(transform.eulerAngles, new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0)) * 0.5f;
+        m_rigidBody.angularVelocity = GetAngleVelocitiesToRotate(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0)) * 1.5f;
         
         if (m_groundDetector.IsGrounded)
         {

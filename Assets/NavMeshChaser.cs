@@ -5,21 +5,20 @@ public class NavMeshChaser : MonoBehaviour
 {
     public Transform m_Target;
 
-    private NavMeshAgent m_nma;
+    private NavMeshNavigator m_nmn;
     private Rigidbody m_rb;
 	// Use this for initialization
 	void Start ()
 	{
         m_rb = GetComponent<Rigidbody>();
-        m_nma = GetComponentInChildren<NavMeshAgent>();
-        m_nma.updateRotation = false;
-        m_nma.updatePosition = true;
+        m_nmn = GetComponentInChildren<NavMeshNavigator>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-        m_nma.SetDestination(m_Target.position);
-        m_rb.AddForce(m_nma.desiredVelocity, ForceMode.Acceleration);
+        m_nmn.Target = m_Target.position;
+
+        m_rb.AddForce(m_nmn.DesiredDirection * 10.0f, ForceMode.Acceleration);
 	}
 }
