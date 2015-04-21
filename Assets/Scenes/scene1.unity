@@ -253,122 +253,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a983e397f4a99c40a7d5ff0a751481b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &78860613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 78860619}
-  - 33: {fileID: 78860618}
-  - 23: {fileID: 78860616}
-  - 54: {fileID: 78860620}
-  - 135: {fileID: 78860617}
-  - 114: {fileID: 78860614}
-  - 114: {fileID: 78860615}
-  m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &78860614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 78860613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2f6203c0536224ea923859f17f929e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Target: {fileID: 1577575773}
---- !u!114 &78860615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 78860613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2994e55bb3dc345b5cfc43eae45902, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AreaMask: -1
-  m_StopRadius: 2
---- !u!23 &78860616
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 78860613}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 851e572593a5bf743832242de6279e9b, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!135 &78860617
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 78860613}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &78860618
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 78860613}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &78860619
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 78860613}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.34000015, y: .839999974, z: -35.9830017}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
---- !u!54 &78860620
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 78860613}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &106616253
 Prefab:
   m_ObjectHideFlags: 0
@@ -4620,6 +4504,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1420970279}
   - 114: {fileID: 1420970280}
+  - 114: {fileID: 1420970284}
   - 114: {fileID: 1420970281}
   - 114: {fileID: 1420970282}
   - 114: {fileID: 1420970283}
@@ -4716,6 +4601,24 @@ MonoBehaviour:
   m_Icon: {fileID: 21300000, guid: 23df957f6136df642be2096116fb2fc6, type: 3}
   m_VisualEffectOrigin: {fileID: 1685733536}
   m_CastDelay: .300000012
+--- !u!114 &1420970284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1420970278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709c7e3d2f3f68b4fa3b651ebf9b8d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CooldownTime: .300000012
+  m_ManaCost: 2
+  m_SpellName: Magic bolt
+  m_Caster: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 31f4210f01dc9ff469fe140ebe062199, type: 3}
+  m_FlySpeed: 60
+  m_prefab: {fileID: 119088, guid: b9894b0d2663c924389c3b7d9054ef12, type: 2}
 --- !u!4 &1430592879 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400042, guid: 96dc6b4afef3e7642a22d5a13034b498, type: 3}
