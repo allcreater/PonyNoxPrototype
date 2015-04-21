@@ -1,16 +1,37 @@
 fileFormatVersion: 2
-guid: a111e919afe97d7469a99d3bb213dd5f
-timeCreated: 1429301244
+guid: 68a6e06f143f3ff4ea8e49699771807b
+timeCreated: 1429526807
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
+    100000: Camera
+    100002: Cube
+    100004: //RootNode
+    100006: Lamp
+    100008: Armature
+    100010: Door
+    100012: Door 1
+    100014: Door.001
+    100016: Door.001_end
+    400000: Camera
+    400002: Cube
+    400004: //RootNode
+    400006: Lamp
+    400008: Armature
+    400010: Door
+    400012: Door 1
+    400014: Door.001
+    400016: Door.001_end
+    2300000: Cube
+    2300002: Door
+    3300000: Cube
+    3300002: Door
     4300000: Cube
-    4300002: House.5
+    4300002: Door
+    6400000: Door
+    9500000: //RootNode
+    13700000: Door
   materials:
     importMaterials: 1
     materialName: 0
@@ -20,7 +41,7 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -64,7 +85,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
