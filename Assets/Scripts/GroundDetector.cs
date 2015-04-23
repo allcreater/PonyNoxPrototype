@@ -20,7 +20,7 @@ public class GroundDetector : MonoBehaviour
 	void Update ()
 	{
         IsGrounded = false;
-        GroundNormal = Vector3.up;
+        GroundNormal = Vector3.zero;
 
         foreach (Transform raycastTransform in m_raycastPoints)
         {
@@ -35,9 +35,13 @@ public class GroundDetector : MonoBehaviour
             if (Physics.Raycast(ray, out hitInfo, m_maxDistance, 1))
             {
                 IsGrounded = true;
-
-                GroundNormal = hitInfo.normal; //TODO
+                GroundNormal += hitInfo.normal; //TODO
             }
         }
+
+        GroundNormal /= m_raycastPoints.Length;
+
+        if (GroundNormal.sqrMagnitude <= 0.0001f)
+            GroundNormal = Vector3.up;
 	}
 }
