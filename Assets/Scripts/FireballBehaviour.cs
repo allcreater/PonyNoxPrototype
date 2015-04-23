@@ -51,7 +51,7 @@ public class FireballBehaviour : ThrowableSpellBehaviour
             Vector3 effectLocation = transform.position;
             RaycastHit hitInfo;
             if (Physics.Raycast(ray, out hitInfo, scalarVelocity * 2.0f))
-                effectLocation += (hitInfo.normal * 0.5f);
+                effectLocation = (hitInfo.point + hitInfo.normal * 0.1f);
             Explode(effectLocation);
         }
 	}

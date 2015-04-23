@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce4edf5579d2564cabd3854d497a3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ExplosionRadius: .200000003
+  m_ExplosionRadius: .400000006
   m_Damage: 4
 --- !u!198 &19838912
 ParticleSystem:

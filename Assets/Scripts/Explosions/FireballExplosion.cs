@@ -7,11 +7,12 @@ public class FireballExplosion : MonoBehaviour
     public float m_ExplosionRadius = 5.0f;
     public float m_ExplosionBaseDamage = 10.0f;
     public float m_ShockwaveBaseImpulse = 100.0f;
+    public int m_LayerMask = 1 | 1 << 8;
 
     IEnumerator Explode(Vector3 location)
     {
         //взрываемся
-        var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
+        var objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius, m_LayerMask);
         foreach (var collider in objects)
         {
             /*
@@ -41,7 +42,7 @@ public class FireballExplosion : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
 
-        objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius);
+        objects = Physics.OverlapSphere(transform.position, m_ExplosionRadius, m_LayerMask);
         foreach (var collider in objects)
         {
             var direction = collider.transform.position - transform.position;

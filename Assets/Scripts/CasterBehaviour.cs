@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public abstract class SpellBehaviour : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class CasterBehaviour : MonoBehaviour
 
 	protected void UpdateSpellsList()
 	{
-		m_AvailableSpells = m_spellContainer.GetComponents<SpellBehaviour>();
+		m_AvailableSpells = m_spellContainer.GetComponentsInChildren<SpellBehaviour>().Where(x => x.m_Icon).ToArray();
 	}
 
     private IEnumerator SpellWaitingProcess(SpellBehaviour activeSpell)
@@ -80,7 +81,7 @@ public class CasterBehaviour : MonoBehaviour
         }
 
         StartCoroutine(SpellWaitingProcess(spell));
-
+        
         return true;
 	}
 

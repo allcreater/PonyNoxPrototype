@@ -112,7 +112,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .300000012
+  m_Time: .100000001
   m_StartWidth: 1
   m_EndWidth: 1
   m_Colors:
@@ -180,7 +180,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 1
+      scalar: .300000012
       maxCurve:
         serializedVersion: 2
         m_Curve:

@@ -1,0 +1,618 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: BlinkSpell
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.00057785149, y: -.000142421224, z: .408402652, w: -.912801623}
+        inSlope: {x: -.106789716, y: -.0200096834, z: .345468491, w: .156054482}
+        outSlope: {x: -.106789716, y: -.0200096834, z: .345468491, w: .156054482}
+        tangentMode: 0
+      - time: .0166666675
+        value: {x: -.00235768012, y: -.000475915964, z: .41416046, w: -.910200715}
+        inSlope: {x: -.106661521, y: -.0206843242, z: .344890028, w: .157216772}
+        outSlope: {x: -.106661521, y: -.0206843242, z: .344890028, w: .157216772}
+        tangentMode: 0
+      - time: .0333333351
+        value: {x: -.00413323566, y: -.000831898709, z: .419898987, w: -.907561064}
+        inSlope: {x: -.106398538, y: -.0220324062, z: .343721449, w: .159534186}
+        outSlope: {x: -.106398538, y: -.0220324062, z: .343721449, w: .159534186}
+        tangentMode: 0
+      - time: .0500000045
+        value: {x: -.00590429828, y: -.00121032959, z: .425617844, w: -.904882908}
+        inSlope: {x: -.106122293, y: -.0233780742, z: .342543125, w: .161840916}
+        outSlope: {x: -.106122293, y: -.0233780742, z: .342543125, w: .161840916}
+        tangentMode: 0
+      - time: .0666666701
+        value: {x: -.0076706456, y: -.00161116791, z: .431317091, w: -.902166367}
+        inSlope: {x: -.105832815, y: -.0247211885, z: .341349572, w: .164136901}
+        outSlope: {x: -.105832815, y: -.0247211885, z: .341349572, w: .164136901}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: -.00943205878, y: -.00203436916, z: .436996162, w: -.899411678}
+        inSlope: {x: -.105530202, y: -.0260613747, z: .340118438, w: .166418567}
+        outSlope: {x: -.105530202, y: -.0260613747, z: .340118438, w: .166418567}
+        tangentMode: 0
+      - time: .100000001
+        value: {x: -.011188319, y: -.00247988035, z: .442654371, w: -.896619081}
+        inSlope: {x: -.105214462, y: -.0273988713, z: .33888641, w: .168694869}
+        outSlope: {x: -.105214462, y: -.0273988713, z: .33888641, w: .168694869}
+        tangentMode: 0
+      - time: .116666667
+        value: {x: -.0129392073, y: -.00294766482, z: .448292375, w: -.893788517}
+        inSlope: {x: -.104885563, y: -.0287335217, z: .337643564, w: .170962185}
+        outSlope: {x: -.104885563, y: -.0287335217, z: .337643564, w: .170962185}
+        tangentMode: 0
+      - time: .13333334
+        value: {x: -.0146845048, y: -.00343766459, z: .453909159, w: -.890920341}
+        inSlope: {x: -.104543433, y: -.0300649032, z: .336370409, w: .17321524}
+        outSlope: {x: -.104543433, y: -.0300649032, z: .336370409, w: .17321524}
+        tangentMode: 0
+      - time: .150000006
+        value: {x: -.0164239891, y: -.00394982845, z: .459504724, w: -.888014674}
+        inSlope: {x: -.104188263, y: -.0313931406, z: .335089296, w: .175457612}
+        outSlope: {x: -.104188263, y: -.0313931406, z: .335089296, w: .175457612}
+        tangentMode: 0
+      - time: .166666672
+        value: {x: -.0181574468, y: -.0044841026, z: .465078801, w: -.885071754}
+        inSlope: {x: -.104007468, y: -.0320564508, z: .334444672, w: .176575199}
+        outSlope: {x: -.104007468, y: -.0320564508, z: .334444672, w: .176575199}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -.0749946386, y: .0180684663, z: -3.99999323e-08}
+        inSlope: {x: -3.21865082e-05, y: -.0544108003, z: -.029999759}
+        outSlope: {x: -3.21865082e-05, y: -.0544108003, z: -.029999759}
+        tangentMode: 0
+      - time: .166666672
+        value: {x: -.075000003, y: .00899999961, z: -.00499999989}
+        inSlope: {x: -3.21865082e-05, y: -.0544108003, z: -.029999759}
+        outSlope: {x: -3.21865082e-05, y: -.0544108003, z: -.029999759}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/GameObject/Particle
+      System
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: .923076928
+        outSlope: .923076928
+        tangentMode: 10
+      - time: .216666669
+        value: .200000003
+        inSlope: 2.74493933
+        outSlope: 2.74493933
+        tangentMode: 10
+      - time: .433333337
+        value: 1.18947363
+        inSlope: 8.36234856
+        outSlope: 8.36234856
+        tangentMode: 10
+      - time: .5
+        value: 2
+        inSlope: -8.92105293
+        outSlope: -8.92105293
+        tangentMode: 10
+      - time: .566666663
+        value: 0
+        inSlope: -30.0000019
+        outSlope: -30.0000019
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Brightness
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/GameObject
+    classID: 123
+    script: {fileID: 0}
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 2556677128
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2556677128
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3537016292
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - path: 581056833
+      attribute: 1406091054
+      script: {fileID: 0}
+      classID: 123
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_StartTime: 0
+    m_StopTime: .566666663
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.0749946386
+        inSlope: -3.21865082e-05
+        outSlope: -3.21865082e-05
+        tangentMode: 10
+      - time: .166666672
+        value: -.075000003
+        inSlope: -3.21865082e-05
+        outSlope: -3.21865082e-05
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.x
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .0180684663
+        inSlope: -.0544108003
+        outSlope: -.0544108003
+        tangentMode: 10
+      - time: .166666672
+        value: .00899999961
+        inSlope: -.0544108003
+        outSlope: -.0544108003
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.y
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -3.99999323e-08
+        inSlope: -.029999759
+        outSlope: -.029999759
+        tangentMode: 10
+      - time: .166666672
+        value: -.00499999989
+        inSlope: -.029999759
+        outSlope: -.029999759
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalPosition.z
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.00057785149
+        inSlope: -.106789716
+        outSlope: -.106789716
+        tangentMode: 0
+      - time: .0166666675
+        value: -.00235768012
+        inSlope: -.106661521
+        outSlope: -.106661521
+        tangentMode: 0
+      - time: .0333333351
+        value: -.00413323566
+        inSlope: -.106398538
+        outSlope: -.106398538
+        tangentMode: 0
+      - time: .0500000045
+        value: -.00590429828
+        inSlope: -.106122293
+        outSlope: -.106122293
+        tangentMode: 0
+      - time: .0666666701
+        value: -.0076706456
+        inSlope: -.105832815
+        outSlope: -.105832815
+        tangentMode: 0
+      - time: .0833333358
+        value: -.00943205878
+        inSlope: -.105530202
+        outSlope: -.105530202
+        tangentMode: 0
+      - time: .100000001
+        value: -.011188319
+        inSlope: -.105214462
+        outSlope: -.105214462
+        tangentMode: 0
+      - time: .116666667
+        value: -.0129392073
+        inSlope: -.104885563
+        outSlope: -.104885563
+        tangentMode: 0
+      - time: .13333334
+        value: -.0146845048
+        inSlope: -.104543433
+        outSlope: -.104543433
+        tangentMode: 0
+      - time: .150000006
+        value: -.0164239891
+        inSlope: -.104188263
+        outSlope: -.104188263
+        tangentMode: 0
+      - time: .166666672
+        value: -.0181574468
+        inSlope: -.104007468
+        outSlope: -.104007468
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.000142421224
+        inSlope: -.0200096834
+        outSlope: -.0200096834
+        tangentMode: 0
+      - time: .0166666675
+        value: -.000475915964
+        inSlope: -.0206843242
+        outSlope: -.0206843242
+        tangentMode: 0
+      - time: .0333333351
+        value: -.000831898709
+        inSlope: -.0220324062
+        outSlope: -.0220324062
+        tangentMode: 0
+      - time: .0500000045
+        value: -.00121032959
+        inSlope: -.0233780742
+        outSlope: -.0233780742
+        tangentMode: 0
+      - time: .0666666701
+        value: -.00161116791
+        inSlope: -.0247211885
+        outSlope: -.0247211885
+        tangentMode: 0
+      - time: .0833333358
+        value: -.00203436916
+        inSlope: -.0260613747
+        outSlope: -.0260613747
+        tangentMode: 0
+      - time: .100000001
+        value: -.00247988035
+        inSlope: -.0273988713
+        outSlope: -.0273988713
+        tangentMode: 0
+      - time: .116666667
+        value: -.00294766482
+        inSlope: -.0287335217
+        outSlope: -.0287335217
+        tangentMode: 0
+      - time: .13333334
+        value: -.00343766459
+        inSlope: -.0300649032
+        outSlope: -.0300649032
+        tangentMode: 0
+      - time: .150000006
+        value: -.00394982845
+        inSlope: -.0313931406
+        outSlope: -.0313931406
+        tangentMode: 0
+      - time: .166666672
+        value: -.0044841026
+        inSlope: -.0320564508
+        outSlope: -.0320564508
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .408402652
+        inSlope: .345468491
+        outSlope: .345468491
+        tangentMode: 0
+      - time: .0166666675
+        value: .41416046
+        inSlope: .344890028
+        outSlope: .344890028
+        tangentMode: 0
+      - time: .0333333351
+        value: .419898987
+        inSlope: .343721449
+        outSlope: .343721449
+        tangentMode: 0
+      - time: .0500000045
+        value: .425617844
+        inSlope: .342543125
+        outSlope: .342543125
+        tangentMode: 0
+      - time: .0666666701
+        value: .431317091
+        inSlope: .341349572
+        outSlope: .341349572
+        tangentMode: 0
+      - time: .0833333358
+        value: .436996162
+        inSlope: .340118438
+        outSlope: .340118438
+        tangentMode: 0
+      - time: .100000001
+        value: .442654371
+        inSlope: .33888641
+        outSlope: .33888641
+        tangentMode: 0
+      - time: .116666667
+        value: .448292375
+        inSlope: .337643564
+        outSlope: .337643564
+        tangentMode: 0
+      - time: .13333334
+        value: .453909159
+        inSlope: .336370409
+        outSlope: .336370409
+        tangentMode: 0
+      - time: .150000006
+        value: .459504724
+        inSlope: .335089296
+        outSlope: .335089296
+        tangentMode: 0
+      - time: .166666672
+        value: .465078801
+        inSlope: .334444672
+        outSlope: .334444672
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.912801623
+        inSlope: .156054482
+        outSlope: .156054482
+        tangentMode: 0
+      - time: .0166666675
+        value: -.910200715
+        inSlope: .157216772
+        outSlope: .157216772
+        tangentMode: 0
+      - time: .0333333351
+        value: -.907561064
+        inSlope: .159534186
+        outSlope: .159534186
+        tangentMode: 0
+      - time: .0500000045
+        value: -.904882908
+        inSlope: .161840916
+        outSlope: .161840916
+        tangentMode: 0
+      - time: .0666666701
+        value: -.902166367
+        inSlope: .164136901
+        outSlope: .164136901
+        tangentMode: 0
+      - time: .0833333358
+        value: -.899411678
+        inSlope: .166418567
+        outSlope: .166418567
+        tangentMode: 0
+      - time: .100000001
+        value: -.896619081
+        inSlope: .168694869
+        outSlope: .168694869
+        tangentMode: 0
+      - time: .116666667
+        value: -.893788517
+        inSlope: .170962185
+        outSlope: .170962185
+        tangentMode: 0
+      - time: .13333334
+        value: -.890920341
+        inSlope: .17321524
+        outSlope: .17321524
+        tangentMode: 0
+      - time: .150000006
+        value: -.888014674
+        inSlope: .175457612
+        outSlope: .175457612
+        tangentMode: 0
+      - time: .166666672
+        value: -.885071754
+        inSlope: .176575199
+        outSlope: .176575199
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/GameObject/Particle
+      System
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: .923076928
+        outSlope: .923076928
+        tangentMode: 10
+      - time: .216666669
+        value: .200000003
+        inSlope: 2.74493933
+        outSlope: 2.74493933
+        tangentMode: 10
+      - time: .433333337
+        value: 1.18947363
+        inSlope: 8.36234856
+        outSlope: 8.36234856
+        tangentMode: 10
+      - time: .5
+        value: 2
+        inSlope: -8.92105293
+        outSlope: -8.92105293
+        tangentMode: 10
+      - time: .566666663
+        value: 0
+        inSlope: -30.0000019
+        outSlope: -30.0000019
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Brightness
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/GameObject
+    classID: 123
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .0671081543
+        inSlope: 12.083313
+        outSlope: 12.083313
+        tangentMode: 10
+      - time: .166666672
+        value: 2.08099365
+        inSlope: 12.083313
+        outSlope: 12.083313
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.0121459961
+        inSlope: -3.0065918
+        outSlope: -3.0065918
+        tangentMode: 10
+      - time: .166666672
+        value: -.513244629
+        inSlope: -3.0065918
+        outSlope: -3.0065918
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 311.790894
+        inSlope: -43.4485474
+        outSlope: -43.4485474
+        tangentMode: 10
+      - time: .166666672
+        value: 304.549469
+        inSlope: -43.4485474
+        outSlope: -43.4485474
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+    classID: 4
+    script: {fileID: 0}
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []
