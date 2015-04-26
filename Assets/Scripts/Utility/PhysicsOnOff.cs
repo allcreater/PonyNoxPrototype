@@ -108,9 +108,10 @@ public class PhysicsOnOff : MonoBehaviour
                 {
                     object value = property.GetValue(obj, null);
 
-                    if (property.PropertyType.IsSubclassOf(typeof(Component)))
+					//if (property.PropertyType.IsSubclassOf(typeof(Component)))
+                    if (value is Component)
                         value = (value as Component).gameObject;
-                    
+
                     PropertiesValue.Add(property.Name, value);
                 }
             }
@@ -133,7 +134,7 @@ public class PhysicsOnOff : MonoBehaviour
                     object value = PropertiesValue[property.Name];
 
                     if (property.PropertyType.IsSubclassOf(typeof(Component)))
-                        value = PhysicsOnOff.GetOrCreateComponent(PropertiesValue[property.Name] as GameObject, property.PropertyType);
+                        value = PhysicsOnOff.GetOrCreateComponent(value as GameObject, property.PropertyType);
 
                     property.SetValue(target, value, null);
                 }
