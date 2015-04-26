@@ -20,7 +20,7 @@ public class BlinkSpell : SpellBehaviour
     {
         m_inProgress = true;
 
-        m_Caster.GetComponentInChildren<Animator>().SetTrigger(m_AnimationTriggerName);
+        CasterAnimator.SetTrigger(m_AnimationTriggerName);
         StartCoroutine(CastProcess(target));
     }
 

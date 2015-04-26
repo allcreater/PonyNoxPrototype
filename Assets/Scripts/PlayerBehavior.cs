@@ -58,7 +58,7 @@ public class PlayerBehavior : MonoBehaviour
         if (!lc.IsAlive)
             return;
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
             m_motor.Jump();
 
         //TODO: Ахтунг! Говнокод!

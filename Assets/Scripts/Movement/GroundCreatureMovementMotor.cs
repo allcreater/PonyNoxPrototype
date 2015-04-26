@@ -23,8 +23,9 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
 
     public void Jump()
     {
+        Vector3 direction = (m_groundDetector.GroundNormal + new Vector3(MovementImpulse.x, 0.0f, MovementImpulse.z)*0.1f).normalized;
         if (m_groundDetector.IsGrounded)
-            m_rigidBody.AddForce(m_groundDetector.GroundNormal * m_JumpImpulse, ForceMode.Impulse);
+            m_rigidBody.AddForce(direction * m_JumpImpulse, ForceMode.Impulse);
     }
     private Vector3 GetAngleVelocitiesToRotate(Vector3 sourceAngles, Vector3 desiredAngles)
     {
@@ -75,7 +76,12 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
         float dampeningK = 1.0f - m_rigidBody.velocity.sqrMagnitude * 0.001f;
         //m_rigidBody.velocity = m_rigidBody.velocity * dampeningK;
 
-        m_Animator.SetFloat("SpeedAhead", transform.InverseTransformDirection(m_rigidBody.velocity).z);
+
+        float speedAhead = transform.InverseTransformDirection(m_rigidBody.velocity).z;
+        if (speedAhead < 1.0f && m_groundDetector.IsGrounded && MovementDirection.magnitude > 0.5f)
+            speedAhead = 10.0f;
+
+        m_Animator.SetFloat("SpeedAhead", speedAhead);
         m_Animator.SetBool("IsJumping", !m_groundDetector.IsGrounded);
     }
 

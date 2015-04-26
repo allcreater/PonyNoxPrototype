@@ -16,20 +16,24 @@ public abstract class SpellBehaviour : MonoBehaviour
 
     public Sprite m_Icon;
 
+    private float m_lastCastTime = 0.0f;
+
 	public bool IsAvailable
 	{
 		get { return Time.timeSinceLevelLoad > (m_lastCastTime + m_CooldownTime); }
 	}
 
-	private float m_lastCastTime = 0.0f;
-
     public abstract bool IsInProgress { get; }
+
+    public Animator CasterAnimator { get; private set; }
+
 
 	public void BeginCast(Vector3 target)
 	{
 		Debug.Log(m_SpellName + " fired!");
 
 		m_lastCastTime = Time.timeSinceLevelLoad;
+        CasterAnimator = m_Caster.GetComponentInChildren<Animator>();
 
 		BeginCastImpl(target);
 	}
