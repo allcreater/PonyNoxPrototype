@@ -13,31 +13,31 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: SpeedAhead
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsJumping
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: TriggerAbility_Bite
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: TriggerAbility_Breath
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -50,7 +50,7 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - serializedVersion: 5
     m_Name: Ability layer
     m_StateMachine: {fileID: 110711872}
@@ -62,7 +62,7 @@ AnimatorController:
     m_DefaultWeight: 1
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_MultiThreadedStateMachine: 1
 --- !u!114 &11411506
 MonoBehaviour:
@@ -294,6 +294,23 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 7400000, guid: 46054d198e8dac04a8e7aa674eb2b1ec, type: 3}
   m_Tag: 
+--- !u!1102 &110222876
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: TW_PoisonBreath
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: fe7c7d5286e269e41b26886ec8a45e4f, type: 2}
+  m_Tag: 
 --- !u!1102 &110234668
 AnimatorState:
   serializedVersion: 5
@@ -381,7 +398,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: c6934389c9a092c46846f519792aa587, type: 2}
+  m_Motion: {fileID: 7400000, guid: fe7c7d5286e269e41b26886ec8a45e4f, type: 2}
   m_Tag: 
 --- !u!1102 &110267990
 AnimatorState:
@@ -453,6 +470,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 110240802}
     m_Position: {x: 36, y: -144, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 110222876}
+    m_Position: {x: 71, y: -79, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110107910}
