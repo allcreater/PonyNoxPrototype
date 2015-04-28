@@ -317,6 +317,7 @@ GameObject:
   - 114: {fileID: 11445690}
   - 114: {fileID: 11478156}
   - 114: {fileID: 11489810}
+  - 114: {fileID: 11456406}
   m_Layer: 8
   m_Name: TimberWolf(Full-Bonned)1.0
   m_TagString: Untagged
@@ -4151,6 +4152,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DetachObjectOnEnablePhysics: 1
+--- !u!114 &11456406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abed18e7cd6020044a6e32f794f9217a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Team: Enemy
 --- !u!114 &11460390
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -149,13 +149,14 @@ GameObject:
   - 114: {fileID: 11499660}
   - 114: {fileID: 11439810}
   - 114: {fileID: 11498436}
+  - 114: {fileID: 11445622}
   m_Layer: 0
   m_Name: parasprite
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &164756
 GameObject:
   m_ObjectHideFlags: 1
@@ -401,7 +402,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164384}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 32.2900009, y: .0700000003, z: -24.4300003}
+  m_LocalPosition: {x: 32.2900009, y: 1.05999994, z: -24.4300003}
   m_LocalScale: {x: .100000009, y: .100000001, z: .100000009}
   m_Children:
   - {fileID: 491854}
@@ -589,6 +590,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementImpulse: 50
   m_Animator: {fileID: 9586956}
+--- !u!114 &11445622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abed18e7cd6020044a6e32f794f9217a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Team: Enemy
 --- !u!114 &11498436
 MonoBehaviour:
   m_ObjectHideFlags: 1

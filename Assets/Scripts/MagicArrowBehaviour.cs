@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class MagicArrowBehaviour : ThrowableSpellBehaviour
 {
-    public Transform m_Target;
+    public string m_TargetTeam;
 
     public float m_Speed;
     public float m_Acceleration;
@@ -14,16 +15,23 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
     public int m_BounceLayerMask = 1 << 0;
 
     private float m_startTime;
+    private SeekableTarget m_target;
+    private NearestTargetSelector m_targetSelector;
 
-    // Use this for initialization
     void Start()
     {
+        m_targetSelector = GetComponent<NearestTargetSelector>();
         m_startTime = Time.time;
+    }
+
+    void Update()
+    {
+        m_target = m_targetSelector.Targets.FirstOrDefault(x => x.m_Team == m_TargetTeam && x.IsAlive);
     }
 
     void FixedUpdate()
     {
-        var dir = (m_Target != null)? m_Target.position - transform.position : m_Velocity;
+        var dir = (m_target != null)? m_target.transform.position - transform.position : m_Velocity;
         if (Time.time <= m_startTime + m_HomingDelay)
             dir = m_Velocity;
 

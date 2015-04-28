@@ -45,10 +45,10 @@ public class MagicArrowsSpell : SpellBehaviour
             var missileObject = GameObject.Instantiate(m_prefab, origin , m_Caster.transform.rotation) as GameObject;
             var missile = missileObject.GetComponent<MagicArrowBehaviour>();
 
+            missile.m_TargetTeam = "Enemy"; //TODO
             missile.m_Speed = m_ArrowSpeed;
             missile.Velocity = velocity;
             missile.m_Caster = m_Caster;
-            missile.m_Target = FindTarget();
             missile.m_Acceleration = m_ArrowAcceleration;
 
             m_arrowsList.Add(missile);
@@ -59,15 +59,5 @@ public class MagicArrowsSpell : SpellBehaviour
     {
         var lcb = go.GetComponent<LivingCreatureBehaviour>();
         return lcb != null && lcb.IsAlive;
-    }
-
-    private Transform FindTarget()
-    {
-        var aliveObjects = GameObject.FindGameObjectsWithTag("Enemy").Where(IsObjectAlive);
-        
-        var target = aliveObjects.FirstOrDefault();
-        if (target != null)
-            return target.transform;
-        return null;
     }
 }

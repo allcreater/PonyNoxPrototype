@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 477550}
   - 96: {fileID: 9665240}
   - 114: {fileID: 11473600}
+  - 114: {fileID: 11499268}
   m_Layer: 0
   m_Name: MagicArrow
   m_TagString: Untagged
@@ -148,12 +149,25 @@ MonoBehaviour:
   m_Caster: {fileID: 0}
   m_ColliderRadius: .0299999993
   m_explosionEffect: {fileID: 126282, guid: c0b5598f1b5ac164db6290991e1c7d72, type: 2}
-  m_Target: {fileID: 0}
+  m_TargetTeam: 
   m_Speed: 30
   m_Acceleration: 0
   m_HomingDelay: .25
   m_Lifetime: 3
   m_BounceLayerMask: 1
+--- !u!114 &11499268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802d486d673e46d429cfafc9f0350480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UpdateInterval: .300000012
+  m_VisionRadius: 20
 --- !u!123 &12315604
 LensFlare:
   m_ObjectHideFlags: 1
