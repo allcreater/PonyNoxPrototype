@@ -3940,19 +3940,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 24e40f6e82747824e9207a20ff17300c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -.5
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 24e40f6e82747824e9207a20ff17300c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: .707106829
+      value: -.5
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 24e40f6e82747824e9207a20ff17300c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -.500000119
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 24e40f6e82747824e9207a20ff17300c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: .707106709
+      value: .49999994
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 24e40f6e82747824e9207a20ff17300c, type: 3}
       propertyPath: m_RootOrder
