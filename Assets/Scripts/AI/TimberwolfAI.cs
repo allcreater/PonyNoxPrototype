@@ -1,51 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 [RequireComponent(typeof(GroundCreatureMovementMotor))]
 public class TimberwolfAI : MonoBehaviour
 {
-    public Transform m_Target;
-    public float m_TargetDetectDistance;
-
-
+    private NearestTargetSelector m_targetSelector;
     private GroundCreatureMovementMotor m_motor;
     private NavMeshNavigator m_navigator;
-
 
 	// Use this for initialization
 	void Start ()
 	{
         m_motor = GetComponent<GroundCreatureMovementMotor>();
         m_navigator = GetComponent<NavMeshNavigator>();
+        m_targetSelector = GetComponent<NearestTargetSelector>();
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
-        if (m_Target == null)
+        var target = m_targetSelector.Targets.Where(x => x.m_Team != "Enemy").FirstOrDefault();
+        if (!target)
             return;
-        
-        var dir = m_Target.position - transform.position;
+
+        var dir = target.transform.position - transform.position;
         var targetDirection = new Ray(transform.position, dir.normalized);
-        /*
-	    if (Physics.Raycast(targetDirection, m_TargetDetectDistance))
-        {
-            NavMeshHit hit;
-            NavMesh.SamplePosition(m_Target.position, out hit, 1.0f, NavMesh.AllAreas);
-            
-        }
-        */
 
-        if (dir.magnitude < m_TargetDetectDistance)
-        {
-            m_navigator.Target = m_Target.position;
+        m_navigator.Target = target.transform.position;
 
-            m_motor.MovementDirection = m_navigator.DesiredDirection;
-            //Debug.DrawRay(targetDirection.origin, targetDirection.direction * m_TargetDetectDistance, Color.green);
-        }
-        else
-        {
-            Debug.DrawRay(targetDirection.origin, targetDirection.direction * m_TargetDetectDistance, Color.red);
-        }
+        m_motor.MovementDirection = m_navigator.DesiredDirection;
+        Debug.DrawRay(targetDirection.origin, targetDirection.direction * dir.magnitude, Color.green);
+
 	}
 }

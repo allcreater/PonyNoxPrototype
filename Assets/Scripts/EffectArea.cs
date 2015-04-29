@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EffectArea : MonoBehaviour
 {
+    public GameObject m_EffectPrefab;
 
 	// Use this for initialization
 	void Start ()
