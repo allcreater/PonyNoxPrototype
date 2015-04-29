@@ -24,6 +24,7 @@ ModelImporter:
     4300000: Cube.001
     4300002: Cube
     4300004: Cube.002
+    6400000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -45,7 +46,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
