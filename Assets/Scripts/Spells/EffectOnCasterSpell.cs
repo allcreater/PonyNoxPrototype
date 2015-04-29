@@ -18,6 +18,7 @@ public class EffectOnCasterSpell : SpellBehaviour
 
     public override void BeginCastImpl(Vector3 target)
 	{
-        m_EffectInstance = EffectBehaviour.InstantiateEffect(m_Effect, m_Caster.gameObject);
+        var er = m_Caster.GetComponent<EffectsReceiver>();
+        m_EffectInstance = er.AddEffect(m_Effect);
 	}
 }

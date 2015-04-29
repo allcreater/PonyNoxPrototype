@@ -54,7 +54,7 @@ public class PoisonBreathSpell : SpellBehaviour
             {
                 if (m_Effect)
                 {
-                    var effectInstance = EffectBehaviour.InstantiateEffect(m_Effect, lcb.gameObject);
+                    //var effectInstance = EffectBehaviour.InstantiateEffect(m_Effect, lcb.gameObject);
                 }
 
                 lcb.m_HitPoints.ChangeValue(-m_Damage);

@@ -77,7 +77,7 @@ public class PlayerBehavior : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha7))
             m_caster.Cast(6, m_targetPosition);
 
-        if (Input.GetButtonDown("Fire1") && m_InventoryBehaviour.ArmedWeapon != null)
+        if (Input.GetButtonDown("Fire1") && m_InventoryBehaviour.ArmedWeapon)
         {
             m_InventoryBehaviour.ArmedWeapon.Fire(gameObject, m_targetPosition);
         }

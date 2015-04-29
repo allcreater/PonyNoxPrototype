@@ -21,8 +21,11 @@ public class ManaRespawnerBehaviour : MonoBehaviour
         {
             caster.m_ManaPoints.ChangeValue(m_ManaPointsPerSecond * Time.deltaTime);
 
-
             var direction = (caster.transform.position + Random.onUnitSphere*0.4f) - m_ps.transform.position;
+            var rb = other.GetComponent<Rigidbody>();
+            if (rb)
+                direction += rb.velocity * 0.4f;
+
             m_ps.Emit(m_ps.transform.localPosition, direction.normalized * 10.0f, 1.0f, 1.0f, new Color32(0, 0, 255, 128));
         }
     }
