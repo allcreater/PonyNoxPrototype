@@ -12,6 +12,10 @@ public class EffectArea : MonoBehaviour
 	
     void OnTriggerStay (Collider otherCollider)
     {
+        var receiver = otherCollider.GetComponent<EffectsReceiver>();
+        if (!receiver)
+            return;
 
+        receiver.AddEffect(m_EffectPrefab);
     }
 }

@@ -45,6 +45,7 @@ MonoBehaviour:
     currentValue: 0
     maximumValue: 1
   m_Target: {fileID: 0}
+  m_SpellID: SmallCure
   HpChangePerSecond: 10
 --- !u!198 &19866000
 ParticleSystem:

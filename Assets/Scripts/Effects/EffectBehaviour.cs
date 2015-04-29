@@ -12,6 +12,7 @@ public abstract class EffectBehaviour : MonoBehaviour
     public Segment m_Timer;
     [HideInInspector]
     public GameObject m_Target;
+    public string m_SpellID;
 
     protected T GetTargetsComponent<T>(bool testChildren = false)
     {
@@ -32,6 +33,7 @@ public abstract class EffectBehaviour : MonoBehaviour
 
     protected abstract void EffectUpdate();
 
+    /*
     public static GameObject InstantiateEffect(GameObject reference, GameObject target)
     {
         var instance = GameObject.Instantiate(reference, target.transform.position, target.transform.rotation) as GameObject;
@@ -42,4 +44,5 @@ public abstract class EffectBehaviour : MonoBehaviour
 
         return instance;
     }
+     */
 }
