@@ -30,5 +30,6 @@ public class FlyingCreatureMotor : LivingCreatureMotor
     protected override void OnDeath()
     {
         m_rigidBody.useGravity = true;
+        m_rigidBody.constraints = RigidbodyConstraints.None;
     }
 }

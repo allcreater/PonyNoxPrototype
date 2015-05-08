@@ -23,7 +23,8 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
 
     public void Jump()
     {
-        Vector3 direction = (m_groundDetector.GroundNormal + new Vector3(MovementImpulse.x, 0.0f, MovementImpulse.z)*0.1f).normalized;
+        Vector3 direction = (m_groundDetector.GroundNormal + new Vector3(MovementImpulse.x, 0.0f, MovementImpulse.z)*0.01f).normalized;
+        Debug.DrawRay(transform.position, direction, Color.blue);
         if (m_groundDetector.IsGrounded)
             m_rigidBody.AddForce(direction * m_JumpImpulse, ForceMode.Impulse);
     }

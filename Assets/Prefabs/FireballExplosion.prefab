@@ -192,7 +192,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_ExplosionRadius: 5
   m_ExplosionBaseDamage: 10
   m_ShockwaveBaseImpulse: 10000
+  m_LayerMask: 257
 --- !u!198 &19822250
 ParticleSystem:
   m_ObjectHideFlags: 1
