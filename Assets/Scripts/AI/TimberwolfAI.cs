@@ -34,3 +34,16 @@ public class TimberwolfAI : MonoBehaviour
 
 	}
 }
+
+abstract class AiState
+{
+    public abstract void Update();
+};
+
+class StandAiState : AiState
+{
+    public override void Update()
+    {
+        throw new System.NotImplementedException();
+    }
+}

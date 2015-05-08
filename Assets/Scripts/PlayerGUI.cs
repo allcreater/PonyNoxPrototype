@@ -94,15 +94,6 @@ public class PlayerGUI : MonoBehaviour
 	{
 		m_livingCreatureComponent = GetComponent<LivingCreatureBehaviour>();
         m_casterBehaviourComponent = GetComponent<CasterBehaviour>();
-
-        //TODO
-        foreach (var spell in m_casterBehaviourComponent.m_AvailableSpells)
-        {
-            var icon = GameObject.Instantiate(m_SpellIconTemplate);
-            icon.transform.SetParent(m_SpellsPanel.transform, false);
-            icon.GetComponentInChildren<Text>().text = spell.m_SpellName;
-            icon.GetComponent<Image>().sprite = spell.m_Icon;
-        }
 	}
 	
 	void Update ()
@@ -110,6 +101,13 @@ public class PlayerGUI : MonoBehaviour
 		m_HpIndicator.text = string.Format("{0}", m_livingCreatureComponent.m_HitPoints);
         m_MpIndicator.text = string.Format("{0}", m_casterBehaviourComponent.m_ManaPoints);
 
+        UpdateItems();
+
+        UpdateSpells();
+	}
+   
+    protected void UpdateItems()
+    {
         var itemList = m_Inventory.Items.ToList();
         PreparePool(itemList.Count);
         for (int i = 0; i < itemList.Count; ++i)
@@ -128,5 +126,22 @@ public class PlayerGUI : MonoBehaviour
             m_activeItemIcon.sprite = m_activeItem.m_InventoryIcon;
             m_activeItemDescription.text = m_activeItem.m_Description;
         }
-	}
+    }
+
+    private bool m_spellsDirtyFlag = false;
+    protected void UpdateSpells()
+    {
+        if (m_spellsDirtyFlag)
+            return;
+        m_spellsDirtyFlag = true;
+
+        //TODO
+        foreach (var spell in m_casterBehaviourComponent.m_AvailableSpells)
+        {
+            var icon = GameObject.Instantiate(m_SpellIconTemplate);
+            icon.transform.SetParent(m_SpellsPanel.transform, false);
+            icon.GetComponentInChildren<Text>().text = spell.m_SpellName;
+            icon.GetComponent<Image>().sprite = spell.m_Icon;
+        }
+    }
 }

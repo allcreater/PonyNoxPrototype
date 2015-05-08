@@ -23,6 +23,7 @@ public class FlyingCreatureMotor : LivingCreatureMotor
     //Will work only for alive creature
     protected override void FixedUpdateImpl()
     {
+        m_rigidBody.angularVelocity = GetAngleVelocitiesToRotate(transform.rotation, Quaternion.LookRotation(MovementDirection.normalized)) * 1.5f;
         m_rigidBody.AddForce(MovementImpulse, ForceMode.Impulse);
     }
 

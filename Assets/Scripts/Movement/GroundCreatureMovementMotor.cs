@@ -27,30 +27,6 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
         if (m_groundDetector.IsGrounded)
             m_rigidBody.AddForce(direction * m_JumpImpulse, ForceMode.Impulse);
     }
-    private Vector3 GetAngleVelocitiesToRotate(Vector3 sourceAngles, Vector3 desiredAngles)
-    {
-        var source = Quaternion.Euler(sourceAngles);
-        var target = Quaternion.Euler(desiredAngles);
-
-        var deltaAngles = (source * Quaternion.Inverse(target)).eulerAngles;
-
-        return new Vector3(
-            Mathf.DeltaAngle(deltaAngles.x, 0),
-            Mathf.DeltaAngle(deltaAngles.y, 0),
-            Mathf.DeltaAngle(deltaAngles.z, 0)
-            ) / Mathf.PI;
-    }
-    private Vector3 GetAngleVelocitiesToRotate(Quaternion source, Quaternion target)
-    {
-        var deltaAngles = (source * Quaternion.Inverse(target)).eulerAngles;
-
-        return new Vector3(
-            Mathf.DeltaAngle(deltaAngles.x, 0),
-            Mathf.DeltaAngle(deltaAngles.y, 0),
-            Mathf.DeltaAngle(deltaAngles.z, 0)
-            ) / Mathf.PI;
-    }
-
 
     //Will work only for alive creature
     protected override void FixedUpdateImpl()
@@ -115,8 +91,8 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
 
     protected override void OnRevive()
     {
-        transform.eulerAngles = new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0);
-
+        //transform.eulerAngles = new Vector3(0, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0);
+        MovementDirection = transform.forward * 0.01f;
 		m_Animator.enabled = true;
 
         /*

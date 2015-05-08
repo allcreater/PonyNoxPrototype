@@ -150,13 +150,14 @@ GameObject:
   - 114: {fileID: 11439810}
   - 114: {fileID: 11498436}
   - 114: {fileID: 11445622}
+  - 114: {fileID: 11436420}
   m_Layer: 0
   m_Name: parasprite
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &164756
 GameObject:
   m_ObjectHideFlags: 1
@@ -401,9 +402,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164384}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 32.2900009, y: 1.05999994, z: -24.4300003}
-  m_LocalScale: {x: .100000009, y: .100000001, z: .100000009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.5, y: -.400000006, z: 26.9300003}
+  m_LocalScale: {x: .100000016, y: .100000001, z: .100000016}
   m_Children:
   - {fileID: 491854}
   - {fileID: 440652}
@@ -416,7 +417,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156672}
-  m_LocalRotation: {x: -4.32977997e-17, y: .707106709, z: .707106829, w: -4.32978063e-17}
+  m_LocalRotation: {x: -.5, y: -.5, z: -.499999762, w: .500000298}
   m_LocalPosition: {x: .521897793, y: .738290668, z: -.158285737}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -577,6 +578,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11436420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802d486d673e46d429cfafc9f0350480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UpdateInterval: 1
+  m_VisionRadius: 20
 --- !u!114 &11439810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -613,7 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8eec15eb52e6724c95dbe5ca7dcec40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Target: {fileID: 0}
 --- !u!114 &11499660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -640,7 +653,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Center: {x: .200000003, y: 1.20000005, z: -.200000003}
+  m_Center: {x: .5, y: 1.20000005, z: .200000003}
 --- !u!137 &13734816
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
