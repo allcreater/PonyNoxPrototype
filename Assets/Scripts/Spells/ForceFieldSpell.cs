@@ -17,7 +17,7 @@ public class ForceFieldSpell : SpellBehaviour
         }
     }
 
-    public override void BeginCastImpl(Vector3 target)
+    public override void BeginCastImpl(TargetInfo target)
     {
         CasterAnimator.SetTrigger(m_AnimationTriggerName);
 

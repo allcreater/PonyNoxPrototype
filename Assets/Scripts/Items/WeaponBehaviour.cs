@@ -24,7 +24,7 @@ public class WeaponBehaviour : MonoBehaviour
 
     public string AnimationTrigger;
 
-    public void Fire(GameObject owner, Vector3 target)
+    public void Fire(GameObject owner, TargetInfo target)
     {
         var animator = owner.GetComponentInChildren<Animator>();
         animator.SetTrigger(AnimationTrigger);

@@ -12,7 +12,7 @@ public class PlayerBehavior : MonoBehaviour
     private Collider m_collider;
     private GroundCreatureMovementMotor m_motor;
 
-    private Vector3 m_targetPosition;
+    private TargetInfo m_currentTarget;
 	void Start ()
     {
 		m_caster = GetComponent<CasterBehaviour>();
@@ -33,23 +33,27 @@ public class PlayerBehavior : MonoBehaviour
             {
                 if (hit_new.collider != m_collider)
                 {
-                    //var pos = new Vector3(hit_new.point.x, Terrain.activeTerrain.SampleHeight(hit_new.point) + 1, hit_new.point.z);
-                    //var normalVS = transform.InverseTransformDirection(m_groundDetector.GroundNormal);
-                    //float pitch = Mathf.Asin(normalVS.z) * Mathf.Rad2Deg;
-
                     var dir = hit_new.point - transform.position;
 
                     //m_sceletonTransform.localEulerAngles = new Vector3(pitch, 180, 0);
 
-                    m_targetPosition = hit_new.point;
+                    m_currentTarget = new TargetInfo(hit_new.point, hit_new.normal);
 
+                    
                     if (Input.GetButton("Fire2"))
                         m_motor.MovementDirection = dir;
                     else
                         m_motor.MovementDirection = dir.normalized * 0.01f;//Vector3.zero;
+                    
                 }
             }
         }
+        /*
+        if (Input.GetButton("Fire2"))
+            m_motor.MovementDirection = ray_new.direction;
+        else
+            m_motor.MovementDirection = ray_new.direction * 0.01f;//Vector3.zero;
+         */
     }
 
     void Update()
@@ -63,23 +67,23 @@ public class PlayerBehavior : MonoBehaviour
 
         //TODO: Ахтунг! Говнокод!
 		if (Input.GetKey(KeyCode.Alpha1))
-            m_caster.Cast(0, m_targetPosition);
+            m_caster.Cast(0, m_currentTarget);
         if (Input.GetKey(KeyCode.Alpha2))
-            m_caster.Cast(1, m_targetPosition);
+            m_caster.Cast(1, m_currentTarget);
         if (Input.GetKey(KeyCode.Alpha3))
-            m_caster.Cast(2, m_targetPosition);
+            m_caster.Cast(2, m_currentTarget);
         if (Input.GetKey(KeyCode.Alpha4))
-            m_caster.Cast(3, m_targetPosition);
+            m_caster.Cast(3, m_currentTarget);
         if (Input.GetKey(KeyCode.Alpha5))
-            m_caster.Cast(4, m_targetPosition);
+            m_caster.Cast(4, m_currentTarget);
         if (Input.GetKey(KeyCode.Alpha6))
-            m_caster.Cast(5, m_targetPosition);
+            m_caster.Cast(5, m_currentTarget);
         if (Input.GetKey(KeyCode.Alpha7))
-            m_caster.Cast(6, m_targetPosition);
+            m_caster.Cast(6, m_currentTarget);
 
         if (Input.GetButtonDown("Fire1") && m_InventoryBehaviour.ArmedWeapon)
         {
-            m_InventoryBehaviour.ArmedWeapon.Fire(gameObject, m_targetPosition);
+            m_InventoryBehaviour.ArmedWeapon.Fire(gameObject, m_currentTarget);
         }
 
         TestMousePointer();

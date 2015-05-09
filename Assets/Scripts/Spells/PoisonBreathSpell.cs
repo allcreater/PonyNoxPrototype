@@ -19,7 +19,7 @@ public class PoisonBreathSpell : SpellBehaviour
         }
     }
 
-    public override void BeginCastImpl(Vector3 target)
+    public override void BeginCastImpl(TargetInfo target)
     {
         m_inProgress = true;
         

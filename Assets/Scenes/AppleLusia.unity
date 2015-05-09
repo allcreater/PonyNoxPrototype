@@ -628,7 +628,7 @@ Transform:
   m_Children:
   - {fileID: 349851553}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!54 &205678018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3395,7 +3395,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!1 &482550356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,7 +3480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &482550362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4111,6 +4111,14 @@ Prefab:
       propertyPath: m_JumpImpulse
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 11443724, guid: 74712ab6e2efd5a4aba60cf6b114b842, type: 2}
+      propertyPath: m_ManaPoints.maximumValue
+      value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443724, guid: 74712ab6e2efd5a4aba60cf6b114b842, type: 2}
+      propertyPath: m_ManaPoints.currentValue
+      value: 8000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74712ab6e2efd5a4aba60cf6b114b842, type: 2}
   m_IsPrefabParent: 0
@@ -4214,64 +4222,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 136f469b6800cc24585a7dfd7f2681ba, type: 3}
   m_IsPrefabParent: 0
---- !u!21 &686219165
-Material:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Explosion
-  m_Shader: {fileID: 4800000, guid: 3ad9cea2715054022ac5b343000f3e16, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 89c55a6a75d704c17b5a68a0e7b088f4, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _RampTex
-        second:
-          m_Texture: {fileID: 2800000, guid: fefc6813ed34d4fad819fcf0f35ded02, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _Radius
-        second: .5
-      data:
-        first:
-          name: _Heat
-        second: .920000017
-      data:
-        first:
-          name: _NoiseFrequency
-        second: 2
-      data:
-        first:
-          name: _ScrollSpeed
-        second: 1
-      data:
-        first:
-          name: _Alpha
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _SpherePos
-        second: {r: 295.899994, g: 1.45000005, b: 176.5, a: 0}
 --- !u!4 &722671552 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 772619415b95b1a48b440cc75da050a2, type: 3}
@@ -4950,52 +4900,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a983e397f4a99c40a7d5ff0a751481b, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &949120070
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 295.899994
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.45000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 176.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 686219165}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 3349198dfac824d7190d4cd04d2a7305, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &951101274
 Prefab:
@@ -6253,7 +6157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1001 &1524401281
 Prefab:
   m_ObjectHideFlags: 0
@@ -6401,7 +6305,7 @@ Transform:
   - {fileID: 247702829}
   - {fileID: 889235463}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1636557508 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 179528, guid: 74712ab6e2efd5a4aba60cf6b114b842, type: 2}
@@ -7117,7 +7021,7 @@ Transform:
   - {fileID: 1861352957}
   - {fileID: 1754597957}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1001 &1947263450
 Prefab:
   m_ObjectHideFlags: 0

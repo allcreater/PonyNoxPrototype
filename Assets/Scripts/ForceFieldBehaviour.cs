@@ -36,7 +36,6 @@ public class ForceFieldBehaviour : MonoBehaviour
             var magnitude = direction.magnitude;
 
             RaycastHit hitInfo;
-            //collider
             Ray ray = new Ray(transform.position + direction*20.0f, -direction);
             if (magnitude >= 0.0f && collider.Raycast(ray, out hitInfo, 20.0f))
             {

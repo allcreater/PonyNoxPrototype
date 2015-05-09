@@ -3,6 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
+public class TargetInfo
+{
+    public Vector3 point { get; private set; }
+    public Vector3 normal { get; private set; }
+
+    public TargetInfo(Vector3 _point, Vector3 _normal)
+    {
+        point = _point;
+        normal = _normal;
+    }
+}
+
 public abstract class SpellBehaviour : MonoBehaviour
 {
 	[Range(0.0f, 100.0f)]
@@ -28,7 +40,7 @@ public abstract class SpellBehaviour : MonoBehaviour
     public Animator CasterAnimator { get; private set; }
 
 
-	public void BeginCast(Vector3 target)
+	public void BeginCast(TargetInfo target)
 	{
 		Debug.Log(m_SpellName + " fired!");
 
@@ -39,9 +51,8 @@ public abstract class SpellBehaviour : MonoBehaviour
 	}
 
 
-    public abstract void BeginCastImpl(Vector3 target);
+    public abstract void BeginCastImpl(TargetInfo target);
 }
-
 
 public class CasterBehaviour : MonoBehaviour
 {
@@ -68,7 +79,7 @@ public class CasterBehaviour : MonoBehaviour
         IsBusy = false;
     }
 
-	public bool Cast(uint activeSpell, Vector3 target)
+    public bool Cast(uint activeSpell, TargetInfo target)
 	{
         if (IsBusy)
             return false;

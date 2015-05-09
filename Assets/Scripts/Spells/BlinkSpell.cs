@@ -16,7 +16,7 @@ public class BlinkSpell : SpellBehaviour
         }
     }
 
-    public override void BeginCastImpl(Vector3 target)
+    public override void BeginCastImpl(TargetInfo target)
     {
         m_inProgress = true;
 
@@ -24,12 +24,21 @@ public class BlinkSpell : SpellBehaviour
         StartCoroutine(CastProcess(target));
     }
 
-    IEnumerator CastProcess(Vector3 target)
+    IEnumerator CastProcess(TargetInfo target)
     {
         
         yield return new WaitForSeconds(m_CastDelay);
 
-        m_Caster.transform.position = target;
+        RaycastHit hitInfo;
+        var direction = target.point - m_Caster.transform.position;
+        /*
+        if (Physics.SphereCast(new Ray(m_Caster.transform.position, direction), 1.0f, out hitInfo, direction.magnitude, 1))
+        {
+            m_Caster.transform.position = hitInfo.point + hitInfo.normal;
+            Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.red, 1.0f);
+        }
+        else*/
+            m_Caster.transform.position = target.point + target.normal;
 
         m_inProgress = false;
     }

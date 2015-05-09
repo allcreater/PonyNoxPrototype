@@ -28,7 +28,7 @@ public class MagicArrowsSpell : SpellBehaviour
         return vec;
     }
 
-    public override void BeginCastImpl(Vector3 target)
+    public override void BeginCastImpl(TargetInfo target)
     {
         if (m_prefab.GetComponent<MagicArrowBehaviour>() == null)
             return;
