@@ -1,5 +1,19 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+
+public class TargetInfo
+{
+    public Vector3 point { get; private set; }
+    public Vector3 normal { get; private set; }
+
+    public TargetInfo(Vector3 _point, Vector3 _normal)
+    {
+        point = _point;
+        normal = _normal;
+    }
+}
 
 public abstract class SpellBehaviour : MonoBehaviour
 {
@@ -9,28 +23,36 @@ public abstract class SpellBehaviour : MonoBehaviour
 
     public string m_SpellName = "";
 
+    [HideInInspector]
     public CasterBehaviour m_Caster;
+
+    public Sprite m_Icon;
+
+    private float m_lastCastTime = 0.0f;
 
 	public bool IsAvailable
 	{
 		get { return Time.timeSinceLevelLoad > (m_lastCastTime + m_CooldownTime); }
 	}
 
-	private float m_lastCastTime = 0.0f;
+    public abstract bool IsInProgress { get; }
 
-	public void BeginCast(Vector3 target)
+    public Animator CasterAnimator { get; private set; }
+
+
+	public void BeginCast(TargetInfo target)
 	{
 		Debug.Log(m_SpellName + " fired!");
 
 		m_lastCastTime = Time.timeSinceLevelLoad;
+        CasterAnimator = m_Caster.GetComponentInChildren<Animator>();
 
 		BeginCastImpl(target);
 	}
 
 
-    public abstract void BeginCastImpl(Vector3 target);
+    public abstract void BeginCastImpl(TargetInfo target);
 }
-
 
 public class CasterBehaviour : MonoBehaviour
 {
@@ -40,15 +62,30 @@ public class CasterBehaviour : MonoBehaviour
 
 	public SpellBehaviour[] m_AvailableSpells;
 
+    public bool IsBusy { get; protected set; }
+
 	protected void UpdateSpellsList()
 	{
-		m_AvailableSpells = m_spellContainer.GetComponents<SpellBehaviour>();
+		m_AvailableSpells = m_spellContainer.GetComponentsInChildren<SpellBehaviour>().Where(x => x.m_Icon).ToArray();
 	}
 
-	public void Cast(uint activeSpell, Vector3 target)
+    private IEnumerator SpellWaitingProcess(SpellBehaviour activeSpell)
+    {
+        IsBusy = true;
+
+        while (activeSpell.IsInProgress)
+            yield return new WaitForEndOfFrame();
+
+        IsBusy = false;
+    }
+
+    public bool Cast(uint activeSpell, TargetInfo target)
 	{
+        if (IsBusy)
+            return false;
+
 		if (m_AvailableSpells == null || activeSpell >= m_AvailableSpells.Length)
-			return;
+			return false;
 		
 		var spell = m_AvailableSpells[activeSpell];
         if (spell.IsAvailable && m_ManaPoints.currentValue >= spell.m_ManaCost)
@@ -57,15 +94,20 @@ public class CasterBehaviour : MonoBehaviour
             spell.m_Caster = this;
             spell.BeginCast(target);
         }
+
+        StartCoroutine(SpellWaitingProcess(spell));
+        
+        return true;
 	}
 
 	void Start ()
 	{
+        IsBusy = false;
 		UpdateSpellsList();
 	}
 	
 	void Update ()
 	{
-	
+        //UpdateSpellsList();
 	}
 }

@@ -1,0 +1,890 @@
+fileFormatVersion: 2
+guid: 96dc6b4afef3e7642a22d5a13034b498
+timeCreated: 1428494419
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Chest1
+    100002: Chest2
+    100004: HairBack1
+    100006: Head
+    100008: horn
+    100010: Jaw
+    100012: jiggle_hair1
+    100014: jiggle_hair1_end
+    100016: jiggle_hair2
+    100018: jiggle_hair2_end
+    100020: jiggle_hair3
+    100022: jiggle_hair3_end
+    100024: jiggle_tail1
+    100026: jiggle_tail1_end
+    100028: jiggle_tail2
+    100030: jiggle_tail2_end
+    100032: LeftBall
+    100034: LeftBall_end
+    100036: LeftEar
+    100038: LeftEar_end
+    100040: LeftFoot
+    100042: LeftFoot_end
+    100044: LeftForearm
+    100046: LeftHand
+    100048: LeftLeg1
+    100050: LeftLeg2
+    100052: LeftShoulder
+    100054: LeftThigh
+    100056: LeftWingClosed
+    100058: LeftWingClosed_end
+    100060: LeftWingOpen
+    100062: LeftWingOpen_end
+    100064: LowerTeeth
+    100066: LowerTeeth_end
+    100068: mane_twilight
+    100070: mesh
+    100072: mesh1
+    100074: mesh1_end
+    100076: mesh_end
+    100078: Neck
+    100080: Pelvis
+    100082: phymodel_female_medium_tail
+    100084: polymsh
+    100086: polymsh_end
+    100088: reference_twilight ref
+    100090: RightBall
+    100092: RightBall_end
+    100094: RightEar
+    100096: RightEar_end
+    100098: RightFoot
+    100100: RightFoot_end
+    100102: RightForearm
+    100104: RightHand
+    100106: RightLeg1
+    100108: RightLeg2
+    100110: RightShoulder
+    100112: RightThigh
+    100114: RightWingClosed
+    100116: RightWingClosed_end
+    100118: RightWingOpen
+    100120: RightWingOpen_end
+    100122: Tail1
+    100124: Tail2
+    100126: Tail3
+    100128: tail_twilight
+    100130: //RootNode
+    100132: twilightsparkle.qc_skeleton
+    100134: UpperTeeth
+    100136: UpperTeeth_end
+    400000: Chest1
+    400002: Chest2
+    400004: HairBack1
+    400006: Head
+    400008: horn
+    400010: Jaw
+    400012: jiggle_hair1
+    400014: jiggle_hair1_end
+    400016: jiggle_hair2
+    400018: jiggle_hair2_end
+    400020: jiggle_hair3
+    400022: jiggle_hair3_end
+    400024: jiggle_tail1
+    400026: jiggle_tail1_end
+    400028: jiggle_tail2
+    400030: jiggle_tail2_end
+    400032: LeftBall
+    400034: LeftBall_end
+    400036: LeftEar
+    400038: LeftEar_end
+    400040: LeftFoot
+    400042: LeftFoot_end
+    400044: LeftForearm
+    400046: LeftHand
+    400048: LeftLeg1
+    400050: LeftLeg2
+    400052: LeftShoulder
+    400054: LeftThigh
+    400056: LeftWingClosed
+    400058: LeftWingClosed_end
+    400060: LeftWingOpen
+    400062: LeftWingOpen_end
+    400064: LowerTeeth
+    400066: LowerTeeth_end
+    400068: mane_twilight
+    400070: mesh
+    400072: mesh1
+    400074: mesh1_end
+    400076: mesh_end
+    400078: Neck
+    400080: Pelvis
+    400082: phymodel_female_medium_tail
+    400084: polymsh
+    400086: polymsh_end
+    400088: reference_twilight ref
+    400090: RightBall
+    400092: RightBall_end
+    400094: RightEar
+    400096: RightEar_end
+    400098: RightFoot
+    400100: RightFoot_end
+    400102: RightForearm
+    400104: RightHand
+    400106: RightLeg1
+    400108: RightLeg2
+    400110: RightShoulder
+    400112: RightThigh
+    400114: RightWingClosed
+    400116: RightWingClosed_end
+    400118: RightWingOpen
+    400120: RightWingOpen_end
+    400122: Tail1
+    400124: Tail2
+    400126: Tail3
+    400128: tail_twilight
+    400130: //RootNode
+    400132: twilightsparkle.qc_skeleton
+    400134: UpperTeeth
+    400136: UpperTeeth_end
+    4300000: phymodel_female_medium_tail
+    4300002: tail_twilight
+    4300004: mane_twilight
+    4300006: horn
+    4300008: reference_twilight ref
+    7400000: Sword_Attack_1
+    7400002: running_sprint
+    7400004: twilightsparkle.qc_skeletonAction.001
+    7400006: pony_idle_stance
+    7400008: twilightsparkle.qc_skeletonAction.002
+    7400010: female walk cycle 1.000
+    7400012: twilightsparkle.qc_skeleton|female walk cycle 1.000
+    7400014: twilightsparkle.qc_skeleton|female walk cycle 1.3
+    7400016: twilightsparkle.qc_skeleton|pony_idle_stance
+    7400018: twilightsparkle.qc_skeleton|ragdoll_female_normal
+    7400020: twilightsparkle.qc_skeleton|running_sprint
+    7400022: twilightsparkle.qc_skeleton|Sword_Attack_1
+    7400024: twilightsparkle.qc_skeleton|twilightsparkle.qc_skeletonAction
+    7400026: twilightsparkle.qc_skeleton|twilightsparkle.qc_skeletonAction.001
+    7400028: twilightsparkle.qc_skeleton|twilightsparkle.qc_skeletonAction.002
+    7400030: phymodel_female_medium_tail|ragdoll_female_normal
+    7400032: tail_twilight|ragdoll_female_normal
+    7400034: mane_twilight|ragdoll_female_normal
+    7400036: horn|ragdoll_female_normal
+    7400038: reference_twilight ref|ragdoll_female_normal
+    9500000: //RootNode
+    13700000: horn
+    13700002: mane_twilight
+    13700004: phymodel_female_medium_tail
+    13700006: reference_twilight ref
+    13700008: tail_twilight
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Sword_Attack_1
+      takeName: Sword_Attack_1
+      firstFrame: 0
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: horn
+        weight: 1
+      - path: mane_twilight
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: reference_twilight ref
+        weight: 1
+      - path: tail_twilight
+        weight: 1
+      - path: twilightsparkle.qc_skeleton
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh1/mesh1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair3
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair3/jiggle_hair3_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1/jiggle_hair1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1/jiggle_tail1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail2/jiggle_tail2_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/polymsh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: running_sprint
+      takeName: running_sprint
+      firstFrame: 1
+      lastFrame: 289
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: horn
+        weight: 1
+      - path: mane_twilight
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: reference_twilight ref
+        weight: 1
+      - path: tail_twilight
+        weight: 1
+      - path: twilightsparkle.qc_skeleton
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh1/mesh1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair3
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair3/jiggle_hair3_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1/jiggle_hair1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1/jiggle_tail1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail2/jiggle_tail2_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/polymsh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pony_idle_stance
+      takeName: pony_idle_stance
+      firstFrame: 1
+      lastFrame: 209
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: horn
+        weight: 1
+      - path: mane_twilight
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: reference_twilight ref
+        weight: 1
+      - path: tail_twilight
+        weight: 1
+      - path: twilightsparkle.qc_skeleton
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh1/mesh1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair3
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair3/jiggle_hair3_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1/jiggle_hair1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1/jiggle_tail1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail2/jiggle_tail2_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/polymsh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: female walk cycle 1.000
+      takeName: female walk cycle 1.000
+      firstFrame: 1
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: horn
+        weight: 1
+      - path: mane_twilight
+        weight: 1
+      - path: phymodel_female_medium_tail
+        weight: 1
+      - path: reference_twilight ref
+        weight: 1
+      - path: tail_twilight
+        weight: 1
+      - path: twilightsparkle.qc_skeleton
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh/mesh_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/mesh1/mesh1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/LeftShoulder/LeftForearm/LeftHand/LeftBall/LeftBall_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair3
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/HairBack1/jiggle_hair3/jiggle_hair3_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/Jaw/LowerTeeth/LowerTeeth_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair1/jiggle_hair1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/jiggle_hair2/jiggle_hair2_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/LeftEar/LeftEar_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/RightEar/RightEar_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/Neck/Head/UpperTeeth/UpperTeeth_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/Chest2/RightShoulder/RightForearm/RightHand/RightBall/RightBall_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingClosed
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingClosed/LeftWingClosed_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingOpen
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/LeftWingOpen/LeftWingOpen_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingClosed
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingClosed/RightWingClosed_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingOpen
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Chest1/RightWingOpen/RightWingOpen_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/LeftThigh/LeftLeg1/LeftLeg2/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/RightThigh/RightLeg1/RightLeg2/RightFoot/RightFoot_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail1/jiggle_tail1_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail2
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/Pelvis/Tail1/Tail2/Tail3/jiggle_tail2/jiggle_tail2_end
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/polymsh
+        weight: 1
+      - path: twilightsparkle.qc_skeleton/polymsh/polymsh_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0199999996
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -149,9 +149,12 @@ GameObject:
   - 114: {fileID: 11499660}
   - 114: {fileID: 11439810}
   - 114: {fileID: 11498436}
+  - 114: {fileID: 11445622}
+  - 114: {fileID: 11436420}
+  - 114: {fileID: 11403252}
   m_Layer: 0
   m_Name: parasprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,9 +403,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164384}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 28.7399998, y: .986000001, z: -20}
-  m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.83233643, y: 2.38025546, z: 29.8500061}
+  m_LocalScale: {x: .100000016, y: .100000001, z: .100000016}
   m_Children:
   - {fileID: 491854}
   - {fileID: 440652}
@@ -415,7 +418,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156672}
-  m_LocalRotation: {x: -4.32977997e-17, y: .707106709, z: .707106829, w: -4.32978063e-17}
+  m_LocalRotation: {x: -.5, y: -.5, z: -.499999762, w: .500000298}
   m_LocalPosition: {x: .521897793, y: .738290668, z: -.158285737}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -551,13 +554,13 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164384}
   serializedVersion: 2
-  m_Mass: .100000001
+  m_Mass: 100
   m_Drag: 1
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!95 &9586956
 Animator:
@@ -576,6 +579,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11403252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5045392b9d0359344ac7f2ff1a1a8270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11436420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802d486d673e46d429cfafc9f0350480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UpdateInterval: 1
+  m_VisionRadius: 20
 --- !u!114 &11439810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -587,8 +614,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e20f52e17608dc45be630e738a538ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovementImpulse: .0500000007
+  m_MovementImpulse: 50
   m_Animator: {fileID: 9586956}
+--- !u!114 &11445622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abed18e7cd6020044a6e32f794f9217a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Team: Enemy
 --- !u!114 &11498436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -600,7 +639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8eec15eb52e6724c95dbe5ca7dcec40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Target: {fileID: 0}
 --- !u!114 &11499660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -627,7 +665,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Center: {x: .200000003, y: 1.20000005, z: -.200000003}
+  m_Center: {x: .5, y: 1.20000005, z: .200000003}
 --- !u!137 &13734816
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -641,7 +679,7 @@ SkinnedMeshRenderer:
   - {fileID: 2100000, guid: d8c3b8416456f9b4c95b33b1381b814e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
+  m_UseLightProbes: 0
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
@@ -685,7 +723,7 @@ SkinnedMeshRenderer:
   - {fileID: 2100000, guid: f2ba118a487358c47a5362193573ba5c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
+  m_UseLightProbes: 0
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -12,16 +13,23 @@ public class FlyingCreatureMotor : LivingCreatureMotor
         m_rigidBody = GetComponent<Rigidbody>();
         m_rigidBody.useGravity = false; 
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-
-	}
     
+    void Update()
+    {
+        m_Animator.SetBool("IsDead", !LivingCreature.IsAlive);
+        m_Animator.SetBool("IsFlying", m_rigidBody.velocity.magnitude > 0.5f);
+    }
+
     //Will work only for alive creature
     protected override void FixedUpdateImpl()
     {
+        m_rigidBody.angularVelocity = GetAngleVelocitiesToRotate(transform.rotation, Quaternion.LookRotation(MovementDirection.normalized)) * 1.5f;
         m_rigidBody.AddForce(MovementImpulse, ForceMode.Impulse);
+    }
+
+    protected override void OnDeath()
+    {
+        m_rigidBody.useGravity = true;
+        m_rigidBody.constraints = RigidbodyConstraints.None;
     }
 }
