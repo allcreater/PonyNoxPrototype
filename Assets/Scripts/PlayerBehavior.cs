@@ -12,7 +12,6 @@ public class PlayerBehavior : MonoBehaviour
     private Collider m_collider;
     private GroundCreatureMovementMotor m_motor;
 
-    private TargetInfo m_currentTarget;
 	void Start ()
     {
 		m_caster = GetComponent<CasterBehaviour>();
@@ -37,7 +36,7 @@ public class PlayerBehavior : MonoBehaviour
 
                     //m_sceletonTransform.localEulerAngles = new Vector3(pitch, 180, 0);
 
-                    m_currentTarget = new TargetInfo(hit_new.point, hit_new.normal);
+                    m_caster.Target = new TargetInfo(hit_new.point, hit_new.normal);
 
                     
                     if (Input.GetButton("Fire2"))
@@ -65,25 +64,26 @@ public class PlayerBehavior : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
             m_motor.Jump();
 
+        
         //TODO: Ахтунг! Говнокод!
 		if (Input.GetKey(KeyCode.Alpha1))
-            m_caster.Cast(0, m_currentTarget);
+            m_caster.Cast(0);
         if (Input.GetKey(KeyCode.Alpha2))
-            m_caster.Cast(1, m_currentTarget);
+            m_caster.Cast(1);
         if (Input.GetKey(KeyCode.Alpha3))
-            m_caster.Cast(2, m_currentTarget);
+            m_caster.Cast(2);
         if (Input.GetKey(KeyCode.Alpha4))
-            m_caster.Cast(3, m_currentTarget);
+            m_caster.Cast(3);
         if (Input.GetKey(KeyCode.Alpha5))
-            m_caster.Cast(4, m_currentTarget);
+            m_caster.Cast(4);
         if (Input.GetKey(KeyCode.Alpha6))
-            m_caster.Cast(5, m_currentTarget);
+            m_caster.Cast(5);
         if (Input.GetKey(KeyCode.Alpha7))
-            m_caster.Cast(6, m_currentTarget);
+            m_caster.Cast(6);
 
         if (Input.GetButtonDown("Fire1") && m_InventoryBehaviour.ArmedWeapon)
         {
-            m_InventoryBehaviour.ArmedWeapon.Fire(gameObject, m_currentTarget);
+            m_InventoryBehaviour.ArmedWeapon.Fire(gameObject);
         }
 
         TestMousePointer();

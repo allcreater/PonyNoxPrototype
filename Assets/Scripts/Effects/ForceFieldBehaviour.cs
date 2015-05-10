@@ -1,28 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ForceFieldBehaviour : MonoBehaviour
+public class ForceFieldBehaviour : EffectBehaviour
 {
     public float m_GrowTime = 0.5f;
-    public float m_LifeTime = 1.0f;
-    
-    private float m_startTime;
     private float m_scale = 0.0f;
 	// Use this for initialization
 	void Start ()
     {
-        m_startTime = Time.time;
         transform.localScale = Vector3.zero;
 	}
 	
-	// Update is called once per frame
-	void Update ()
+    protected override void EffectUpdate()
     {
-        m_scale = Mathf.Min(Time.time - m_startTime, m_GrowTime) / m_GrowTime;
+        m_scale = Mathf.Min(m_Timer.currentValue, m_GrowTime) / m_GrowTime;
         transform.localScale = new Vector3(m_scale, m_scale, m_scale);
-
-        if (Time.time > m_startTime + m_LifeTime)
-            GameObject.Destroy(gameObject);
 	}
 
     void OnTriggerStay(Collider otherCollider)

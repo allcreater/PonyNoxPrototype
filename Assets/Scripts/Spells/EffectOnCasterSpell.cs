@@ -12,11 +12,11 @@ public class EffectOnCasterSpell : SpellBehaviour
     {
         get
         {
-            return m_IsAsynchronious && m_EffectInstance;
+            return !m_IsAsynchronious && m_EffectInstance;
         }
     }
 
-    public override void BeginCastImpl(TargetInfo target)
+    public override void BeginCastImpl()
 	{
         var er = m_Caster.GetComponent<EffectsReceiver>();
         m_EffectInstance = er.AddEffect(m_Effect);

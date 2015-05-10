@@ -16,12 +16,12 @@ public class ManaRespawnerBehaviour : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        var caster = other.GetComponent<CasterBehaviour>();
-        if (caster != null)
+        var attribute = AttributeBehaviour.GetAttributeComponent(other.gameObject, "ManaPoints");
+        if (attribute != null)
         {
-            caster.m_ManaPoints.ChangeValue(m_ManaPointsPerSecond * Time.deltaTime);
+            attribute.m_Amount.ChangeValue(m_ManaPointsPerSecond * Time.deltaTime);
 
-            var direction = (caster.transform.position + Random.onUnitSphere*0.4f) - m_ps.transform.position;
+            var direction = (attribute.transform.position + Random.onUnitSphere * 0.4f) - m_ps.transform.position;
             var rb = other.GetComponent<Rigidbody>();
             if (rb)
                 direction += rb.velocity * 0.4f;

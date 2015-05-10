@@ -24,17 +24,15 @@ public class WeaponBehaviour : MonoBehaviour
 
     public string AnimationTrigger;
 
-    public void Fire(GameObject owner, TargetInfo target)
+    public void Fire(GameObject owner)
     {
         var animator = owner.GetComponentInChildren<Animator>();
         animator.SetTrigger(AnimationTrigger);
 
-
         var spell = GetComponent<SpellBehaviour>();
         if (spell != null)
         {
-            spell.m_Caster = owner.GetComponent<CasterBehaviour>(); //костыль?
-            spell.BeginCast(target);
+            spell.BeginCast(owner.GetComponent<CasterBehaviour>());
         }
     }
 }

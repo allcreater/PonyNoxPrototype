@@ -17,7 +17,7 @@ public class SwordAttack : SpellBehaviour
         }
     }
 
-    public override void BeginCastImpl(TargetInfo target)
+    public override void BeginCastImpl()
     {
         m_inProgress = true;
 

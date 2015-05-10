@@ -99,7 +99,7 @@ public class PlayerGUI : MonoBehaviour
 	void Update ()
 	{
 		m_HpIndicator.text = string.Format("{0}", m_livingCreatureComponent.m_HitPoints);
-        m_MpIndicator.text = string.Format("{0}", m_casterBehaviourComponent.m_ManaPoints);
+        //m_MpIndicator.text = string.Format("{0}", m_casterBehaviourComponent.m_ManaPoints);
 
         UpdateItems();
 

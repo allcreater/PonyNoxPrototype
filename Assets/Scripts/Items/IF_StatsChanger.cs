@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 using System.Collections.Generic;
 
 public interface IUsableItem
@@ -8,6 +9,7 @@ public interface IUsableItem
 
 public class IF_StatsChanger : MonoBehaviour, IUsableItem
 {
+    //TODO
     public float m_deltaHP;
     public float m_deltaMP;
 
@@ -18,13 +20,14 @@ public class IF_StatsChanger : MonoBehaviour, IUsableItem
         {
             lc.m_HitPoints.ChangeValue(m_deltaHP);
         }
-
-        var caster = args.Owner.GetComponent<CasterBehaviour>();
-        if (caster != null)
-        {
-            caster.m_ManaPoints.ChangeValue(m_deltaMP);
-        }
         
+        {
+            var attribute = AttributeBehaviour.GetAttributeComponent(args.Owner, "ManaPoints");
+            if (attribute)
+                attribute.m_Amount.ChangeValue(m_deltaMP);
+        }
+
+
         args.Item.Dispose();
     }
 }

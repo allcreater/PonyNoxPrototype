@@ -16,12 +16,12 @@ public class BlinkSpell : SpellBehaviour
         }
     }
 
-    public override void BeginCastImpl(TargetInfo target)
+    public override void BeginCastImpl()
     {
         m_inProgress = true;
 
         CasterAnimator.SetTrigger(m_AnimationTriggerName);
-        StartCoroutine(CastProcess(target));
+        StartCoroutine(CastProcess(m_Caster.Target));
     }
 
     IEnumerator CastProcess(TargetInfo target)
