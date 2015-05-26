@@ -41,8 +41,9 @@ public class GroundCreatureMovementMotor : LivingCreatureMotor
         var normalVS = transform.InverseTransformDirection(m_groundDetector.GroundNormal);
         float pitch = Mathf.Asin(normalVS.z) * Mathf.Rad2Deg;
 
-        m_rigidBody.angularVelocity = GetAngleVelocitiesToRotate(transform.rotation, Quaternion.Euler(pitch, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0)) * 1.5f;
-        
+		var vel = GetAngleVelocitiesToRotate(transform.rotation, Quaternion.Euler(pitch, Mathf.Atan2(MovementDirection.x, MovementDirection.z) * Mathf.Rad2Deg, 0)) * 1.5f;
+		m_rigidBody.angularVelocity = vel;
+
         if (m_groundDetector.IsGrounded)
         {
             float speedAttenuation = Mathf.Exp(-m_rigidBody.velocity.magnitude * 0.1f);

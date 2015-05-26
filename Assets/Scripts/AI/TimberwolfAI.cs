@@ -8,6 +8,7 @@ public class TimberwolfAI : MonoBehaviour
     private NearestTargetSelector m_targetSelector;
     private GroundCreatureMovementMotor m_motor;
     private NavMeshNavigator m_navigator;
+	private CasterBehaviour m_caster;
 
 	// Use this for initialization
 	void Start ()
@@ -15,6 +16,7 @@ public class TimberwolfAI : MonoBehaviour
         m_motor = GetComponent<GroundCreatureMovementMotor>();
         m_navigator = GetComponent<NavMeshNavigator>();
         m_targetSelector = GetComponent<NearestTargetSelector>();
+		m_caster = GetComponent<CasterBehaviour> ();
 	}
 
 	// Update is called once per frame
@@ -32,6 +34,12 @@ public class TimberwolfAI : MonoBehaviour
         m_motor.MovementDirection = m_navigator.DesiredDirection;
         Debug.DrawRay(targetDirection.origin, targetDirection.direction * dir.magnitude, Color.green);
 
+
+		m_caster.Target = new TargetInfo (target.transform.position, Vector3.up);
+		if (dir.magnitude <= 2.0f) {
+			m_caster.Cast (0);
+			//Debug.Log("cast");
+		}
 	}
 }
 

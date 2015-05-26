@@ -4,7 +4,11 @@ using System.Collections;
 
 public class EffectsReceiver : MonoBehaviour
 {
+	public string[] m_ResistsList; //TODO по-хорошему нужно уметь их ослаблять, а возможно и вообще вынести резисты в отдельную логику
+
     private Dictionary<string, EffectBehaviour> m_registeredEffects = new Dictionary<string,EffectBehaviour>();
+
+	private HashSet<string> m_ResistsSet;
 
     public GameObject AddEffect (GameObject effectTemplate)
     {
@@ -16,6 +20,15 @@ public class EffectsReceiver : MonoBehaviour
 
         foreach (var effect in instance.GetComponents<EffectBehaviour>())
         {
+			if (m_ResistsSet.Contains(effect.m_SpellID))
+			{
+				Debug.Log ("resist!");
+				Destroy(effect.gameObject);
+				continue;
+			}
+
+
+
             EffectBehaviour existingEffect = null;
             if (m_registeredEffects.TryGetValue(effect.m_SpellID, out existingEffect) && existingEffect)
             {//усилим старый эффект, а новый можно и удалить
@@ -34,7 +47,7 @@ public class EffectsReceiver : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-	
+		m_ResistsSet = new HashSet<string> (m_ResistsList);
 	}
 	
 	// Update is called once per frame
