@@ -30,16 +30,20 @@ public class TimberwolfAI : MonoBehaviour
         var targetDirection = new Ray(transform.position, dir.normalized);
 
         m_navigator.Target = target.transform.position;
+		m_navigator.m_StopRadius = 2.0f + GetComponent<Rigidbody> ().velocity.magnitude * 0.1f; //TODO - govnocode!
 
         m_motor.MovementDirection = m_navigator.DesiredDirection;
+		m_motor.RotationFactor = m_navigator.DesiredDirection.magnitude;
         Debug.DrawRay(targetDirection.origin, targetDirection.direction * dir.magnitude, Color.green);
 
 
 		m_caster.Target = new TargetInfo (target.transform.position, Vector3.up);
-		if (dir.magnitude <= 2.0f) {
+
+		var distance = dir.magnitude;
+		if (distance > 3.0f && distance <= 10.0f)
 			m_caster.Cast (0);
-			//Debug.Log("cast");
-		}
+		else if (distance <= 3.0f)
+			m_caster.Cast (1);
 	}
 }
 

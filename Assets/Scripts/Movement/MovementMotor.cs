@@ -26,6 +26,13 @@ public class MovementMotor : MonoBehaviour
     }
     private Vector3 m_movementDirection;
 
+	public float RotationFactor
+	{
+		get { return m_rotationFactor; }
+		set { m_rotationFactor = value; }
+	}
+	protected float m_rotationFactor = 1.0f;
+
     protected static Vector3 GetAngleVelocitiesToRotate(Quaternion source, Quaternion target)
     {
         var deltaAngles = (source * Quaternion.Inverse(target)).eulerAngles;
@@ -34,8 +41,13 @@ public class MovementMotor : MonoBehaviour
             Mathf.DeltaAngle(deltaAngles.x, 0),
             Mathf.DeltaAngle(deltaAngles.y, 0),
             Mathf.DeltaAngle(deltaAngles.z, 0)
-            ) / Mathf.PI;
+			) / Mathf.PI;
     }
+
+	protected Vector3 GetAngleVelocitiesToRotate(Quaternion target)
+	{
+		return GetAngleVelocitiesToRotate(transform.rotation, target) * m_rotationFactor;
+	}
 }
 
 public abstract class LivingCreatureMotor : MovementMotor

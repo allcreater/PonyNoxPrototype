@@ -7,6 +7,7 @@ public class SwordAttack : SpellBehaviour
     public float m_Damage = 1.0f;
 
     public float m_MaxDuracity = 1.0f;
+	public string m_AnimationTriggerName;
 
     private bool m_inProgress = false;
     public override bool IsInProgress
@@ -20,6 +21,9 @@ public class SwordAttack : SpellBehaviour
     public override void BeginCastImpl()
     {
         m_inProgress = true;
+
+		if (!string.IsNullOrEmpty (m_AnimationTriggerName))
+			CasterAnimator.SetTrigger (m_AnimationTriggerName);
 
         StartCoroutine(CastProcess());
     }
@@ -51,7 +55,7 @@ public class SwordAttack : SpellBehaviour
                 lcb.m_HitPoints.ChangeValue(-m_Damage);
 
                 if (hit.rigidbody != null)
-                    hit.rigidbody.AddForce(ray.direction * 1000.0f, ForceMode.Impulse);
+                    hit.rigidbody.AddForce(ray.direction * 100.0f, ForceMode.Impulse);
 
                 return true;
             }

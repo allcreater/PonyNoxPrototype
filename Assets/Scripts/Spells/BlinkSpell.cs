@@ -31,13 +31,8 @@ public class BlinkSpell : SpellBehaviour
 
         RaycastHit hitInfo;
         var direction = target.point - m_Caster.transform.position;
-        /*
-        if (Physics.SphereCast(new Ray(m_Caster.transform.position, direction), 1.0f, out hitInfo, direction.magnitude, 1))
-        {
-            m_Caster.transform.position = hitInfo.point + hitInfo.normal;
-            Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.red, 1.0f);
-        }
-        else*/
+
+		if (target.normal.y > 0.7f)
             m_Caster.transform.position = target.point + target.normal;
 
         m_inProgress = false;

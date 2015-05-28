@@ -55,10 +55,11 @@ public class NavMeshNavigator : MonoBehaviour
         if (PathStatus != NavMeshPathStatus.PathInvalid && (m_currentPointIndex < m_calculatedPath.corners.Length))
         {
             var dir = m_calculatedPath.corners[m_currentPointIndex] - transform.position;
-            DesiredDirection = Vector3.ClampMagnitude(dir / m_StopRadius, 1.0f);
+            DesiredDirection = Vector3.ClampMagnitude(dir, 1.0f);
 
             if (dir.magnitude <= m_StopRadius)
             {
+				DesiredDirection = DesiredDirection * 0.1f;
                 m_currentPointIndex++;
                 Debug.Log(m_currentPointIndex);
             }
