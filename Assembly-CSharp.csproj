@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{3BF11437-9308-01C8-25BB-E0458BC6B754}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>E:/Editor/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>E:/Editor/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\NavMeshChaser.cs" />
+     <Compile Include="Assets\ParticlesGravityAffector.cs" />
+     <Compile Include="Assets\PorglezompPyroclastics\ExplosionMat.cs" />
+     <Compile Include="Assets\Scripts\AI\NearestTargetSelector.cs" />
+     <Compile Include="Assets\Scripts\AI\ParaspriteAI.cs" />
+     <Compile Include="Assets\Scripts\AI\SeekableTarget.cs" />
+     <Compile Include="Assets\Scripts\AI\TimberwolfAI.cs" />
+     <Compile Include="Assets\Scripts\AttributeBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CasterBehaviour.cs" />
+     <Compile Include="Assets\Scripts\EffectArea.cs" />
+     <Compile Include="Assets\Scripts\Effects\EffectBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Effects\ForceFieldBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Effects\HpChangeEffect.cs" />
+     <Compile Include="Assets\Scripts\EffectsReceiver.cs" />
+     <Compile Include="Assets\Scripts\Explosions\FireballExplosion.cs" />
+     <Compile Include="Assets\Scripts\Explosions\PointDamageExplosion.cs" />
+     <Compile Include="Assets\Scripts\FireballBehaviour.cs" />
+     <Compile Include="Assets\Scripts\FloatingRigidBody.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\GroundDetector.cs" />
+     <Compile Include="Assets\Scripts\InventoryBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Items\IF_StatsChanger.cs" />
+     <Compile Include="Assets\Scripts\Items\PickableItem.cs" />
+     <Compile Include="Assets\Scripts\Items\WeaponBehaviour.cs" />
+     <Compile Include="Assets\Scripts\LivingCreatureBehaviour.cs" />
+     <Compile Include="Assets\Scripts\MagicArrowBehaviour.cs" />
+     <Compile Include="Assets\Scripts\ManaRespawnerBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Movement\FlyingCreatureMotor.cs" />
+     <Compile Include="Assets\Scripts\Movement\GroundCreatureMovementMotor.cs" />
+     <Compile Include="Assets\Scripts\Movement\MovementMotor.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
+     <Compile Include="Assets\Scripts\PlayerGUI.cs" />
+     <Compile Include="Assets\Scripts\Speed.cs" />
+     <Compile Include="Assets\Scripts\Spells\BlinkSpell.cs" />
+     <Compile Include="Assets\Scripts\Spells\EffectOnCasterSpell.cs" />
+     <Compile Include="Assets\Scripts\Spells\FireballSpell.cs" />
+     <Compile Include="Assets\Scripts\Spells\MagicArrowsSpell.cs" />
+     <Compile Include="Assets\Scripts\Spells\PoisonBreathSpell.cs" />
+     <Compile Include="Assets\Scripts\Spells\SpellBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Spells\SwordAttack.cs" />
+     <Compile Include="Assets\Scripts\TemplateCollection.cs" />
+     <Compile Include="Assets\Scripts\Utility\AutoRemove.cs" />
+     <Compile Include="Assets\Scripts\Utility\NavMeshNavigator.cs" />
+     <Compile Include="Assets\Scripts\Utility\PhysicsOnOff.cs" />
+     <Compile Include="Assets\Scripts\Water.cs" />
+     <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
+     <None Include="Assets\PorglezompPyroclastics\Shaders\ExplosionHigh.shader" />
+     <None Include="Assets\PorglezompPyroclastics\Shaders\ExplosionLow.shader" />
+     <None Include="Assets\PorglezompPyroclastics\Shaders\ExplosionMed.shader" />
+     <None Include="Assets\Materials\Shaders\ForceFieldShader.shader" />
+     <None Include="Assets\PorglezompPyroclastics\README.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>E:/Editor/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>E:/Editor/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
