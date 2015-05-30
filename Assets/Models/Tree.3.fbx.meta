@@ -12,6 +12,21 @@ ModelImporter:
     100008: Cylinder.004_MeshPart4
     100010: Cylinder.004_MeshPart5
     100012: //RootNode
+    100014: Cylinder.004
+    100016: Sphere
+    100018: Sphere.001
+    100020: Sphere.002
+    100022: Sphere.003
+    100024: Sphere.004
+    100026: Sphere.005
+    100028: Sphere.006
+    100030: Sphere.007
+    100032: Sphere.008
+    100034: Sphere.009
+    100036: Sphere.010
+    100038: Sphere.011
+    100040: Sphere.012
+    100042: Sphere.013
     400000: Cylinder.004_MeshPart0
     400002: Cylinder.004_MeshPart1
     400004: Cylinder.004_MeshPart2
@@ -19,24 +34,84 @@ ModelImporter:
     400008: Cylinder.004_MeshPart4
     400010: Cylinder.004_MeshPart5
     400012: //RootNode
+    400014: Cylinder.004
+    400016: Sphere
+    400018: Sphere.001
+    400020: Sphere.002
+    400022: Sphere.003
+    400024: Sphere.004
+    400026: Sphere.005
+    400028: Sphere.006
+    400030: Sphere.007
+    400032: Sphere.008
+    400034: Sphere.009
+    400036: Sphere.010
+    400038: Sphere.011
+    400040: Sphere.012
+    400042: Sphere.013
     2300000: Cylinder.004_MeshPart0
     2300002: Cylinder.004_MeshPart1
     2300004: Cylinder.004_MeshPart2
     2300006: Cylinder.004_MeshPart3
     2300008: Cylinder.004_MeshPart4
     2300010: Cylinder.004_MeshPart5
+    2300012: Cylinder.004
+    2300014: Sphere
+    2300016: Sphere.001
+    2300018: Sphere.002
+    2300020: Sphere.003
+    2300022: Sphere.004
+    2300024: Sphere.005
+    2300026: Sphere.006
+    2300028: Sphere.007
+    2300030: Sphere.008
+    2300032: Sphere.009
+    2300034: Sphere.010
+    2300036: Sphere.011
+    2300038: Sphere.012
+    2300040: Sphere.013
     3300000: Cylinder.004_MeshPart0
     3300002: Cylinder.004_MeshPart1
     3300004: Cylinder.004_MeshPart2
     3300006: Cylinder.004_MeshPart3
     3300008: Cylinder.004_MeshPart4
     3300010: Cylinder.004_MeshPart5
+    3300012: Cylinder.004
+    3300014: Sphere
+    3300016: Sphere.001
+    3300018: Sphere.002
+    3300020: Sphere.003
+    3300022: Sphere.004
+    3300024: Sphere.005
+    3300026: Sphere.006
+    3300028: Sphere.007
+    3300030: Sphere.008
+    3300032: Sphere.009
+    3300034: Sphere.010
+    3300036: Sphere.011
+    3300038: Sphere.012
+    3300040: Sphere.013
     4300000: Cylinder.004_MeshPart0
     4300002: Cylinder.004_MeshPart1
     4300004: Cylinder.004_MeshPart2
     4300006: Cylinder.004_MeshPart3
     4300008: Cylinder.004_MeshPart4
     4300010: Cylinder.004_MeshPart5
+    4300012: Cylinder.004
+    4300014: Sphere
+    4300016: Sphere.001
+    4300018: Sphere.002
+    4300020: Sphere.003
+    4300022: Sphere.004
+    4300024: Sphere.005
+    4300026: Sphere.006
+    4300028: Sphere.007
+    4300030: Sphere.008
+    4300032: Sphere.009
+    4300034: Sphere.010
+    4300036: Sphere.011
+    4300038: Sphere.012
+    4300040: Sphere.013
   materials:
     importMaterials: 1
     materialName: 0
