@@ -47,6 +47,8 @@ public class PlayerGUI : MonoBehaviour
     public Text m_activeItemDescription;
     public Image m_activeItemIcon;
 
+    public Image m_GameOverPanel;
+
 	private LivingCreatureBehaviour m_livingCreatureComponent;
     private CasterBehaviour m_casterBehaviourComponent;
 
@@ -100,6 +102,9 @@ public class PlayerGUI : MonoBehaviour
 	{
 		m_HpIndicator.text = string.Format("{0}", m_livingCreatureComponent.m_HitPoints);
         //m_MpIndicator.text = string.Format("{0}", m_casterBehaviourComponent.m_ManaPoints);
+
+        if (m_livingCreatureComponent.m_HitPoints.currentValue <= 0.01f)
+            m_GameOverPanel.gameObject.SetActive(true);
 
         UpdateItems();
 
