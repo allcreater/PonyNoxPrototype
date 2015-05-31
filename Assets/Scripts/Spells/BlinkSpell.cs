@@ -6,6 +6,7 @@ public class BlinkSpell : SpellBehaviour
 {
     public float m_CastDelay = 0.3f;
     public string m_AnimationTriggerName;
+    public float m_MaxDistance = 30.0f;
 
     private bool m_inProgress = false;
     public override bool IsInProgress
@@ -32,7 +33,7 @@ public class BlinkSpell : SpellBehaviour
         RaycastHit hitInfo;
         var direction = target.point - m_Caster.transform.position;
 
-		if (target.normal.y > 0.7f)
+        if (target.normal.y > 0.7f && direction.magnitude <= m_MaxDistance)
             m_Caster.transform.position = target.point + target.normal;
 
         m_inProgress = false;
