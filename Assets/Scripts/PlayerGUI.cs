@@ -143,6 +143,9 @@ public class PlayerGUI : MonoBehaviour
         //TODO
         foreach (var spell in m_casterBehaviourComponent.m_AvailableSpells)
         {
+            if (!spell.m_IsActive)
+                continue;
+
             var icon = GameObject.Instantiate(m_SpellIconTemplate);
             icon.transform.SetParent(m_SpellsPanel.transform, false);
             icon.GetComponentInChildren<Text>().text = spell.m_SpellName;
