@@ -5566,6 +5566,7 @@ MonoBehaviour:
   m_SpellName: Bite
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_IsActive: 1
   m_Damage: 3
   m_MaxDuracity: 1
   m_AnimationTriggerName: TriggerAbility_Bite
@@ -5585,6 +5586,7 @@ MonoBehaviour:
   m_SpellName: PoisonBreath
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300008, guid: 9b218fd320ee69943840ed6456028d0d, type: 3}
+  m_IsActive: 1
   m_Prefab: {fileID: 191370, guid: 10c35c7a501792d4daa4e244422551a0, type: 2}
   m_IsAsynchronious: 1
   m_AnimationTriggerName: TriggerAbility_Breath
@@ -13456,7 +13458,7 @@ Transform:
   - {fileID: 1711267549}
   - {fileID: 272202363}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!4 &346234642 stripped
 Transform:
   m_PrefabParentObject: {fileID: 466676, guid: 7a983e397f4a99c40a7d5ff0a751481b, type: 2}
@@ -13724,6 +13726,7 @@ MonoBehaviour:
   m_SpellName: Bite
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_IsActive: 1
   m_Damage: 3
   m_MaxDuracity: 1
   m_AnimationTriggerName: TriggerAbility_Bite
@@ -13743,6 +13746,7 @@ MonoBehaviour:
   m_SpellName: PoisonBreath
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300008, guid: 9b218fd320ee69943840ed6456028d0d, type: 3}
+  m_IsActive: 1
   m_Prefab: {fileID: 191370, guid: 10c35c7a501792d4daa4e244422551a0, type: 2}
   m_IsAsynchronious: 1
   m_AnimationTriggerName: TriggerAbility_Breath
@@ -16105,6 +16109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateInterval: 1
   m_VisionRadius: 20
+  m_TargetForgiveRadius: 50
 --- !u!114 &452418157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16473,7 +16478,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
 --- !u!4 &465053422 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7cf0fb885512c5741a51e55136678911, type: 3}
@@ -16498,6 +16503,7 @@ MonoBehaviour:
   m_SpellName: Bite
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_IsActive: 1
   m_Damage: 3
   m_MaxDuracity: 1
   m_AnimationTriggerName: TriggerAbility_Bite
@@ -16517,6 +16523,7 @@ MonoBehaviour:
   m_SpellName: PoisonBreath
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300008, guid: 9b218fd320ee69943840ed6456028d0d, type: 3}
+  m_IsActive: 1
   m_Prefab: {fileID: 191370, guid: 10c35c7a501792d4daa4e244422551a0, type: 2}
   m_IsAsynchronious: 1
   m_AnimationTriggerName: TriggerAbility_Breath
@@ -17178,7 +17185,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!114 &482550362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18602,6 +18609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateInterval: 1
   m_VisionRadius: 20
+  m_TargetForgiveRadius: 50
 --- !u!114 &540156962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19053,6 +19061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateInterval: 1
   m_VisionRadius: 20
+  m_TargetForgiveRadius: 50
 --- !u!114 &566157566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19258,7 +19267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1001 &574724411
 Prefab:
   m_ObjectHideFlags: 0
@@ -20260,6 +20269,7 @@ MonoBehaviour:
   m_SpellName: Force field
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300000, guid: 68dde56a63ab6f343a2d18d47fc23114, type: 3}
+  m_IsActive: 1
   m_Effect: {fileID: 162470, guid: 530319341dffde94e8edca11a2e1ee04, type: 2}
   m_IsAsynchronious: 1
 --- !u!1001 &597167315
@@ -20769,6 +20779,7 @@ MonoBehaviour:
   m_SpellName: Poison breath
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_IsActive: 1
   m_Prefab: {fileID: 0}
   m_IsAsynchronious: 0
   m_AnimationTriggerName: 
@@ -23769,7 +23780,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1001 &718260660
 Prefab:
   m_ObjectHideFlags: 0
@@ -24370,6 +24381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateInterval: 1
   m_VisionRadius: 20
+  m_TargetForgiveRadius: 50
 --- !u!114 &737378327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24679,7 +24691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1001 &757511113
 Prefab:
   m_ObjectHideFlags: 0
@@ -25522,7 +25534,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1001 &805863492
 Prefab:
   m_ObjectHideFlags: 0
@@ -29652,7 +29664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &913433043 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 154fb8c4ffb50724db7dba599dad7995, type: 3}
@@ -31726,6 +31738,7 @@ MonoBehaviour:
   m_SpellName: PoisonBreath
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300008, guid: 9b218fd320ee69943840ed6456028d0d, type: 3}
+  m_IsActive: 1
   m_Prefab: {fileID: 191370, guid: 10c35c7a501792d4daa4e244422551a0, type: 2}
   m_IsAsynchronious: 1
   m_AnimationTriggerName: TriggerAbility_Breath
@@ -31745,6 +31758,7 @@ MonoBehaviour:
   m_SpellName: Bite
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_IsActive: 1
   m_Damage: 3
   m_MaxDuracity: 1
   m_AnimationTriggerName: TriggerAbility_Bite
@@ -40234,7 +40248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1001 &1232444739
 Prefab:
   m_ObjectHideFlags: 0
@@ -41262,7 +41276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!4 &1255689915 stripped
 Transform:
   m_PrefabParentObject: {fileID: 477422, guid: 7be98a0ea638efd489a6798dc3125624, type: 2}
@@ -44812,6 +44826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateInterval: 1
   m_VisionRadius: 20
+  m_TargetForgiveRadius: 50
 --- !u!114 &1374015240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45332,6 +45347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateInterval: 1
   m_VisionRadius: 20
+  m_TargetForgiveRadius: 50
 --- !u!114 &1411198965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49541,7 +49557,7 @@ Transform:
   - {fileID: 126646657}
   - {fileID: 262408502}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &1607506432 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 1fe4d8e03cdb1604280d9ee33f7e2bf3, type: 3}
@@ -51731,7 +51747,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1700449001 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 449f8dc8bc34d67469836d5fb25870c3, type: 3}
@@ -56315,6 +56331,7 @@ MonoBehaviour:
   m_SpellName: Bite
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_IsActive: 1
   m_Damage: 3
   m_MaxDuracity: 1
   m_AnimationTriggerName: TriggerAbility_Bite
@@ -56334,6 +56351,7 @@ MonoBehaviour:
   m_SpellName: PoisonBreath
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300008, guid: 9b218fd320ee69943840ed6456028d0d, type: 3}
+  m_IsActive: 1
   m_Prefab: {fileID: 191370, guid: 10c35c7a501792d4daa4e244422551a0, type: 2}
   m_IsAsynchronious: 1
   m_AnimationTriggerName: TriggerAbility_Breath
@@ -57530,6 +57548,7 @@ MonoBehaviour:
   m_SpellName: Bite
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_IsActive: 1
   m_Damage: 3
   m_MaxDuracity: 1
   m_AnimationTriggerName: TriggerAbility_Bite
@@ -57549,6 +57568,7 @@ MonoBehaviour:
   m_SpellName: PoisonBreath
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300008, guid: 9b218fd320ee69943840ed6456028d0d, type: 3}
+  m_IsActive: 1
   m_Prefab: {fileID: 191370, guid: 10c35c7a501792d4daa4e244422551a0, type: 2}
   m_IsAsynchronious: 1
   m_AnimationTriggerName: TriggerAbility_Breath
@@ -57694,6 +57714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateInterval: 1
   m_VisionRadius: 20
+  m_TargetForgiveRadius: 50
 --- !u!114 &1904653693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58191,7 +58212,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1001 &1925929371
 Prefab:
   m_ObjectHideFlags: 0
@@ -58884,6 +58905,48 @@ CapsuleCollider:
   m_Height: .819999993
   m_Direction: 1
   m_Center: {x: -.0548121147, y: -.330000013, z: .0795874894}
+--- !u!1001 &1959482056
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 403556, guid: b0bab9fb965b7e14a88aa31329af2305, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 428
+      objectReference: {fileID: 0}
+    - target: {fileID: 403556, guid: b0bab9fb965b7e14a88aa31329af2305, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403556, guid: b0bab9fb965b7e14a88aa31329af2305, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 674.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 403556, guid: b0bab9fb965b7e14a88aa31329af2305, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403556, guid: b0bab9fb965b7e14a88aa31329af2305, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403556, guid: b0bab9fb965b7e14a88aa31329af2305, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403556, guid: b0bab9fb965b7e14a88aa31329af2305, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 403556, guid: b0bab9fb965b7e14a88aa31329af2305, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b0bab9fb965b7e14a88aa31329af2305, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1959698160
 Prefab:
   m_ObjectHideFlags: 0
@@ -62080,7 +62143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!1 &2071047091 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 11382c5ba382450409c9ead9e428222d, type: 3}
@@ -64695,7 +64758,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &2116231059
 Prefab:
   m_ObjectHideFlags: 0
@@ -64774,6 +64837,7 @@ MonoBehaviour:
   m_SpellName: Bite
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_IsActive: 1
   m_Damage: 3
   m_MaxDuracity: 1
   m_AnimationTriggerName: TriggerAbility_Bite
@@ -64793,6 +64857,7 @@ MonoBehaviour:
   m_SpellName: PoisonBreath
   m_Caster: {fileID: 0}
   m_Icon: {fileID: 21300008, guid: 9b218fd320ee69943840ed6456028d0d, type: 3}
+  m_IsActive: 1
   m_Prefab: {fileID: 191370, guid: 10c35c7a501792d4daa4e244422551a0, type: 2}
   m_IsAsynchronious: 1
   m_AnimationTriggerName: TriggerAbility_Breath
@@ -65711,7 +65776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!4 &2145547407 stripped
 Transform:
   m_PrefabParentObject: {fileID: 490688, guid: cc3b9e246a884cc4fb364e2f83690df6, type: 2}
