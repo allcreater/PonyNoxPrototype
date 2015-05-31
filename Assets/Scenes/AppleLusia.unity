@@ -21655,6 +21655,10 @@ Prefab:
       propertyPath: m_GameOverPanel
       value: 
       objectReference: {fileID: 1351316166}
+    - target: {fileID: 11433948, guid: 74712ab6e2efd5a4aba60cf6b114b842, type: 2}
+      propertyPath: m_MaxDistance
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74712ab6e2efd5a4aba60cf6b114b842, type: 2}
   m_IsPrefabParent: 0
