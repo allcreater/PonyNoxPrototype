@@ -26,7 +26,7 @@ public class MagicArrowBehaviour : ThrowableSpellBehaviour
 
     void Update()
     {
-        m_target = m_targetSelector.Targets.FirstOrDefault(x => x.m_Team == m_TargetTeam && x.IsAlive);
+        m_target = m_targetSelector.AllTargets.FirstOrDefault(x => x.m_Team == m_TargetTeam && x.IsAlive);
     }
 
     void FixedUpdate()

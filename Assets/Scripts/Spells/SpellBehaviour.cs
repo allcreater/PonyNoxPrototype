@@ -28,6 +28,8 @@ public abstract class SpellBehaviour : MonoBehaviour
 
     public Sprite m_Icon;
 
+    public bool m_IsActive = true;
+
     private float m_lastCastTime = 0.0f;
 
     public bool IsAvailable

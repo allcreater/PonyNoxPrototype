@@ -7,13 +7,17 @@ public class NearestTargetSelector : MonoBehaviour
 {
     public float m_UpdateInterval = 1.0f;
     public float m_VisionRadius = 20.0f;
-
-    public IList<SeekableTarget> Targets { get; private set; }
+    
+    public float m_TargetForgiveRadius = 50.0f;
+    public System.Func<SeekableTarget, bool> TargetFilter;
+    
+    public IList<SeekableTarget> AllTargets { get; private set; }
+    public SeekableTarget Target { get; private set; }
     public IEnumerable<SeekableTarget> this [string team]
     {
         get
         {
-            return Targets.Where(x => x.m_Team == team);
+            return AllTargets.Where(x => x.m_Team == team);
         }
     }
 
@@ -22,18 +26,31 @@ public class NearestTargetSelector : MonoBehaviour
     void Start()
     {
         m_lastUpdateTime = Time.time;
-        Targets = new List<SeekableTarget>();
+        AllTargets = new List<SeekableTarget>();
+
+        TargetFilter = (x) => true;
     }
 
     void Update()
     {
+        float sqrVisionRadius = m_VisionRadius * m_VisionRadius;
+        float sqrTargetForgiveRadius = m_TargetForgiveRadius * m_TargetForgiveRadius;
+
         if (Time.time > m_lastUpdateTime + m_UpdateInterval)
         {
-            float sqrVisionRadius = m_VisionRadius * m_VisionRadius;
             var targets = GameObject.FindObjectsOfType<SeekableTarget>();
-            Targets = (from x in targets where (transform.position - x.transform.position).sqrMagnitude < sqrVisionRadius orderby (transform.position - x.transform.position).sqrMagnitude select x).ToList();
+            AllTargets = (from x in targets where (transform.position - x.transform.position).sqrMagnitude < sqrVisionRadius orderby (transform.position - x.transform.position).sqrMagnitude select x).ToList();
 
             m_lastUpdateTime = Time.time;
+        }
+
+        if (!Target)
+            Target = AllTargets.Where(TargetFilter).FirstOrDefault();
+        else
+        {
+            var dir = transform.position - Target.transform.position;
+            if (dir.sqrMagnitude > sqrTargetForgiveRadius)
+                Target = null;
         }
     }
 }
