@@ -12,12 +12,14 @@ public class ParaspriteAI : MonoBehaviour
 	{
         m_targetSelector = GetComponent<NearestTargetSelector>();
         m_motor = GetComponent<FlyingCreatureMotor>();
+
+        m_targetSelector.TargetFilter = x => x.m_Team != "Enemy";
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-        var target = m_targetSelector.Targets.Where(x => x.m_Team != "Enemy").FirstOrDefault();
+        var target = m_targetSelector.Target;
         if (!target)
             return;
 
