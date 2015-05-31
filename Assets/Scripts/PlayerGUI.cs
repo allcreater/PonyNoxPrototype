@@ -103,7 +103,7 @@ public class PlayerGUI : MonoBehaviour
 		m_HpIndicator.text = string.Format("{0}", m_livingCreatureComponent.m_HitPoints);
         //m_MpIndicator.text = string.Format("{0}", m_casterBehaviourComponent.m_ManaPoints);
 
-        if (m_livingCreatureComponent.m_HitPoints.currentValue <= 0.01f)
+        if (m_livingCreatureComponent.m_HitPoints.currentValue == 0.0f)
             m_GameOverPanel.gameObject.SetActive(true);
 
         UpdateItems();
