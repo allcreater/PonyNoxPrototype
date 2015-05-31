@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e5cdd53033191ed418998241849076f1
-timeCreated: 1433081259
+guid: 154fb8c4ffb50724db7dba599dad7995
+timeCreated: 1433085404
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Table
+    4300000: fence
   materials:
     importMaterials: 1
     materialName: 0
@@ -29,7 +29,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .200000003
+    globalScale: .600000024
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
