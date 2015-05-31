@@ -2,19 +2,19 @@
 using System.Collections;
 
 [RequireComponent(typeof(GroundCreatureMovementMotor))]
-[RequireComponent(typeof(CasterBehaviour))]
+[RequireComponent(typeof(PlayerCasterBehaviour))]
 public class PlayerBehavior : MonoBehaviour
 {
     public Camera m_playerCamera;
     public InventoryBehaviour m_InventoryBehaviour;
 
-	private CasterBehaviour m_caster;
+	private PlayerCasterBehaviour m_caster;
     private Collider m_collider;
     private GroundCreatureMovementMotor m_motor;
 
 	void Start ()
     {
-		m_caster = GetComponent<CasterBehaviour>();
+		m_caster = GetComponent<PlayerCasterBehaviour>();
         m_collider = GetComponent<Collider>();
         m_motor = GetComponent<GroundCreatureMovementMotor>();
 	}
@@ -65,6 +65,7 @@ public class PlayerBehavior : MonoBehaviour
             m_motor.Jump();
 
         
+        /*
         //TODO: Ахтунг! Говнокод!
 		if (Input.GetKey(KeyCode.Alpha1))
             m_caster.Cast(0);
@@ -80,6 +81,20 @@ public class PlayerBehavior : MonoBehaviour
             m_caster.Cast(5);
         if (Input.GetKey(KeyCode.Alpha7))
             m_caster.Cast(6);
+        */
+        if (Input.GetKeyDown(KeyCode.Q))
+            m_caster.ApplySpellWord("La");
+        if (Input.GetKeyDown(KeyCode.W))
+            m_caster.ApplySpellWord("Ma");
+        if (Input.GetKeyDown(KeyCode.E))
+            m_caster.ApplySpellWord("Ge");
+        if (Input.GetKeyDown(KeyCode.A))
+            m_caster.ApplySpellWord("Ho");
+        if (Input.GetKeyDown(KeyCode.S))
+            m_caster.ApplySpellWord("Lo");
+        if (Input.GetKeyDown(KeyCode.D))
+            m_caster.ApplySpellWord("Ki");
+
 
         if (Input.GetButtonDown("Fire1") && m_InventoryBehaviour.ArmedWeapon)
         {

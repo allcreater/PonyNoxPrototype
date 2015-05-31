@@ -30,7 +30,7 @@ class GameObjectPool
 }
 
 [RequireComponent(typeof(LivingCreatureBehaviour))]
-[RequireComponent(typeof(CasterBehaviour))]
+[RequireComponent(typeof(PlayerCasterBehaviour))]
 public class PlayerGUI : MonoBehaviour
 {
 	public Text m_HpIndicator;
@@ -48,7 +48,7 @@ public class PlayerGUI : MonoBehaviour
     public Image m_activeItemIcon;
 
 	private LivingCreatureBehaviour m_livingCreatureComponent;
-    private CasterBehaviour m_casterBehaviourComponent;
+    private PlayerCasterBehaviour m_casterBehaviourComponent;
 
     private List<GameObject> m_iconsPool = new List<GameObject>();
     private PickableItem m_activeItem;
@@ -93,7 +93,7 @@ public class PlayerGUI : MonoBehaviour
 	void Start ()
 	{
 		m_livingCreatureComponent = GetComponent<LivingCreatureBehaviour>();
-        m_casterBehaviourComponent = GetComponent<CasterBehaviour>();
+        m_casterBehaviourComponent = GetComponent<PlayerCasterBehaviour>();
 	}
 	
 	void Update ()
@@ -136,12 +136,12 @@ public class PlayerGUI : MonoBehaviour
         m_spellsDirtyFlag = true;
 
         //TODO
-        foreach (var spell in m_casterBehaviourComponent.m_AvailableSpells)
+        foreach (var spell in m_casterBehaviourComponent.Spells)
         {
             var icon = GameObject.Instantiate(m_SpellIconTemplate);
             icon.transform.SetParent(m_SpellsPanel.transform, false);
-            icon.GetComponentInChildren<Text>().text = spell.m_SpellName;
-            icon.GetComponent<Image>().sprite = spell.m_Icon;
+            icon.GetComponentInChildren<Text>().text = spell.name;
+            icon.GetComponent<Image>().sprite = spell.sprite;
         }
     }
 }

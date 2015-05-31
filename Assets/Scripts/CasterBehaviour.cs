@@ -4,22 +4,30 @@ using System.Collections.Generic;
 using System.Linq;
 
 
+public class SpellInfo
+{
+    public Sprite sprite {get; set; }
+    public string name {get; set; }
+}
 
 public class CasterBehaviour : MonoBehaviour
 {
-	public GameObject m_spellContainer;
-	public SpellBehaviour[] m_AvailableSpells;
+	public GameObject m_SpellContainer;
 
+    public IList<SpellInfo> Spells { get; private set; }
     public TargetInfo Target { get; set; }
-
     public bool IsBusy { get; protected set; }
+
+    protected SpellBehaviour[] m_availableSpells;
 
 	protected void UpdateSpellsList()
 	{
-		m_AvailableSpells = m_spellContainer.GetComponentsInChildren<SpellBehaviour>().Where(x => x.m_Icon).ToArray();
+        m_availableSpells = m_SpellContainer.GetComponentsInChildren<SpellBehaviour>().Where(x => x.m_Icon).ToArray();
+
+        Spells = (from x in m_availableSpells select new SpellInfo() { name = x.m_SpellName, sprite = x.m_Icon }).ToList();
 	}
 
-    private IEnumerator SpellWaitingProcess(SpellBehaviour activeSpell)
+    protected IEnumerator SpellWaitingProcess(SpellBehaviour activeSpell)
     {
         IsBusy = true;
 
@@ -29,15 +37,16 @@ public class CasterBehaviour : MonoBehaviour
         IsBusy = false;
     }
 
+    /*
     public bool Cast(uint activeSpell)
 	{
         if (IsBusy)
             return false;
 
-		if (m_AvailableSpells == null || activeSpell >= m_AvailableSpells.Length)
+        if (m_availableSpells == null || activeSpell >= m_availableSpells.Length)
 			return false;
-		
-		var spell = m_AvailableSpells[activeSpell];
+
+        var spell = m_availableSpells[activeSpell];
         if (spell.IsAvailable)
             spell.BeginCast(this);
 
@@ -45,6 +54,7 @@ public class CasterBehaviour : MonoBehaviour
         
         return true;
 	}
+    */
 
 	void Start ()
 	{
