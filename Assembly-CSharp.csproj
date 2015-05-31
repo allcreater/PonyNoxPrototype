@@ -93,6 +93,8 @@
      <Compile Include="Assets\Scripts\Utility\PhysicsOnOff.cs" />
      <Compile Include="Assets\Scripts\Water.cs" />
      <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
+     <Compile Include="Assets\SoundOnContact.cs" />
+     <Compile Include="Assets\TriggerEvent.cs" />
      <None Include="Assets\PorglezompPyroclastics\Shaders\ExplosionHigh.shader" />
      <None Include="Assets\PorglezompPyroclastics\Shaders\ExplosionLow.shader" />
      <None Include="Assets\PorglezompPyroclastics\Shaders\ExplosionMed.shader" />

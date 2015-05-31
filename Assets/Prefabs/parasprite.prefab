@@ -405,7 +405,7 @@ Transform:
   m_GameObject: {fileID: 164384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.83233643, y: 2.38025546, z: 29.8500061}
-  m_LocalScale: {x: .100000016, y: .100000001, z: .100000016}
+  m_LocalScale: {x: .0900000036, y: .0900000036, z: .0900000036}
   m_Children:
   - {fileID: 491854}
   - {fileID: 440652}
@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5045392b9d0359344ac7f2ff1a1a8270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ResistsList: []
 --- !u!114 &11436420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -653,6 +654,7 @@ MonoBehaviour:
   m_HitPoints:
     currentValue: 2
     maximumValue: 2
+  m_ReceiveFallDamage: 0
   m_Animator: {fileID: 9586956}
 --- !u!135 &13581416
 SphereCollider:
