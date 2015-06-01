@@ -31,6 +31,7 @@ public class AttributeBehaviour : MonoBehaviour
 {
     public string m_AttributeName;
     public Segment m_Amount;
+    public float m_RegenerationPerSecond;
 
 	void Start ()
     {
@@ -39,7 +40,7 @@ public class AttributeBehaviour : MonoBehaviour
 	
 	void Update ()
     {
-	
+        m_Amount.ChangeValue(m_RegenerationPerSecond * Time.deltaTime);
 	}
 
     public static AttributeBehaviour GetAttributeComponent (GameObject gameObject, string name)

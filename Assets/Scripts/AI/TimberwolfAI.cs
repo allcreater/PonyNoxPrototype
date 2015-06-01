@@ -43,9 +43,9 @@ public class TimberwolfAI : MonoBehaviour
 
 		var distance = dir.magnitude;
 		if (distance > 3.0f && distance <= 10.0f)
-			m_caster.Cast (0);
-		else if (distance <= 3.0f)
 			m_caster.Cast (1);
+		else if (distance <= 3.0f)
+			m_caster.Cast (0);
 	}
 }
 

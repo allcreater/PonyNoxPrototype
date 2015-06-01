@@ -44,6 +44,7 @@ public class PlayerGUI : MonoBehaviour
 
     public InventoryBehaviour m_Inventory;
 
+    public Image m_activeItemPanel;
     public Text m_activeItemDescription;
     public Image m_activeItemIcon;
 
@@ -51,6 +52,7 @@ public class PlayerGUI : MonoBehaviour
 
 	private LivingCreatureBehaviour m_livingCreatureComponent;
     private CasterBehaviour m_casterBehaviourComponent;
+    private AttributeBehaviour m_manaAttribute;
 
     private List<GameObject> m_iconsPool = new List<GameObject>();
     private PickableItem m_activeItem;
@@ -90,21 +92,32 @@ public class PlayerGUI : MonoBehaviour
             m_iconsPool.Add(obj);
         }
     }
-
+    
+    public void OnSwitchInventory()
+    {
+        bool newState = !m_InventoryPanel.gameObject.activeSelf;
+        m_InventoryPanel.gameObject.SetActive(newState);
+        m_activeItemPanel.gameObject.SetActive(newState);
+    }
 
 	void Start ()
 	{
 		m_livingCreatureComponent = GetComponent<LivingCreatureBehaviour>();
         m_casterBehaviourComponent = GetComponent<CasterBehaviour>();
+
+        m_manaAttribute = AttributeBehaviour.GetAttributeComponent(transform.FindChild("Stats").gameObject, "ManaPoints");
 	}
 	
 	void Update ()
 	{
 		m_HpIndicator.text = string.Format("{0}", m_livingCreatureComponent.m_HitPoints);
-        //m_MpIndicator.text = string.Format("{0}", m_casterBehaviourComponent.m_ManaPoints);
+        m_MpIndicator.text = string.Format("{0}", m_manaAttribute.m_Amount);
 
         if (m_livingCreatureComponent.m_HitPoints.currentValue == 0.0f)
             m_GameOverPanel.gameObject.SetActive(true);
+
+        if (Input.GetButtonDown("Inventory"))
+            OnSwitchInventory();
 
         UpdateItems();
 

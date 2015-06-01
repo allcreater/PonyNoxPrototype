@@ -64,7 +64,6 @@ public class PlayerBehavior : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
             m_motor.Jump();
 
-        
         //TODO: Ахтунг! Говнокод!
 		if (Input.GetKey(KeyCode.Alpha1))
             m_caster.Cast(0);

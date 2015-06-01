@@ -61,7 +61,7 @@ public class NavMeshNavigator : MonoBehaviour
             {
 				DesiredDirection = DesiredDirection * 0.1f;
                 m_currentPointIndex++;
-                Debug.Log(m_currentPointIndex);
+                //Debug.Log(m_currentPointIndex);
             }
         }
 
