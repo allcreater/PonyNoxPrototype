@@ -23,7 +23,7 @@ public class SoundOnContact : MonoBehaviour
 	void OnTriggerEnter (Collider other)
 	{
 		if (true) {
-			Debug.Log (m_acceleration.magnitude);
+			//Debug.Log (m_acceleration.magnitude);
 			m_as.Play ();
 		}
 	}

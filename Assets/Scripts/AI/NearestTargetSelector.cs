@@ -9,7 +9,11 @@ public class NearestTargetSelector : MonoBehaviour
     public float m_VisionRadius = 20.0f;
     
     public float m_TargetForgiveRadius = 50.0f;
-    public System.Func<SeekableTarget, bool> TargetFilter;
+    public System.Func<SeekableTarget, bool> TargetFilter
+    {
+        get { return m_targetFilterCallback; }
+        set { m_targetFilterCallback = value; Target = null; }
+    }
     
     public IList<SeekableTarget> AllTargets { get; private set; }
     public SeekableTarget Target { get; private set; }
@@ -22,13 +26,14 @@ public class NearestTargetSelector : MonoBehaviour
     }
 
     private float m_lastUpdateTime;
+    private System.Func<SeekableTarget, bool> m_targetFilterCallback;
 
     void Start()
     {
         m_lastUpdateTime = Time.time;
         AllTargets = new List<SeekableTarget>();
 
-        TargetFilter = (x) => true;
+        //TargetFilter = (x) => x.gameObject != gameObject;
     }
 
     void Update()
@@ -44,9 +49,9 @@ public class NearestTargetSelector : MonoBehaviour
             m_lastUpdateTime = Time.time;
         }
 
-        if (!Target)
+        if (!Target && TargetFilter != null)
             Target = AllTargets.Where(TargetFilter).FirstOrDefault();
-        else
+        else if (Target)
         {
             var dir = transform.position - Target.transform.position;
             if (dir.sqrMagnitude > sqrTargetForgiveRadius)
