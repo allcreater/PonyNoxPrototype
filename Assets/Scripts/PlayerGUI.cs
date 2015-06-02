@@ -105,7 +105,7 @@ public class PlayerGUI : MonoBehaviour
 		m_livingCreatureComponent = GetComponent<LivingCreatureBehaviour>();
         m_casterBehaviourComponent = GetComponent<CasterBehaviour>();
 
-        m_manaAttribute = AttributeBehaviour.GetAttributeComponent(transform.FindChild("Stats").gameObject, "ManaPoints");
+        m_manaAttribute = AttributeBehaviour.GetAttributeComponent(gameObject, "ManaPoints");
 	}
 	
 	void Update ()
@@ -132,9 +132,11 @@ public class PlayerGUI : MonoBehaviour
         {
             var item = itemList[i];
             var icon = m_iconsPool[i];
+            if (!item)
+                continue;
 
             icon.transform.SetParent(m_InventoryPanel.transform, false);
-            icon.GetComponentInChildren<Text>().text = item.m_ItemName;
+            //icon.GetComponentInChildren<Text>().text = item.m_ItemName;
             icon.GetComponent<Image>().sprite = item.m_InventoryIcon;
             icon.GetComponent<Button>().onClick.AddListener(() => m_activeItem = item);
         }

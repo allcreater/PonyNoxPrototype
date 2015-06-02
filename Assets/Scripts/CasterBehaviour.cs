@@ -32,12 +32,12 @@ public class CasterBehaviour : MonoBehaviour
     public bool Cast(uint activeSpell)
 	{
         if (IsBusy)
-            return false;
+            return false;   
 
 		if (m_AvailableSpells == null || activeSpell >= m_AvailableSpells.Length)
 			return false;
 
-        var manaAttribute = AttributeBehaviour.GetAttributeComponent(transform.FindChild("Stats").gameObject, "ManaPoints");
+        var manaAttribute = AttributeBehaviour.GetAttributeComponent(gameObject, "ManaPoints");
 
 		var spell = m_AvailableSpells[activeSpell];
         if (spell.IsAvailable && (!manaAttribute || manaAttribute.m_Amount.currentValue >= spell.m_ManaCost))

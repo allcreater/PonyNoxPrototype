@@ -45,7 +45,7 @@ public class AttributeBehaviour : MonoBehaviour
 
     public static AttributeBehaviour GetAttributeComponent (GameObject gameObject, string name)
     {
-        var attribute = gameObject.GetComponents<AttributeBehaviour>().FirstOrDefault(x => x.m_AttributeName == name);
+        var attribute = gameObject.GetComponentsInChildren<AttributeBehaviour>().FirstOrDefault(x => x.m_AttributeName == name);
         return attribute;
     }
 }

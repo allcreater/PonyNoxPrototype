@@ -890,6 +890,30 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11443434, guid: 4abbb9fef8f3bc24489c75b79c440f9f, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1636557513}
+    - target: {fileID: 11443434, guid: 4abbb9fef8f3bc24489c75b79c440f9f, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnUseButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467500, guid: 4abbb9fef8f3bc24489c75b79c440f9f, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDropButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467500, guid: 4abbb9fef8f3bc24489c75b79c440f9f, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1636557513}
+    - target: {fileID: 11409930, guid: 4abbb9fef8f3bc24489c75b79c440f9f, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnEquipButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409930, guid: 4abbb9fef8f3bc24489c75b79c440f9f, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1636557513}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4abbb9fef8f3bc24489c75b79c440f9f, type: 2}
   m_IsPrefabParent: 0
@@ -12581,7 +12605,7 @@ Transform:
   - {fileID: 840778438}
   - {fileID: 78319677}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!4 &346234642 stripped
 Transform:
   m_PrefabParentObject: {fileID: 466676, guid: 7a983e397f4a99c40a7d5ff0a751481b, type: 2}
@@ -16426,9 +16450,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1361682881}
-  targetHeight: 2
-  distance: 2.79999995
-  maxDistance: 10
+  targetHeight: .800000012
+  distance: 8
+  maxDistance: 16
   minDistance: .5
   xSpeed: 250
   ySpeed: 120
@@ -47723,6 +47747,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Team: Player
+--- !u!114 &1636557513 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11428618, guid: 74712ab6e2efd5a4aba60cf6b114b842,
+    type: 2}
+  m_PrefabInternal: {fileID: 637140530}
+  m_Script: {fileID: 11500000, guid: 5e5a4ad57d3fab848ba593f3d38291d0, type: 3}
 --- !u!1 &1638262680 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 449f8dc8bc34d67469836d5fb25870c3, type: 3}
